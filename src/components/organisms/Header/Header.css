@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.3px solid #2f2f2f;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.column:first-child {
+  margin-left: 30px;
+}
+
+.column:last-child {
+  margin-right: 30px;
+}

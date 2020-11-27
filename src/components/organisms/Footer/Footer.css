@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  height: 20rem;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}

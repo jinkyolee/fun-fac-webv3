@@ -1,0 +1,20 @@
+.lang-btn {
+  height: 26px;
+  border: none;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+  color: #2f2f2f;
+  line-height: 26px;
+}
+
+.link-btn {
+  display: inline-block;
+  width: 45px;
+  height: 26px;
+  background-color: #c4c4c4;
+  color: #2f2f2f;
+  margin-right: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 26px;
+}
