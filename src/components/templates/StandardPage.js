@@ -1,10 +1,13 @@
 import React from "react";
+import { Box } from "../atoms/Box/Box";
 
-const StandardPage = ({ header, body }) => {
+const StandardPage = ({ header, children, className, style = null }) => {
   return (
     <React.Fragment>
       {header}
-      {body}
+      <Box className={className} style={style}>
+        {children}
+      </Box>
     </React.Fragment>
   );
 };

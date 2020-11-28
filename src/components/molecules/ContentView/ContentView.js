@@ -1,17 +1,18 @@
 import React from "react";
+import { Box } from "../../atoms/Box/Box";
 import { LinkedImage } from "../../atoms/ImageComp/ImageComp";
 import { Text } from "../../atoms/Text/Text";
 import "./ContentView.css";
 
 export const ContentView = ({ imgSrc, to, title, description }) => {
   return (
-    <div className="content-container">
+    <Box className="content-container">
       <LinkedImage src={imgSrc} alt="" className="content-image" to={to} />
-      <div className="description-container">
-        <Text type="heading" text={title} />
+      <Box className="description-container">
+        <Text className="heading">{title}</Text>
         <br />
-        <Text type="sub-heading" text={description} />
-      </div>
-    </div>
+        <Text className="sub-heading">{description}</Text>
+      </Box>
+    </Box>
   );
 };

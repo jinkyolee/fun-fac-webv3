@@ -2,6 +2,45 @@
   object-fit: cover;
 }
 
+.image.large {
+  height: 300px;
+  width: 300px;
+}
+
+.image.largeW {
+  width: 300px;
+}
+
+.image.largeH {
+  height: 300px;
+}
+
+.image.medium {
+  height: 150;
+  width: 150;
+}
+
+.image.mediumW {
+  width: 150;
+}
+
+.image.mediumH {
+  height: 150;
+}
+
+.image.small {
+  height: 50px;
+  width: 50px;
+}
+
+.image.smallW {
+  width: 50px;
+}
+
+.image.smallH {
+  height: 50px;
+}
+
 .logo {
   height: 34px;
 }
