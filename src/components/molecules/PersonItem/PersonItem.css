@@ -1,0 +1,11 @@
+.profile {
+  margin: 0 20px 0 20px;
+}
+
+.profile:last-child {
+  margin-right: 0;
+}
+
+.profile:first-child {
+  margin-left: 0;
+}

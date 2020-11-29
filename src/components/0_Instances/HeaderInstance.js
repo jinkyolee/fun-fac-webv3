@@ -9,15 +9,15 @@ export const HeaderInstance = () => {
     <Header
       firstCol={<LinkedImage src={logoImage} alt="" className="logo" to="/" />}
       secondCol={[
-        <LinkButton to="/game" title="Tab 1" key="1" />,
-        <LinkButton to="/othershit" title="Tab 2" key="2" />,
-        <LinkButton to="/thirdshit" title="Tab 3" key="3" />,
+        <LinkButton to="/game" title="Game" key="1" />,
+        <LinkButton to="/story" title="Story" key="2" />,
+        <LinkButton to="/team" title="Team" key="3" />,
       ]}
       thirdCol={
         <Button
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "/btnshit";
+            console.log("Button clicked");
           }}
           label="English"
           className="lang-btn"

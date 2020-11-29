@@ -2,6 +2,14 @@
   object-fit: cover;
 }
 
+.linked {
+  cursor: pointer;
+}
+
+.image.round {
+  border-radius: 50%;
+}
+
 .image.large {
   height: 300px;
   width: 300px;
@@ -16,16 +24,16 @@
 }
 
 .image.medium {
-  height: 150;
-  width: 150;
+  height: 175px;
+  width: 175px;
 }
 
 .image.mediumW {
-  width: 150;
+  width: 175px;
 }
 
 .image.mediumH {
-  height: 150;
+  height: 175px;
 }
 
 .image.small {

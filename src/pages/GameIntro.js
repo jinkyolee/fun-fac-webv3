@@ -8,19 +8,17 @@ import { Text } from "../components/atoms/Text/Text";
 
 export const GameIntroduction = () => {
   return (
-    <React.Fragment>
-      <Header />
-      <StandardPage
-        className={"centered"}
-        style={{ height: "100%", width: "100%", alignItems: "center" }}
-      >
+    <StandardPage
+      className="centered full"
+      header={<Header />}
+      body={
         <Box className="horizontal-flex">
           <Image src={gameIcon} className="large" alt="" />
           <Box
-            className="vertical-flex alignStart"
+            className="vertical-flex align-start"
             style={{
               marginLeft: "50px",
-              width: "400px",
+              width: "25rem",
               justifyContent: "space-around",
             }}
           >
@@ -41,7 +39,7 @@ export const GameIntroduction = () => {
             />
           </Box>
         </Box>
-      </StandardPage>
-    </React.Fragment>
+      }
+    />
   );
 };

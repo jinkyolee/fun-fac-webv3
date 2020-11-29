@@ -2,6 +2,10 @@
   line-height: 20px;
 }
 
+.text.centered {
+  text-align: center;
+}
+
 .heading {
   font-size: 50px;
   line-height: 50px !important;

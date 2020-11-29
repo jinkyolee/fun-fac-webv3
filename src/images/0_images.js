@@ -4,5 +4,16 @@ import content3 from "./content3.png";
 import logoImage from "./logo.png";
 import gameIcon from "./game-icon.png";
 import storeLink from "./store-link.png";
+import teamLogo from "./team-logo.png";
+import profile from "./profile.png";
 
-export { content1, content2, content3, logoImage, gameIcon, storeLink };
+export {
+  content1,
+  content2,
+  content3,
+  logoImage,
+  gameIcon,
+  storeLink,
+  teamLogo,
+  profile,
+};

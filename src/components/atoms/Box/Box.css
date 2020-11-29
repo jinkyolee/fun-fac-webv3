@@ -2,12 +2,17 @@
   display: flex;
 }
 
-.box.alignStart {
+.box.align-start {
   align-items: flex-start;
+}
+
+.box.align-center {
+  align-items: center;
 }
 
 .centered {
   justify-content: center;
+  align-items: center;
 }
 
 .vertical-flex {
@@ -17,4 +22,9 @@
 
 .horizontal-flex {
   flex-direction: row;
+}
+
+.full {
+  height: 100%;
+  width: 100%;
 }
