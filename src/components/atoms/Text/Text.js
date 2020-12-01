@@ -8,3 +8,5 @@ export const Text = ({ className, children, style }) => {
     </span>
   );
 };
+
+export default Text;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ImageComp.css";
 
-export const LinkedImage = ({ src, alt, className, to }) => {
+export const LinkedImage = ({ src, className = "", to, style, alt = "" }) => {
   return (
     <img
       src={src}
@@ -10,11 +10,16 @@ export const LinkedImage = ({ src, alt, className, to }) => {
         e.preventDefault();
         window.location.href = to;
       }}
+      style={style}
       alt={alt}
     />
   );
 };
 
-export const Image = ({ src, className, alt }) => {
-  return <img src={src} className={`image ${className}`} alt={alt} />;
+export const Image = ({ src, className = "", style, alt = "" }) => {
+  return (
+    <img src={src} className={`image ${className}`} style={style} alt={alt} />
+  );
 };
+
+export default Image;

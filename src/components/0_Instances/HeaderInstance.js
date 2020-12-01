@@ -1,5 +1,5 @@
 import React from "react";
-import { Header3 as Header } from "../organisms/Header/Header";
+import Header from "../organisms/Header/Header";
 import { logoImage } from "../../images/0_images";
 import { LinkedImage } from "../atoms/ImageComp/ImageComp";
 import { Button, LinkButton } from "../atoms/Button/Button";
@@ -7,11 +7,12 @@ import { Button, LinkButton } from "../atoms/Button/Button";
 export const HeaderInstance = () => {
   return (
     <Header
-      firstCol={<LinkedImage src={logoImage} alt="" className="logo" to="/" />}
+      firstCol={<LinkedImage src={logoImage} className="logo" to="/" />}
       secondCol={[
         <LinkButton to="/game" title="Game" key="1" />,
         <LinkButton to="/story" title="Story" key="2" />,
         <LinkButton to="/team" title="Team" key="3" />,
+        <LinkButton to="/test" title="Test" key="4" />,
       ]}
       thirdCol={
         <Button
@@ -26,3 +27,5 @@ export const HeaderInstance = () => {
     />
   );
 };
+
+export default Header;

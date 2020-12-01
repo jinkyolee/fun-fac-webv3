@@ -6,6 +6,8 @@ import gameIcon from "./game-icon.png";
 import storeLink from "./store-link.png";
 import teamLogo from "./team-logo.png";
 import profile from "./profile.png";
+import testLogo from "./test-logo.png";
+import testIllust from "./test-illust.png";
 
 export {
   content1,
@@ -16,4 +18,6 @@ export {
   storeLink,
   teamLogo,
   profile,
+  testLogo,
+  testIllust,
 };

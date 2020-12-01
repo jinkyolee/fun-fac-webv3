@@ -1,5 +1,7 @@
 .image {
   object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .linked {
@@ -8,6 +10,32 @@
 
 .image.round {
   border-radius: 50%;
+}
+
+.image.xxlarge {
+  height: 550px;
+  width: 550px;
+}
+
+.image.xxlargeW {
+  width: 550px;
+}
+
+.image.xxlargeH {
+  height: 550px;
+}
+
+.image.xlarge {
+  height: 425px;
+  width: 425px;
+}
+
+.image.xlargeW {
+  width: 425px;
+}
+
+.image.xlargeH {
+  height: 425px;
 }
 
 .image.large {

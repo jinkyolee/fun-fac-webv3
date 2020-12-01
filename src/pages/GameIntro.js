@@ -9,11 +9,11 @@ import { Text } from "../components/atoms/Text/Text";
 export const GameIntroduction = () => {
   return (
     <StandardPage
-      className="centered full"
+      className="centered"
       header={<Header />}
       body={
-        <Box className="horizontal-flex">
-          <Image src={gameIcon} className="large" alt="" />
+        <Box className="horizontal-flex" style={{ marginTop: "195px" }}>
+          <Image src={gameIcon} className="large" />
           <Box
             className="vertical-flex align-start"
             style={{
@@ -35,7 +35,6 @@ export const GameIntroduction = () => {
               src={storeLink}
               className="smallH"
               to="https://www.apple.com/apple-arcade/"
-              alt=""
             />
           </Box>
         </Box>
@@ -43,3 +42,5 @@ export const GameIntroduction = () => {
     />
   );
 };
+
+export default GameIntroduction;

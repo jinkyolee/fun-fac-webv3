@@ -9,3 +9,5 @@ export const FooterPage = ({ header, body, footer }) => {
     </React.Fragment>
   );
 };
+
+export default FooterPage;

@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 
 // Organism for header that has three sections
-export const Header3 = ({ firstCol, secondCol, thirdCol }) => {
+export const Header = ({ firstCol, secondCol, thirdCol }) => {
   return (
     <nav className="header">
       <div className="column">{firstCol}</div>
@@ -11,3 +11,5 @@ export const Header3 = ({ firstCol, secondCol, thirdCol }) => {
     </nav>
   );
 };
+
+export default Header;

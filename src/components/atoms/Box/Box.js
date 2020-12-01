@@ -8,3 +8,5 @@ export const Box = ({ className, style, children }) => {
     </div>
   );
 };
+
+export default Box;

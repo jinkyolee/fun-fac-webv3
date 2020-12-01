@@ -17,3 +17,5 @@ export const PersonItem = ({ name, imageSrc, job }) => {
     </Box>
   );
 };
+
+export default PersonItem;

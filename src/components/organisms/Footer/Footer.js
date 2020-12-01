@@ -14,3 +14,5 @@ export const Footer = ({ rows }) => {
     </div>
   );
 };
+
+export default Footer;

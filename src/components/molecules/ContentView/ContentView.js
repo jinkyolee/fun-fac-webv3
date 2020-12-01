@@ -7,7 +7,7 @@ import "./ContentView.css";
 export const ContentView = ({ imgSrc, to, title, description }) => {
   return (
     <Box className="content-container">
-      <LinkedImage src={imgSrc} alt="" className="content-image" to={to} />
+      <LinkedImage src={imgSrc} className="content-image" to={to} />
       <Box className="description-container">
         <Text className="heading">{title}</Text>
         <br />
@@ -16,3 +16,5 @@ export const ContentView = ({ imgSrc, to, title, description }) => {
     </Box>
   );
 };
+
+export default ContentView;

@@ -21,9 +21,9 @@ export const AboutTeam = () => {
       className="centered"
       header={<Header />}
       body={
-        <Box className="vertical-flex" style={{ marginTop: "140px" }}>
+        <Box className="vertical-flex" style={{ marginTop: "100px" }}>
           <Box className="vertical-flex align-center">
-            <Image src={teamLogo} className="mediumW" alt="" />
+            <Image src={teamLogo} className="mediumW" />
             <Text
               className="sub-heading bold centered"
               style={{ marginTop: "30px" }}
@@ -68,3 +68,5 @@ export const AboutTeam = () => {
     />
   );
 };
+
+export default AboutTeam;
