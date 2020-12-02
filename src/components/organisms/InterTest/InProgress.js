@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box } from "../../atoms/Box/Box";
 import { Text } from "../../atoms/Text/Text";
 import Image from "../../atoms/ImageComp/ImageComp";
@@ -6,10 +6,12 @@ import Choice from "./Choice";
 import { testLogo } from "../../../images/0_images";
 
 // TODO: Find a way so that when progress is finished the rendered component changes from InProgress to Result
+// !!!!! FINISHED !!!!!
 
-export const InProgress = ({ setTestState, setScore }) => {
+export const InProgress = ({ setResult }) => {
   const [progress, setProgress] = useState(0);
-  const [points, setPoints] = useState({
+
+  let points = useRef({
     duk: 0,
     hui: 0,
     bok: 0,
@@ -18,24 +20,11 @@ export const InProgress = ({ setTestState, setScore }) => {
   });
 
   const increasePoints = (props) => {
-    setPoints({
-      ...points,
-      ...props.reduce((editedObj, prop) => {
-        editedObj[prop] = points[prop] + 1;
-        return editedObj;
-      }, {}),
+    props.forEach((palace) => {
+      points.current[palace] += 1;
     });
-    setProgress(progress + 1);
-    checkProgress();
-  };
 
-  const checkProgress = () => {
-    console.log(points);
-    console.log(progress);
-    if (progress >= 1) {
-      setScore(points);
-      setTestState("finished");
-    }
+    setProgress(progress + 1);
   };
 
   const choiceProps = {
@@ -57,13 +46,16 @@ export const InProgress = ({ setTestState, setScore }) => {
       {
         choiceText: "Choice 3",
         increaseFunc: () => {
+          console.log(points);
           increasePoints(["gyeong", "duk"]);
+          setResult(points.current);
         },
       },
       {
         choiceText: "Choice 4",
         increaseFunc: () => {
           increasePoints(["bok", "gyeong"]);
+          setResult(points.current);
         },
       },
     ],
