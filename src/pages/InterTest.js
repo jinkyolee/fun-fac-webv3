@@ -3,7 +3,7 @@ import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstan
 import StandardPage from "../components/templates/StandardPage";
 import Pending from "../components/organisms/InterTest/Pending";
 import InProgress from "../components/organisms/InterTest/InProgress";
-import Box from "../components/atoms/Box/Box";
+import Result from "../components/organisms/InterTest/Result";
 
 export const InteractiveTest = () => {
   const [testState, setTestState] = useState("pending");
@@ -25,13 +25,7 @@ export const InteractiveTest = () => {
         {
           pending: <Pending setTestState={setTestState} />,
           started: <InProgress setResult={setResult} />,
-          finished: (
-            <React.Fragment>
-              <Box className="centered" style={{ marginTop: "100px" }}>
-                {`${JSON.stringify(score)}`}
-              </Box>
-            </React.Fragment>
-          ),
+          finished: <Result score={score} />,
         }[testState]
       }
     />

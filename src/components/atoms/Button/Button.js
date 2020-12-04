@@ -20,10 +20,10 @@ export const Button = ({
   );
 };
 
-export const LinkButton = ({ to, title, className = "", style }) => {
+export const LinkButton = ({ to, label, className = "", style }) => {
   return (
     <a href={to} className={`btn link-btn ${className}`} style={style}>
-      {title}
+      {label}
     </a>
   );
 };

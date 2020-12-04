@@ -9,10 +9,10 @@ export const HeaderInstance = () => {
     <Header
       firstCol={<LinkedImage src={logoImage} className="logo" to="/" />}
       secondCol={[
-        <LinkButton to="/game" title="Game" key="1" />,
-        <LinkButton to="/story" title="Story" key="2" />,
-        <LinkButton to="/team" title="Team" key="3" />,
-        <LinkButton to="/test" title="Test" key="4" />,
+        <LinkButton to="/game" label="Game" key="1" className="tab" />,
+        <LinkButton to="/story" label="Story" key="2" className="tab" />,
+        <LinkButton to="/team" label="Team" key="3" className="tab" />,
+        <LinkButton to="/test" label="Test" key="4" className="tab" />,
       ]}
       thirdCol={
         <Button

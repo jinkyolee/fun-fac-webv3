@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box } from "../../atoms/Box/Box";
 import { Text } from "../../atoms/Text/Text";
 import Image from "../../atoms/ImageComp/ImageComp";
 import Choice from "./Choice";
 import { testLogo } from "../../../images/0_images";
-
-// TODO: Find a way so that when progress is finished the rendered component changes from InProgress to Result
-// !!!!! FINISHED !!!!!
 
 export const InProgress = ({ setResult }) => {
   const [progress, setProgress] = useState(0);
@@ -29,6 +26,7 @@ export const InProgress = ({ setResult }) => {
 
   const choiceProps = {
     0: [
+      { question: "질문 1" },
       {
         choiceText: "Choice 1",
         increaseFunc: () => {
@@ -43,10 +41,10 @@ export const InProgress = ({ setResult }) => {
       },
     ],
     1: [
+      { question: "질문 2" },
       {
         choiceText: "Choice 3",
         increaseFunc: () => {
-          console.log(points);
           increasePoints(["gyeong", "duk"]);
           setResult(points.current);
         },
@@ -65,17 +63,17 @@ export const InProgress = ({ setResult }) => {
     <Box className="vertical-flex centered this" style={{ marginTop: "100px" }}>
       <Text>Progress Bar</Text>
       <Text className="sub-heading bold" style={{ marginTop: "75px" }}>
-        질문 텍스트
+        {choiceProps[progress][0].question}
       </Text>
       <Choice
         style={{ marginTop: "90px" }}
-        label={choiceProps[progress][0].choiceText}
-        onClick={() => choiceProps[progress][0].increaseFunc()}
+        label={choiceProps[progress][1].choiceText}
+        onClick={() => choiceProps[progress][1].increaseFunc()}
       />
       <Choice
         style={{ marginTop: "40px" }}
-        label={choiceProps[progress][1].choiceText}
-        onClick={() => choiceProps[progress][1].increaseFunc()}
+        label={choiceProps[progress][2].choiceText}
+        onClick={() => choiceProps[progress][2].increaseFunc()}
       />
       <Image src={testLogo} className="mediumW" style={{ marginTop: "60px" }} />
     </Box>
