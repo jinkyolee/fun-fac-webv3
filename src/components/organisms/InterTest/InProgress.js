@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Box } from "../../atoms/Box/Box";
 import { Text } from "../../atoms/Text/Text";
 import Image from "../../atoms/ImageComp/ImageComp";
-import Choice from "./Choice";
+import Choice from "../../molecules/InterTest/Choice";
 import { testLogo } from "../../../images/0_images";
 
 export const InProgress = ({ setResult }) => {

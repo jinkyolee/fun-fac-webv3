@@ -9,6 +9,7 @@ import profile from "./profile.png";
 import testLogo from "./test-logo.png";
 import testIllust from "./test-illust.png";
 import resultImage from "./result-image.png";
+import chapterImage from "./chapter-img.png";
 
 export {
   content1,
@@ -22,4 +23,5 @@ export {
   testLogo,
   testIllust,
   resultImage,
+  chapterImage,
 };

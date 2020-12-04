@@ -1,0 +1,20 @@
+.chapter {
+  width: 200px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.chapter:first-child {
+  margin-left: 0;
+}
+
+.chapter:nth-child(4n) {
+  margin-left: 0;
+}
+
+.chapter-container {
+  justify-content: center;
+  width: 800px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
