@@ -4,7 +4,11 @@ import "./Chapter.css";
 
 export const Chapter = ({ chapter, imgSrc }) => {
   return (
-    <LinkedImage className="chapter" src={imgSrc} to={`./story/${chapter}`} />
+    <LinkedImage
+      className="chapter"
+      src={imgSrc}
+      to={`/story/chapter?id=${chapter}`}
+    />
   );
 };
 

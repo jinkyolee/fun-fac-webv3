@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../organisms/Header/Header";
-import { logoImage } from "../../images/0_images";
+import { logoImage } from "../../assets/images/0_images";
 import { LinkedImage } from "../atoms/ImageComp/ImageComp";
 import { Button, LinkButton } from "../atoms/Button/Button";
 

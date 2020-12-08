@@ -16,7 +16,7 @@ function App() {
         <Route path="/team" component={AboutTeam} />
         <Route path="/test" component={InteractiveTest} />
         <Route path="/story" exact component={StoryMain} />
-        <Route path="/story/" component={StoryBook} />
+        <Route path="/story/chapter" component={StoryBook} />
       </Switch>
     </BrowserRouter>
   );

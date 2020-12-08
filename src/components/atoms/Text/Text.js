@@ -1,11 +1,11 @@
 import React from "react";
 import "./Text.css";
 
-export const Text = ({ className, children, style }) => {
+export const Text = ({ className, children, style, Type = "span" }) => {
   return (
-    <span className={`text ${className}`} style={style}>
+    <Type className={`text ${className}`} style={style}>
       {children}
-    </span>
+    </Type>
   );
 };
 
