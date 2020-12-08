@@ -5,15 +5,8 @@ import { Image } from "../components/atoms/ImageComp/ImageComp";
 import { Text } from "../components/atoms/Text/Text";
 import { PersonItem } from "../components/molecules/PersonItem/PersonItem";
 import StandardPage from "../components/templates/StandardPage";
-import { teamLogo, profile } from "../images/0_images";
-
-const profileProps = [
-  { name: "홍길동", imageSrc: profile, job: "웹 UX, UI 디자인" },
-  { name: "김길동", imageSrc: profile, job: "웹 개발자" },
-  { name: "박길동", imageSrc: profile, job: "iOS 개발자" },
-  { name: "최길동", imageSrc: profile, job: "iOS 개발자" },
-  { name: "이길동", imageSrc: profile, job: "웹 UX, UI 디자인" },
-];
+import { teamLogo } from "../assets/images/0_images";
+import profileProps from "../constants/profile";
 
 export const AboutTeam = () => {
   return (

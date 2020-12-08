@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "../../atoms/Box/Box";
 import { Button } from "../../atoms/Button/Button";
 import { Image } from "../../atoms/ImageComp/ImageComp";
-import { testLogo, testIllust } from "../../../images/0_images";
+import { testLogo, testIllust } from "../../../assets/images/0_images";
 
 export const Pending = ({ setTestState }) => {
   return (

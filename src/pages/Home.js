@@ -1,7 +1,12 @@
 import React from "react";
 import { FooterPage } from "../components/templates/FooterPage";
 import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
-import { logoImage, content1, content2, content3 } from "../images/0_images";
+import {
+  logoImage,
+  content1,
+  content2,
+  content3,
+} from "../assets/images/0_images";
 import { LinkedImage } from "../components/atoms/ImageComp/ImageComp";
 import { ContentView } from "../components/molecules/ContentView/ContentView";
 import { Text } from "../components/atoms/Text/Text";

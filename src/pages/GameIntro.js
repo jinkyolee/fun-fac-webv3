@@ -1,5 +1,5 @@
 import React from "react";
-import { gameIcon, storeLink } from "../images/0_images";
+import { gameIcon, storeLink } from "../assets/images/0_images";
 import StandardPage from "../components/templates/StandardPage";
 import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
 import { Image, LinkedImage } from "../components/atoms/ImageComp/ImageComp";

@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "../../atoms/Box/Box";
 import Image from "../../atoms/ImageComp/ImageComp";
-import { resultImage } from "../../../images/0_images";
+import { resultImage } from "../../../assets/images/0_images";
 import Text from "../../atoms/Text/Text";
 import { LinkButton } from "../../atoms/Button/Button";
 import setResultContent from "../../../functions/local/setResultContent";
