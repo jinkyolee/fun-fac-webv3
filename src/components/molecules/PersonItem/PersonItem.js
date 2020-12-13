@@ -7,13 +7,16 @@ import "./PersonItem.css";
 export const PersonItem = ({ name, imageSrc, job }) => {
   return (
     <Box className="vertical-flex align-center profile">
-      <Image src={imageSrc} className="medium round" alt={name} />
-      <Text className="bold" style={{ fontSize: "15px", marginTop: "20px" }}>
+      <Image
+        src={imageSrc}
+        className="round"
+        style={{ width: "125px" }}
+        alt={name}
+      />
+      <Text className="body bold" style={{ marginTop: "20px" }}>
         {name}
       </Text>
-      <Text className="body" style={{ marginTop: "10px" }}>
-        {job}
-      </Text>
+      <Text style={{ marginTop: "10px", fontSize: "10px" }}>{job}</Text>
     </Box>
   );
 };

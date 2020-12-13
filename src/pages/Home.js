@@ -43,7 +43,7 @@ export const Home = () => {
         <Footer
           rows={[
             <Text type="body" text="문의 및 연락처 택스트" />,
-            <LinkedImage src={logoImage} className="" />,
+            <LinkedImage src={logoImage} className="footer-image" />,
           ]}
         />
       }

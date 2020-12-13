@@ -17,23 +17,33 @@ export const Result = ({ score }) => {
       style={{ marginTop: "120px", marginBottom: "50px" }}
     >
       <Image src={resultImage} className="mediumW" alt="" />
-      <Text className="sub-heading bold" style={{ marginTop: "20px" }}>
+      <Text className="body bold" style={{ marginTop: "20px" }}>
         {title}
       </Text>
-      <Text className="sub-body" style={{ marginTop: "40px", width: "250px" }}>
+      <Text style={{ marginTop: "40px", width: "250px", fontSize: "10px" }}>
         {body}
       </Text>
       <LinkButton
         to="/"
         label="다른 궁도 더 알아보기"
-        className="medium"
-        style={{ marginTop: "50px" }}
+        style={{
+          marginTop: "50px",
+          width: "190px",
+          height: "40px",
+          lineHeight: "40px",
+          fontSize: "10px",
+        }}
       />
       <LinkButton
         to="/all-types"
         label="전체 유형 보기"
-        className="medium"
-        style={{ marginTop: "20px" }}
+        style={{
+          marginTop: "20px",
+          width: "190px",
+          height: "40px",
+          lineHeight: "40px",
+          fontSize: "10px",
+        }}
       />
     </Box>
   );

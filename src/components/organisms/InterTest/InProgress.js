@@ -61,20 +61,20 @@ export const InProgress = ({ setResult }) => {
   return (
     <Box className="vertical-flex centered this" style={{ marginTop: "100px" }}>
       <Text>Progress Bar</Text>
-      <Text className="sub-heading bold" style={{ marginTop: "75px" }}>
+      <Text className="bold" style={{ marginTop: "75px", fontSize: "20px" }}>
         {choiceProps[progress][0].question}
       </Text>
       <Choice
-        style={{ marginTop: "90px" }}
+        style={{ marginTop: "60px" }}
         label={choiceProps[progress][1].choiceText}
         onClick={() => choiceProps[progress][1].increaseFunc()}
       />
       <Choice
-        style={{ marginTop: "40px" }}
+        style={{ marginTop: "25px" }}
         label={choiceProps[progress][2].choiceText}
         onClick={() => choiceProps[progress][2].increaseFunc()}
       />
-      <Image src={testLogo} className="mediumW" style={{ marginTop: "60px" }} />
+      <Image src={testLogo} style={{ marginTop: "100px", width: "135px" }} />
     </Box>
   );
 };

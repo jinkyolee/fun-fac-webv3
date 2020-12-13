@@ -13,7 +13,7 @@ export const Choice = ({
       onClick={() => {
         onClick();
       }}
-      style={style}
+      style={{ ...style, width: "200px", height: "60px" }}
     />
   );
 };

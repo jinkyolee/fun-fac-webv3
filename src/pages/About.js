@@ -18,14 +18,14 @@ export const AboutTeam = () => {
           <Box className="vertical-flex align-center">
             <Image src={teamLogo} className="mediumW" />
             <Text
-              className="sub-heading bold centered"
-              style={{ marginTop: "30px" }}
+              className="bold centered"
+              style={{ marginTop: "25px", fontSize: "22px" }}
             >
               제목 텍스트
             </Text>
             <Text
-              className="body centered"
-              style={{ width: "600px", marginTop: "30px" }}
+              className="centered"
+              style={{ width: "600px", marginTop: "30px", fontSize: "10px" }}
             >
               팀 소개 텍스트 박스. 뻔히팩토리가 활동하는 이유를 이야기합니다.
               다음은 대체 텍스트입니다. 훈장등의 영전은 이를 받은 자에게만
@@ -35,8 +35,13 @@ export const AboutTeam = () => {
             </Text>
           </Box>
           <Box className="vertical-flex" style={{ marginTop: "70px" }}>
-            <Text className="sub-heading bold centered">제목 텍스트</Text>
-            <Text className="body centered" style={{ marginTop: "30px" }}>
+            <Text className="bold centered" style={{ fontSize: "22px" }}>
+              제목 텍스트
+            </Text>
+            <Text
+              className="body centered"
+              style={{ marginTop: "30px", fontSize: "10px" }}
+            >
               팀원 한 줄 소개 텍스트. 뻔히팩토리 팀이 어디서 시작되었는지
               간략하게 소개합니다.
             </Text>

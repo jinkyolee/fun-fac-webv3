@@ -1,6 +1,6 @@
 .chapter {
-  width: 200px;
-  margin-left: 50px;
+  width: 253px;
+  margin-left: 100px;
   margin-bottom: 100px;
   filter: grayscale(100%);
 }
@@ -19,7 +19,7 @@
 
 .chapter-container {
   justify-content: center;
-  width: 800px;
+  width: 1000px;
   margin-top: 50px;
   flex-wrap: wrap;
 }
