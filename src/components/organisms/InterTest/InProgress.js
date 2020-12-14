@@ -4,6 +4,7 @@ import { Text } from "../../atoms/Text/Text";
 import Image from "../../atoms/ImageComp/ImageComp";
 import Choice from "../../molecules/InterTest/Choice";
 import { testLogo } from "../../../assets/images/0_images";
+import ProgressBar from "../../molecules/ProgressBar/ProgressBar";
 
 export const InProgress = ({ setResult }) => {
   const [progress, setProgress] = useState(0);
@@ -60,7 +61,7 @@ export const InProgress = ({ setResult }) => {
 
   return (
     <Box className="vertical-flex centered this" style={{ marginTop: "100px" }}>
-      <Text>Progress Bar</Text>
+      <ProgressBar total={2} current={progress} />
       <Text className="sub-heading bold" style={{ marginTop: "75px" }}>
         {choiceProps[progress][0].question}
       </Text>
