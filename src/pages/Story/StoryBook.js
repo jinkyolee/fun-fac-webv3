@@ -23,14 +23,12 @@ export const StoryBook = () => {
 
       for (let i = 0; i < pTexts.length; i++) {
         if (searchParams.includes(pTexts[i].innerText)) {
-          const style = document.createElement("style");
-          style.textContent = `.${pTexts[i].classList[0]} { font-size: 14px !important; }`;
-          iframe.contentDocument.head.appendChild(style);
+          console.log(pTexts[i].classList[0]);
+          pTexts[
+            i
+          ].style = `.${pTexts[i].classList[0]} { font-size: 14px !important; }`;
         } else if (pTexts[i].innerText === "악야") {
-          const style = document.createElement("style");
-          style.textContent = `.p4 { font-size: 40px !important; }`;
           pTexts[i].style = "font-size: 40px !important;";
-          // iframe.contentDocument.head.appendChild(style);
         }
       }
       try {
