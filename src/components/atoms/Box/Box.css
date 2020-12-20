@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.box.justify-center {
+  justify-content: center;
+}
+
 .centered {
   justify-content: center;
   align-items: center;
@@ -27,4 +31,8 @@
 .full {
   height: 100%;
   width: 100%;
+}
+
+.box.circle {
+  border-radius: 50%;
 }

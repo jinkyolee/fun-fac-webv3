@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Box } from "../../atoms/Box/Box";
 import { Text } from "../../atoms/Text/Text";
-import Image from "../../atoms/ImageComp/ImageComp";
+import Image from "../../atoms/Image/Image";
 import Choice from "../../molecules/InterTest/Choice";
 import { testLogo } from "../../../assets/images/0_images";
-import ProgressBar from "../../molecules/ProgressBar/ProgressBar";
+import ProgressBar from "../../molecules/InterTest/ProgressBar/ProgressBar";
 
 export const InProgress = ({ setResult }) => {
   const [progress, setProgress] = useState(0);

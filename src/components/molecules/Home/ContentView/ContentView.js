@@ -1,7 +1,7 @@
 import React from "react";
-import { Box } from "../../atoms/Box/Box";
-import { LinkedImage } from "../../atoms/ImageComp/ImageComp";
-import { Text } from "../../atoms/Text/Text";
+import { Box } from "../../../atoms/Box/Box";
+import { LinkedImage } from "../../../atoms/Image/Image";
+import { Text } from "../../../atoms/Text/Text";
 import "./ContentView.css";
 
 export const ContentView = ({ imgSrc, to, title, description }) => {

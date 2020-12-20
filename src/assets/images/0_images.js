@@ -14,6 +14,11 @@ import chapterImage2 from "./chapter-img2.png";
 import chapterImage3 from "./chapter-img3.png";
 import chapterImage4 from "./chapter-img4.png";
 import chapterImage5 from "./chapter-img5.png";
+import changduk from "./changdeok.png";
+import changgyeong from "./changgyeong.png";
+import duksoo from "./duksoo.png";
+import gyeonghui from "./gyeonghui.png";
+import gyeongbok from "./gyeongbok.png";
 
 export {
   content1,
@@ -32,4 +37,9 @@ export {
   chapterImage3,
   chapterImage4,
   chapterImage5,
+  changduk,
+  changgyeong,
+  duksoo,
+  gyeonghui,
+  gyeongbok,
 };

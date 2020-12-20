@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "../../atoms/Box/Box";
-import Image from "../../atoms/ImageComp/ImageComp";
+import Image from "../../atoms/Image/Image";
 import { resultImage } from "../../../assets/images/0_images";
 import Text from "../../atoms/Text/Text";
 import { LinkButton } from "../../atoms/Button/Button";

@@ -1,0 +1,12 @@
+.palace-timeline {
+  margin-top: 80px;
+}
+
+.palace-timeline:first-child {
+  margin: 0;
+}
+
+.timeline-img {
+  width: 130px;
+  margin-right: 70px;
+}

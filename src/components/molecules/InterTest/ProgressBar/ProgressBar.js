@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "../../atoms/Box/Box";
+import Box from "../../../atoms/Box/Box";
 import "./ProgressBar.css";
 
 export const ProgressBar = ({ total, current }) => {

@@ -7,8 +7,8 @@ import {
   content2,
   content3,
 } from "../assets/images/0_images";
-import { LinkedImage } from "../components/atoms/ImageComp/ImageComp";
-import { ContentView } from "../components/molecules/ContentView/ContentView";
+import { LinkedImage } from "../components/atoms/Image/Image";
+import { ContentView } from "../components/molecules/Home/ContentView/ContentView";
 import { Text } from "../components/atoms/Text/Text";
 import { Footer } from "../components/organisms/Footer/Footer";
 

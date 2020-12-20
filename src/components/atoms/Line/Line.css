@@ -1,0 +1,15 @@
+.line {
+  display: block;
+  width: 500px;
+  height: 3px;
+  background-color: #2f2f2f;
+  align-items: center;
+}
+
+.line.large {
+  width: 915px;
+}
+
+.line.vertical {
+  transform: rotate(90deg);
+}

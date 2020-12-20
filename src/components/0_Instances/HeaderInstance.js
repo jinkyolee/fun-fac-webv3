@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../organisms/Header/Header";
 import { logoImage } from "../../assets/images/0_images";
-import { LinkedImage } from "../atoms/ImageComp/ImageComp";
+import { LinkedImage } from "../atoms/Image/Image";
 import { Button, LinkButton } from "../atoms/Button/Button";
 
 export const HeaderInstance = () => {
@@ -13,6 +13,7 @@ export const HeaderInstance = () => {
         <LinkButton to="/story" label="Story" key="2" className="tab" />,
         <LinkButton to="/team" label="Team" key="3" className="tab" />,
         <LinkButton to="/test" label="Test" key="4" className="tab" />,
+        <LinkButton to="/timeline" label="Timeline" key="5" className="tab" />,
       ]}
       thirdCol={
         <Button

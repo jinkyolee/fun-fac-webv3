@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImageComp.css";
+import "./Image.css";
 
 export const LinkedImage = ({ src, className = "", to, style, alt = "" }) => {
   return (
