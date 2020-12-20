@@ -1,0 +1,64 @@
+.event-container {
+  position: absolute;
+}
+
+.event-item {
+  position: relative;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #2f2f2f;
+  background-color: #f2f2f2;
+  z-index: 1000;
+}
+
+.event-mask {
+  width: 13px;
+  height: 13px;
+  background-color: #f2f2f2;
+  z-index: 1000;
+}
+
+.event-date {
+  position: absolute;
+  text-align: center;
+  font-size: 13px;
+  width: 30px;
+  left: -7.5px;
+  top: -20px;
+}
+
+.event-date.top {
+  top: -55px;
+}
+
+.event-date.vertical {
+  position: static;
+}
+
+.event-text {
+  position: absolute;
+  text-align: center;
+  font-size: 13px;
+  line-height: 13px;
+  width: 95px;
+  left: -40px;
+  top: 20px;
+}
+
+.event-text.top {
+  top: -35px;
+}
+
+.event-text.vertical {
+  position: static;
+}
+
+.event-textbox {
+  position: absolute;
+}
+
+.event-line {
+  position: absolute;
+  height: 1px;
+}

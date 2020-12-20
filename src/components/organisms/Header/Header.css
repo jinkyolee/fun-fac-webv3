@@ -9,7 +9,7 @@
   align-items: center;
   border-bottom: 0.3px solid #2f2f2f;
   background-color: #ffffff;
-  z-index: 1000;
+  z-index: 100000;
 }
 
 .column:first-child {
