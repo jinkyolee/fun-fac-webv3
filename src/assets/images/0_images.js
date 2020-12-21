@@ -19,6 +19,7 @@ import changgyeong from "./changgyeong.png";
 import duksoo from "./duksoo.png";
 import gyeonghui from "./gyeonghui.png";
 import gyeongbok from "./gyeongbok.png";
+import sejong from "./sejong.png";
 
 export {
   content1,
@@ -42,4 +43,5 @@ export {
   duksoo,
   gyeonghui,
   gyeongbok,
+  sejong,
 };

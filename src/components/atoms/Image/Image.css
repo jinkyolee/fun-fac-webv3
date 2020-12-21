@@ -89,3 +89,11 @@
 .footer-image {
   height: 26px;
 }
+
+.image.person-image {
+  filter: grayscale(100%);
+}
+
+.image.person-image:hover {
+  filter: none;
+}

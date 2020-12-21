@@ -14,6 +14,12 @@ export const HeaderInstance = () => {
         <LinkButton to="/team" label="Team" key="3" className="tab" />,
         <LinkButton to="/test" label="Test" key="4" className="tab" />,
         <LinkButton to="/timeline" label="Timeline" key="5" className="tab" />,
+        <LinkButton
+          to="/persons/sejong"
+          label="Sejong"
+          key="6"
+          className="tab"
+        />,
       ]}
       thirdCol={
         <Button

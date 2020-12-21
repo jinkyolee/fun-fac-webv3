@@ -7,6 +7,7 @@ import InteractiveTest from "./pages/InterTest";
 import StoryMain from "./pages/Story/StoryMain";
 import StoryBook from "./pages/Story/StoryBook";
 import TimelinePage from "./pages/TimelinePage";
+import PersonPage from "./pages/Person";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/story" exact component={StoryMain} />
         <Route path="/story/chapter" component={StoryBook} />
         <Route path="/timeline" component={TimelinePage} />
+        <Route path="/persons/sejong" component={PersonPage} />
       </Switch>
     </BrowserRouter>
   );
