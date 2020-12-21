@@ -161,7 +161,7 @@ const palaceEvents = [
       {
         style: {
           type: "Vertical",
-          props: { dir: "bottom", height: "32.5px", width: "20px" },
+          props: { dir: "bottom", height: "32.5px", width: "27px" },
         },
         date: 1905,
         eventName: "수옥헌에서 을사늑약 체결",

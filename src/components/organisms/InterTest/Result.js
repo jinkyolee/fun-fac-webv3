@@ -9,8 +9,6 @@ import setResultContent from "../../../functions/local/setResultContent";
 export const Result = ({ score }) => {
   const { body, title } = setResultContent(score);
 
-  console.log(`${body}`);
-
   return (
     <Box
       className="vertical-flex centered"
