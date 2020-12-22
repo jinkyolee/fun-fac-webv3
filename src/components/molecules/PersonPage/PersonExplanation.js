@@ -7,9 +7,7 @@ export const PersonExplanation = ({ title, body }) => {
   return (
     <Box className="exp-container vertical-flex">
       <Text className="person-exp title">{title}</Text>
-      <Text className="person-exp" Type="pre">
-        {body}
-      </Text>
+      <Text className="person-exp">{body}</Text>
     </Box>
   );
 };
