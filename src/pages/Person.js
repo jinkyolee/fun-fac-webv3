@@ -28,9 +28,14 @@ export const PersonPage = () => {
             </Text>
           </Box>
           <Image
-            className="mediumW person-image"
+            className="person-image"
             src={sejong}
-            style={{ position: "absolute", right: "30px", top: "70px" }}
+            style={{
+              position: "absolute",
+              right: "30px",
+              top: "70px",
+              width: "185px",
+            }}
           />
           <Box
             className="vertical-flex"
