@@ -10,11 +10,11 @@ export const Event = ({ currentEvent, prevEvent = { date: 1395 } }) => {
   let eventTemp;
 
   if (date - prevDate < 5 && date !== 1395) {
-    eventDate = (prevDate - 1385) * 1.5 + 5;
+    eventDate = (prevDate - 1385) * 1.55 + 5;
   } else if (date - prevDate < 10 && date !== 1395) {
-    eventDate = (prevDate - 1385) * 1.5;
+    eventDate = (prevDate - 1385) * 1.55;
   } else {
-    eventDate = (date - 1395) * 1.5;
+    eventDate = (date - 1395) * 1.55;
   }
 
   if (type === "Vertical") {

@@ -8,9 +8,7 @@ export const BasicEvent = ({ eventDate, date, eventName }) => {
     <Box className="event-container" style={{ left: eventDate }}>
       <Box className="event-item circle">
         <Text className="event-date">{date}</Text>
-        <Text Type="pre" className="event-text">
-          {eventName}
-        </Text>
+        <Text className="event-text">{eventName}</Text>
       </Box>
     </Box>
   );
@@ -21,9 +19,7 @@ export const TopEvent = ({ eventDate, date, eventName }) => {
     <Box className="event-container" style={{ left: eventDate }}>
       <Box className="event-item circle">
         <Text className="event-date top">{date}</Text>
-        <Text Type="pre" className="event-text top">
-          {eventName}
-        </Text>
+        <Text className="event-text top">{eventName}</Text>
       </Box>
     </Box>
   );
@@ -45,7 +41,6 @@ export const VerticalEvent = ({ eventDate, date, eventName, styleProps }) => {
             }}
           />
         )}
-
         {lineWidth && (
           <Line
             className="event-line"
