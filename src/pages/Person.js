@@ -11,10 +11,10 @@ import PersonExplanation from "../components/molecules/PersonPage/PersonExplanat
 export const PersonPage = () => {
   return (
     <StandardPage
-      className="full"
+      className="fullW"
       header={<Header />}
       body={
-        <Box className="vertical-flex full align-center">
+        <Box className="vertical-flex fullW align-center">
           <Box className="vertical-flex align-center">
             <Text
               className="super-bold"
@@ -36,7 +36,7 @@ export const PersonPage = () => {
             className="vertical-flex"
             style={{
               width: "750px",
-              marginTop: "160px",
+              marginTop: "140px",
             }}
           >
             {sejongData.map(({ title, body }, index) => {

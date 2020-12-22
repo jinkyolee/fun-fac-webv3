@@ -52,6 +52,7 @@
 
 .event-text.vertical {
   position: static;
+  width: 110px !important;
 }
 
 .event-textbox {

@@ -8,7 +8,9 @@ export const BasicEvent = ({ eventDate, date, eventName }) => {
     <Box className="event-container" style={{ left: eventDate }}>
       <Box className="event-item circle">
         <Text className="event-date">{date}</Text>
-        <Text className="event-text">{eventName}</Text>
+        <Text className="event-text" Type="pre">
+          {eventName}
+        </Text>
       </Box>
     </Box>
   );
@@ -54,7 +56,7 @@ export const VerticalEvent = ({ eventDate, date, eventName, styleProps }) => {
         <Box
           className="event-textbox vertical-flex align-center"
           style={{
-            [styleProps.dir]: `calc(-${styleProps.height} - 25px)`,
+            [styleProps.dir]: `calc(-${styleProps.height} - 20px)`,
             left: `calc(${styleProps.width} + 10px )`,
           }}
         >

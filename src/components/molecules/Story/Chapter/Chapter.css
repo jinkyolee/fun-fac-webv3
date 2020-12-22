@@ -1,8 +1,10 @@
 .chapter {
   width: 200px;
+  height: 261px;
   margin-left: 50px;
   margin-bottom: 100px;
   filter: grayscale(100%);
+  object-fit: cover;
 }
 
 .chapter:hover {

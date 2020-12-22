@@ -180,7 +180,7 @@ const palaceEvents = [
           props: { dir: "top", height: "32.5px", width: "12px" },
         },
         date: 1933,
-        eventName: "덕수궁을 공원으로 개조하여 일반에 공개 ",
+        eventName: "덕수궁을 공원으로 개조하여 일반에 공개",
       },
     ],
   },

@@ -5,7 +5,7 @@ import "./PersonExplanation.css";
 
 export const PersonExplanation = ({ title, body }) => {
   return (
-    <Box className="exp-container vertical-flex">
+    <Box className="exp-container">
       <Text className="person-exp title">{title}</Text>
       <Text className="person-exp">{body}</Text>
     </Box>

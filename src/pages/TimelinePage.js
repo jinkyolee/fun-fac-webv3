@@ -17,8 +17,14 @@ export const Timelines = () => {
           style={{ marginTop: "135px", marginBottom: "190px" }}
         >
           <Text className="heading centered" style={{ marginBottom: "60px" }}>
-            우리가 <Text className="super-bold">경복궁</Text>과 함께한 시간{" "}
-            <Text className="super-bold">625년</Text>
+            우리가{" "}
+            <Text Type="span" className="super-bold">
+              경복궁
+            </Text>
+            과 함께한 시간{" "}
+            <Text Type="span" className="super-bold">
+              625년
+            </Text>
           </Text>
           {palaceEvents.map(({ image, events }, index) => {
             return <PalaceTimeline img={image} events={events} key={index} />;
