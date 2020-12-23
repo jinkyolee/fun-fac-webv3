@@ -4,6 +4,10 @@
   color: #2f2f2f;
 }
 
+.btn:focus {
+  outline: none !important;
+}
+
 .btn.big {
   height: 70px;
   width: 280px;
@@ -22,6 +26,7 @@
 
 .lang-btn {
   height: 26px;
+  width: 56px;
   border-radius: 10px;
   line-height: 26px;
 }
@@ -36,4 +41,5 @@
 
 .link-btn.tab {
   margin-right: 30px;
+  width: 61px;
 }
