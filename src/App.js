@@ -1,4 +1,5 @@
 import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AboutTeam from "./pages/About";
