@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . /app
 
-CMD [ "npm", "build" ]
+RUN npm run build
+
+CMD [ "server", "-s", "build" ]
