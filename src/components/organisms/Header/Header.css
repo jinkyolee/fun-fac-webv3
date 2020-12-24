@@ -3,11 +3,10 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.3px solid #2f2f2f;
   background-color: #ffffff;
   z-index: 100000;
 }

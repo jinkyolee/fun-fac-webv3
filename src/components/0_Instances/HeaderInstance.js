@@ -8,48 +8,55 @@ import { languageState } from "../../recoil/atoms";
 
 export const HeaderInstance = () => {
   const [language, setLanguage] = useRecoilState(languageState);
+  const tabs = [
+    <LinkButton
+      to="/game"
+      label={language === "kr" ? "게임" : "Game"}
+      key="1"
+      className="tab"
+    />,
+    <LinkButton
+      to="/story"
+      label={language === "kr" ? "스토리" : "Story"}
+      key="2"
+      className="tab"
+    />,
+    <LinkButton
+      to="/team"
+      label={language === "kr" ? "팀" : "Team"}
+      key="3"
+      className="tab"
+    />,
+    <LinkButton
+      to="/test"
+      label={language === "kr" ? "테스트" : "Test"}
+      key="4"
+      className="tab"
+    />,
+    <LinkButton
+      to="/timeline"
+      label={language === "kr" ? "타임라인" : "Timeline"}
+      key="5"
+      className="tab"
+    />,
+    <LinkButton
+      to="/persons/sejong"
+      label={language === "kr" ? "세종" : "Sejong"}
+      key="6"
+      className="tab"
+    />,
+    <LinkButton
+      to="/community"
+      label={language === "kr" ? "커뮤니티" : "Forum"}
+      key="7"
+      className="tab"
+    />,
+  ];
 
   return (
     <Header
       firstCol={<LinkedImage src={logoImage} className="logo" to="/" />}
-      secondCol={[
-        <LinkButton
-          to="/game"
-          label={language === "kr" ? "게임" : "Game"}
-          key="1"
-          className="tab"
-        />,
-        <LinkButton
-          to="/story"
-          label={language === "kr" ? "스토리" : "Story"}
-          key="2"
-          className="tab"
-        />,
-        <LinkButton
-          to="/team"
-          label={language === "kr" ? "팀" : "Team"}
-          key="3"
-          className="tab"
-        />,
-        <LinkButton
-          to="/test"
-          label={language === "kr" ? "테스트" : "Test"}
-          key="4"
-          className="tab"
-        />,
-        <LinkButton
-          to="/timeline"
-          label={language === "kr" ? "타임라인" : "Timeline"}
-          key="5"
-          className="tab"
-        />,
-        <LinkButton
-          to="/persons/sejong"
-          label={language === "kr" ? "세종" : "Sejong"}
-          key="6"
-          className="tab"
-        />,
-      ]}
+      secondCol={tabs}
       thirdCol={
         <Button
           onClick={(e) => {

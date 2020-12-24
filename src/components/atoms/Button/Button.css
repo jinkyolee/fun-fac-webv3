@@ -26,9 +26,12 @@
 
 .lang-btn {
   height: 26px;
-  width: 56px;
+  width: 85px;
+  border: 1px solid #00249c;
   border-radius: 10px;
-  line-height: 26px;
+  background-color: transparent;
+  color: #00249c;
+  font-size: 12px;
 }
 
 .link-btn {
@@ -42,4 +45,6 @@
 .link-btn.tab {
   margin-right: 30px;
   width: 61px;
+  background-color: transparent;
+  color: #00249c;
 }
