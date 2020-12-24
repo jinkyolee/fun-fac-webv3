@@ -18,3 +18,16 @@ export const ebookURLState = selector({
     }
   },
 });
+
+export const fontState = selector({
+  key: "fontState",
+  get: ({ get }) => {
+    const language = get(languageState);
+
+    switch (language) {
+      case "kr":
+        return "'Noto Sans KR', sans-serif";
+      case "en":
+    }
+  },
+});
