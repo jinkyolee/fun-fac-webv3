@@ -20,7 +20,6 @@ import duksoo from "./duksoo.png";
 import gyeonghui from "./gyeonghui.png";
 import gyeongbok from "./gyeongbok.png";
 import sejong from "./sejong.png";
-import community from "./community.png";
 
 export {
   content1,
@@ -45,5 +44,4 @@ export {
   gyeonghui,
   gyeongbok,
   sejong,
-  community,
 };

@@ -9,9 +9,9 @@ import StoryMain from "./pages/Story/StoryMain";
 import StoryBook from "./pages/Story/StoryBook";
 import TimelinePage from "./pages/TimelinePage";
 import PersonPage from "./pages/Person";
-import Community from "./pages/Community";
-import { useRecoilValue } from "recoil";
-import { languageState } from "./recoil/atoms";
+import CommunityPage from "./pages/CommunityPage";
+// import { useRecoilValue } from "recoil";
+// import { languageState } from "./recoil/atoms";
 
 function App() {
   // const language = useRecoilValue(languageState);
@@ -30,7 +30,7 @@ function App() {
           <Route path="/story/chapter" component={StoryBook} />
           <Route path="/timeline" component={TimelinePage} />
           <Route path="/persons/sejong" component={PersonPage} />
-          <Route path="/community" component={Community} />
+          <Route path="/community" component={CommunityPage} />
         </Switch>
       </BrowserRouter>
     </RecoilRoot>

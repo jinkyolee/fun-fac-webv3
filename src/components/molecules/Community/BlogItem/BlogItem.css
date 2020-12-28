@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 325px;
+  height: 210px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  margin: 0 0 50px 50px;
+}
+
+.card .title-container {
+  display: flex;
+  align-items: baseline;
+  margin: 18px 0 10px 20px;
+}
+
+.card .item-title {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.card .item-user {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 5px;
+}
+
+.card .content-preview {
+  width: 280px;
+  font-size: 12px;
+  margin-left: 23px;
+  color: #808080;
+}
+
+.card .upload-date {
+  font-size: 10px;
+  margin-left: 23px;
+  color: #808080;
+  margin-top: 5px;
+}
