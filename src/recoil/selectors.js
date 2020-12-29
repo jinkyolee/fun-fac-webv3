@@ -28,6 +28,7 @@ export const fontState = selector({
       case "kr":
         return "'Noto Sans KR', sans-serif";
       case "en":
+        return "";
     }
   },
 });

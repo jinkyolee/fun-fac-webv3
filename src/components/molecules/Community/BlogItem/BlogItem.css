@@ -1,17 +1,22 @@
 .card {
-  position: relative;
   flex-direction: column;
-  border-radius: 10px;
+  position: relative;
   width: 325px;
   height: 210px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
   margin: 0 0 50px 50px;
+  background-color: #ffffff;
+}
+
+.card:nth-child(3n + 1) {
+  margin-left: 0;
 }
 
 .card .title-container {
   display: flex;
   align-items: baseline;
-  margin: 18px 0 10px 20px;
+  margin: 18px 0 10px 22px;
 }
 
 .card .item-title {
@@ -19,7 +24,7 @@
   font-weight: 500;
 }
 
-.card .item-user {
+.card .item-uploader {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
   margin-left: 5px;
@@ -33,8 +38,58 @@
 }
 
 .card .upload-date {
+  position: absolute;
   font-size: 10px;
-  margin-left: 23px;
+  left: 23px;
   color: #808080;
-  margin-top: 5px;
+  bottom: 10px;
+}
+
+.listItem {
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  height: 50px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.listItem:last-child {
+  margin-bottom: 0;
+}
+
+.listItem .column:first-child {
+  margin-left: 15px;
+}
+
+.listItem .column:last-child {
+  margin-right: 15px;
+}
+
+.listItem .item-title,
+.listItem .item-uploader,
+.listItem .divider,
+.listItem .upload-date {
+  line-height: 100%;
+  user-select: none;
+}
+
+.listItem .item-uploader,
+.listItem .upload-date {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.listItem .item-title:hover {
+  text-underline-offset: 2.5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  width: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
 }

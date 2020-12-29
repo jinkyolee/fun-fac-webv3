@@ -1,15 +1,20 @@
 .flair {
-  position: absolute;
   width: 50px;
   height: 20px;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .card .flair {
+  position: absolute;
   right: 20px;
   top: 18px;
+}
+
+.listItem .flair {
+  margin-right: 10px;
 }
 
 .flair.palace {

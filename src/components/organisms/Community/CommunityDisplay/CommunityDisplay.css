@@ -1,0 +1,10 @@
+.community-display {
+  flex-wrap: wrap;
+  width: 1075px;
+  height: 730px;
+  margin: 200px 0 100px 0;
+}
+
+.community-display.centered {
+  text-align: center;
+}

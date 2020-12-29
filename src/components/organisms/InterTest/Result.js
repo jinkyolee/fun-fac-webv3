@@ -4,7 +4,7 @@ import Image from "../../atoms/Image/Image";
 import { resultImage } from "../../../assets/images/0_images";
 import Text from "../../atoms/Text/Text";
 import { LinkButton } from "../../atoms/Button/Button";
-import setResultContent from "../../../functions/local/setResultContent";
+import setResultContent from "../../../functions/local/InterTest/setResultContent";
 
 export const Result = ({ score }) => {
   const { body, title } = setResultContent(score);
