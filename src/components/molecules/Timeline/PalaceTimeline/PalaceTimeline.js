@@ -1,6 +1,6 @@
 import React from "react";
-import Box from "../../../atoms/Box/Box";
-import Image from "../../../atoms/Image/Image";
+import Box from "components/atoms/Box/Box";
+import Image from "components/atoms/Image/Image";
 import Timeline from "../Timeline/Timeline";
 import "./PalaceTimeline.css";
 

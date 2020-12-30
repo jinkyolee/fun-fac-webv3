@@ -1,10 +1,10 @@
 import React from "react";
-import Box from "../../atoms/Box/Box";
-import Image from "../../atoms/Image/Image";
-import { resultImage } from "../../../assets/images/0_images";
-import Text from "../../atoms/Text/Text";
-import { LinkButton } from "../../atoms/Button/Button";
-import setResultContent from "../../../functions/local/InterTest/setResultContent";
+import Box from "components/atoms/Box/Box";
+import Image from "components/atoms/Image/Image";
+import { resultImage } from "assets/images/0_images";
+import Text from "components/atoms/Text/Text";
+import { LinkButton } from "components/atoms/Button/Button";
+import setResultContent from "functions/local/InterTest/setResultContent";
 
 export const Result = ({ score }) => {
   const { body, title } = setResultContent(score);

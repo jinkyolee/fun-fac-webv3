@@ -1,12 +1,12 @@
 import React from "react";
-import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
-import Box from "../components/atoms/Box/Box";
-import Image from "../components/atoms/Image/Image";
-import Text from "../components/atoms/Text/Text";
-import StandardPage from "../components/templates/StandardPage";
-import sejongData from "../constants/personData";
-import { sejong } from "../assets/images/0_images";
-import PersonExplanation from "../components/molecules/PersonPage/PersonExplanation";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
+import Box from "components/atoms/Box/Box";
+import Image from "components/atoms/Image/Image";
+import Text from "components/atoms/Text/Text";
+import StandardPage from "components/templates/StandardPage";
+import sejongData from "constants/personData";
+import { sejong } from "assets/images/0_images";
+import PersonExplanation from "components/molecules/PersonPage/PersonExplanation";
 
 export const PersonPage = () => {
   return (

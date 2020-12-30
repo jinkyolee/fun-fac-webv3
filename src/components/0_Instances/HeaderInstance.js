@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../organisms/Header/Header";
-import { logoImage } from "../../assets/images/0_images";
-import { LinkedImage } from "../atoms/Image/Image";
-import { Button, LinkButton } from "../atoms/Button/Button";
+import Header from "components/molecules/Header/Header";
+import { logoImage } from "assets/images/0_images";
+import { LinkedImage } from "components/atoms/Image/Image";
+import { Button, LinkButton } from "components/atoms/Button/Button";
 import { useRecoilState } from "recoil";
-import { languageState } from "../../recoil/atoms";
+import { languageState } from "recoil/atoms";
 
 export const HeaderInstance = () => {
   const [language, setLanguage] = useRecoilState(languageState);
@@ -49,6 +49,18 @@ export const HeaderInstance = () => {
       to="/community"
       label={language === "kr" ? "커뮤니티" : "Forum"}
       key="7"
+      className="tab"
+    />,
+    <LinkButton
+      to="/login"
+      label={language === "kr" ? "회가" : "Signup"}
+      key="8"
+      className="tab"
+    />,
+    <LinkButton
+      to="/signup"
+      label={language === "kr" ? "로그" : "Login"}
+      key="9"
       className="tab"
     />,
   ];

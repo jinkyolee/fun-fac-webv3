@@ -1,16 +1,16 @@
 import React from "react";
-import { FooterPage } from "../components/templates/FooterPage";
-import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
+import { FooterPage } from "components/templates/FooterPage";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
 import {
   logoImage,
   content1,
   content2,
   content3,
-} from "../assets/images/0_images";
-import { LinkedImage } from "../components/atoms/Image/Image";
-import { ContentView } from "../components/molecules/Home/ContentView/ContentView";
-import { Text } from "../components/atoms/Text/Text";
-import { Footer } from "../components/organisms/Footer/Footer";
+} from "assets/images/0_images";
+import { LinkedImage } from "components/atoms/Image/Image";
+import { ContentView } from "components/molecules/Home/ContentView/ContentView";
+import { Text } from "components/atoms/Text/Text";
+import { Footer } from "components/molecules/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -43,7 +43,7 @@ export const Home = () => {
         <Footer
           rows={[
             <Text type="body" text="문의 및 연락처 택스트" />,
-            <LinkedImage src={logoImage} className="" />,
+            <LinkedImage src={logoImage} className="footer-image" />,
           ]}
         />
       }

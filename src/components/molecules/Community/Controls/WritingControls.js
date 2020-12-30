@@ -1,7 +1,7 @@
 import React from "react";
-import Box from "../../../atoms/Box/Box";
-import { LinkButton } from "../../../atoms/Button/Button";
-import SearchIcon from "../../../../assets/svg/SearchIcon";
+import Box from "components/atoms/Box/Box";
+import { LinkButton } from "components/atoms/Button/Button";
+import SearchIcon from "assets/svg/SearchIcon";
 import "./WritingControls.css";
 
 export const WritingControls = () => {

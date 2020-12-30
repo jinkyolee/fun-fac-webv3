@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Box } from "../../atoms/Box/Box";
-import { Text } from "../../atoms/Text/Text";
-import Image from "../../atoms/Image/Image";
-import Choice from "../../molecules/InterTest/Choice";
-import { testLogo } from "../../../assets/images/0_images";
-import ProgressBar from "../../molecules/InterTest/ProgressBar/ProgressBar";
+import { Box } from "components/atoms/Box/Box";
+import { Text } from "components/atoms/Text/Text";
+import Image from "components/atoms/Image/Image";
+import Choice from "components/molecules/InterTest/Choice";
+import { testLogo } from "assets/images/0_images";
+import ProgressBar from "components/molecules/InterTest/ProgressBar/ProgressBar";
 
 export const InProgress = ({ setResult }) => {
   const [progress, setProgress] = useState(0);

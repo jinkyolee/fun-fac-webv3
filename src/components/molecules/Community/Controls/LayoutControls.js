@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import GridIcon from "../../../../assets/svg/Community/GridIcon";
-import ListIcon from "../../../../assets/svg/Community/ListIcon";
-import initButtonColor from "../../../../functions/local/Community/initButtonColor";
-import setButtonColor from "../../../../functions/local/Community/setButtonColor";
-import Box from "../../../atoms/Box/Box";
-import Button from "../../../atoms/Button/Button";
+import GridIcon from "assets/svg/Community/GridIcon";
+import ListIcon from "assets/svg/Community/ListIcon";
+import initButtonColor from "functions/local/Community/initButtonColor";
+import setButtonColor from "functions/local/Community/setButtonColor";
+import Box from "components/atoms/Box/Box";
+import Button from "components/atoms/Button/Button";
 import "./LayoutControls.css";
 
 export const LayoutControls = ({ displayState, setDisplayState }) => {

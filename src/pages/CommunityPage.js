@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
-import StandardPage from "../components/templates/StandardPage";
-import WritingControls from "../components/molecules/Community/Controls/WritingControls";
-import LayoutControls from "../components/molecules/Community/Controls/LayoutControls";
-import initDisplayState from "../functions/local/Community/initDisplayState";
-import CommunityDisplay from "../components/organisms/Community/CommunityDisplay/CommunityDisplay";
-// import CardedBlogItem from "../components/molecules/Community/BlogItem/CardedBlogItem";
-// import ListedBlogItem from "../components/molecules/Community/BlogItem/ListedBlogItem";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
+import StandardPage from "components/templates/StandardPage";
+import WritingControls from "components/molecules/Community/Controls/WritingControls";
+import LayoutControls from "components/molecules/Community/Controls/LayoutControls";
+import initDisplayState from "functions/local/Community/initDisplayState";
+import CommunityDisplay from "components/organisms/Community/CommunityDisplay/CommunityDisplay";
+// import CardedBlogItem from "components/molecules/Community/BlogItem/CardedBlogItem";
+// import ListedBlogItem from "components/molecules/Community/BlogItem/ListedBlogItem";
 
 export const CommunityPage = () => {
   const [display, setDisplay] = useState(initDisplayState());

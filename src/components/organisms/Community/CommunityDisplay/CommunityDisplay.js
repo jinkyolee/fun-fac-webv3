@@ -1,8 +1,9 @@
 import React from "react";
-import List from "../../../atoms/List/List";
-import CardedBlogItem from "../../../molecules/Community/BlogItem/CardedBlogItem";
-import ListedBlogItem from "../../../molecules/Community/BlogItem/ListedBlogItem";
+import List from "components/atoms/List/List";
+import CardedBlogItem from "components/molecules/Community/BlogItem/CardedBlogItem";
+import ListedBlogItem from "components/molecules/Community/BlogItem/ListedBlogItem";
 import "./CommunityDisplay.css";
+import Box from "components/atoms/Box/Box";
 
 export const CommunityDisplay = ({ data, displayState }) => {
   let alignClass;

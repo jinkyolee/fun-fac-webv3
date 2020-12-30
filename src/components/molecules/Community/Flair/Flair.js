@@ -1,6 +1,6 @@
 import React from "react";
-import Box from "../../../atoms/Box/Box";
-import Text from "../../../atoms/Text/Text";
+import Box from "components/atoms/Box/Box";
+import Text from "components/atoms/Text/Text";
 import "./Flair.css";
 
 export const Flair = ({ type }) => {

@@ -1,9 +1,10 @@
 import React from "react";
-import Box from "../../../atoms/Box/Box";
-import Line from "../../../atoms/Line/Line";
-import ListItem from "../../../atoms/List/ListItem";
-import Text, { LinkedText } from "../../../atoms/Text/Text";
+import Box from "components/atoms/Box/Box";
+import Line from "components/atoms/Line/Line";
+import ListItem from "components/atoms/List/ListItem";
+import Text, { LinkedText } from "components/atoms/Text/Text";
 import Flair from "../Flair/Flair";
+import "./BlogItem.css";
 
 export const ListedBlogItem = ({ title, user, flair, date, id }) => {
   return (

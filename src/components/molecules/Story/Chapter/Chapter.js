@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkedImage } from "../../../atoms/Image/Image";
+import { LinkedImage } from "components/atoms/Image/Image";
 import "./Chapter.css";
 
 export const Chapter = ({ chapter, imgSrc }) => {

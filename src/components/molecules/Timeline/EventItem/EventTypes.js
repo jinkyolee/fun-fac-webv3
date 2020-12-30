@@ -1,7 +1,7 @@
 import React from "react";
-import Box from "../../../atoms/Box/Box";
-import Line from "../../../atoms/Line/Line";
-import Text from "../../../atoms/Text/Text";
+import Box from "components/atoms/Box/Box";
+import Line from "components/atoms/Line/Line";
+import Text from "components/atoms/Text/Text";
 
 export const BasicEvent = ({ eventDate, date, eventName }) => {
   return (

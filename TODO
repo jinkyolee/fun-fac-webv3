@@ -3,7 +3,11 @@
 ❌ create input atoms
 
 ❌ community page
--- ❌ create controls for community page
+-- ✅ create controls for community page
+-- ✅ create ui components for community page
+-- ❌ create firebase for community
+-- ❌ create login page
+-- ❌ create write page
 
 ❌ recreate storybook -> customization is pain in ass
 ❌ mechanism for retaining language settings

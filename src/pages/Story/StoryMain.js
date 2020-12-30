@@ -1,19 +1,19 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
-import { languageState } from "../../recoil/atoms";
-import { HeaderInstance as Header } from "../../components/0_Instances/HeaderInstance";
-import Box from "../../components/atoms/Box/Box";
-import Text from "../../components/atoms/Text/Text";
-import ChapterContainer from "../../components/molecules/Story/Chapter/ChapterContainer";
-import StandardPage from "../../components/templates/StandardPage";
-import Chapter from "../../components/molecules/Story/Chapter/Chapter";
+import { languageState } from "recoil/atoms";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
+import Box from "components/atoms/Box/Box";
+import Text from "components/atoms/Text/Text";
+import ChapterContainer from "components/molecules/Story/Chapter/ChapterContainer";
+import StandardPage from "components/templates/StandardPage";
+import Chapter from "components/molecules/Story/Chapter/Chapter";
 import {
   chapterImage1,
   chapterImage2,
   chapterImage3,
   chapterImage4,
   chapterImage5,
-} from "../../assets/images/0_images";
+} from "assets/images/0_images";
 
 export const StoryMain = () => {
   const language = useRecoilValue(languageState);

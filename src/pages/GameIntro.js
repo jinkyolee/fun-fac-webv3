@@ -1,10 +1,10 @@
 import React from "react";
-import { gameIcon, storeLink } from "../assets/images/0_images";
-import StandardPage from "../components/templates/StandardPage";
-import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
-import { Image, LinkedImage } from "../components/atoms/Image/Image";
-import { Box } from "../components/atoms/Box/Box";
-import { Text } from "../components/atoms/Text/Text";
+import { gameIcon, storeLink } from "assets/images/0_images";
+import StandardPage from "components/templates/StandardPage";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
+import { Image, LinkedImage } from "components/atoms/Image/Image";
+import { Box } from "components/atoms/Box/Box";
+import { Text } from "components/atoms/Text/Text";
 
 export const GameIntroduction = () => {
   return (

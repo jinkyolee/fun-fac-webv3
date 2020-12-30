@@ -1,3 +1,5 @@
+import React from "react";
+
 export const List = ({ className = "", style, children, Type = "ul" }) => {
   return (
     <Type className={`${className}`} style={style}>

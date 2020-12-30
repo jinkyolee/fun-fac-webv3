@@ -1,7 +1,7 @@
 import { selector } from "recoil";
 import { languageState } from "./atoms";
-import evilNightKr from "../assets/evil-night-kr.epub";
-import evilNightEn from "../assets/evil-night-en.epub";
+import evilNightKr from "assets/evil-night-kr.epub";
+import evilNightEn from "assets/evil-night-en.epub";
 
 export const ebookURLState = selector({
   key: "ebookURLState",
