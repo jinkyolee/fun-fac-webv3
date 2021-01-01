@@ -3,7 +3,7 @@ import Box from "components/atoms/Box/Box";
 import Image from "components/atoms/Image/Image";
 import { resultImage } from "assets/images/0_images";
 import Text from "components/atoms/Text/Text";
-import { LinkButton } from "components/atoms/Button/Button";
+import { LinkedButton } from "components/atoms/Button/Button";
 import setResultContent from "functions/local/InterTest/setResultContent";
 
 export const Result = ({ score }) => {
@@ -21,13 +21,13 @@ export const Result = ({ score }) => {
       <Text className="sub-body" style={{ marginTop: "40px", width: "250px" }}>
         {body}
       </Text>
-      <LinkButton
+      <LinkedButton
         to="/"
         label="다른 궁도 더 알아보기"
         className="medium"
         style={{ marginTop: "50px" }}
       />
-      <LinkButton
+      <LinkedButton
         to="/all-types"
         label="전체 유형 보기"
         className="medium"

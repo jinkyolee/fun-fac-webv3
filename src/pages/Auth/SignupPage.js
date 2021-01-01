@@ -1,14 +1,15 @@
 import React from "react";
+import "./AuthPage.css";
 import StandardPage from "components/templates/StandardPage";
 import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
-import { SignupForm } from "components/organisms/Auth/AuthForm";
+import AuthComponent from "components/organisms/Auth/AuthComponent";
 
 export const SignupPage = () => {
   return (
     <StandardPage
-      className="centered full"
+      className="justify-center gray"
       header={<Header />}
-      body={<SignupForm />}
+      body={<AuthComponent header="회원가입하기" authType="signup" />}
     />
   );
 };

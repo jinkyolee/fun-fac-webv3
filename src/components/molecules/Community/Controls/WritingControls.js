@@ -1,13 +1,13 @@
 import React from "react";
 import Box from "components/atoms/Box/Box";
-import { LinkButton } from "components/atoms/Button/Button";
+import { LinkedButton } from "components/atoms/Button/Button";
 import SearchIcon from "assets/svg/SearchIcon";
 import "./WritingControls.css";
 
 export const WritingControls = () => {
   return (
     <Box className="writing-cntrl">
-      <LinkButton className="new-blog-btn" to="/write" label="✍️  글 쓰기" />
+      <LinkedButton className="new-blog-btn" to="/write" label="✍️  글 쓰기" />
       <Box className="search-btn centered">
         <SearchIcon />
       </Box>

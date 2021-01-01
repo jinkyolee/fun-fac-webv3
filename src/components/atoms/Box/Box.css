@@ -37,6 +37,10 @@
   width: 100%;
 }
 
+.fullH {
+  height: 100%;
+}
+
 .box.circle {
   border-radius: 50%;
 }
@@ -47,4 +51,12 @@
 
 .box li {
   display: inline-flex !important;
+}
+
+.box.gray {
+  background-color: #f9f9f9;
+}
+
+.fit-contentH {
+  height: fit-content;
 }

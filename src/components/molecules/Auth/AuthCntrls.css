@@ -1,0 +1,68 @@
+.input-container label,
+.input-container input {
+  display: block;
+}
+
+.input-container {
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.auth-input {
+  width: 24rem;
+  height: 36px;
+  padding: 0 0.5rem 0 0.5rem;
+  border: 1px solid rgb(205, 209, 216);
+  border-radius: 0.5rem;
+  margin-top: 10px;
+}
+
+.auth-label::after {
+  padding-left: 5px;
+  color: rgb(201, 39, 54);
+  content: "*";
+}
+
+.auth-submit {
+  height: 40px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgba(0, 36, 156, 0.8);
+  color: #f2f2f2;
+  font-size: 18px;
+  line-height: 38px;
+}
+
+.auth-btn {
+  width: 29rem;
+  height: 55px;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
+  margin-top: 25px;
+}
+
+.auth-btn:first-child {
+  margin: 0;
+}
+
+.auth-btn.kakao {
+  color: black;
+  background-color: #fceb53;
+}
+
+.auth-btn.google {
+  background-color: #ffffff;
+}
+
+.auth-btn.facebook {
+  color: #ffffff;
+  background-color: #1977f3;
+}
+
+.auth-btn.email {
+  color: #ffffff;
+  background-color: #457456;
+}
