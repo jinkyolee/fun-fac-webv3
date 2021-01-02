@@ -9,9 +9,8 @@ import StoryBook from "pages/Story/StoryBook";
 import TimelinePage from "pages/TimelinePage";
 import PersonPage from "pages/Person";
 import CommunityPage from "pages/CommunityPage";
-import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
-import { languageState } from "recoil/atoms";
-import { authService } from "Firebase/fbase";
+// import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
+// import { languageState } from "recoil/atoms";
 import LoginPage from "pages/Auth/LoginPage";
 import SignupPage from "pages/Auth/SignupPage";
 
@@ -26,9 +25,6 @@ const initLanguage = (setLanguage) => {
 };
 
 function App() {
-  const setLanguage = useRecoilValue(languageState);
-  // initLanguage(setLanguage);
-
   return (
     <BrowserRouter>
       <Switch>

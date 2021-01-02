@@ -10,14 +10,14 @@ import {
 import Button from "components/atoms/Button/Button";
 
 export const AuthComponent = ({ header, authType }) => {
-  let text, form;
+  let label, form;
   const [emailSelected, setSelectState] = useState(false);
 
   if (authType === "login") {
-    text = "로그인";
+    label = "로그인";
     form = <LoginForm />;
   } else {
-    text = "회원가입";
+    label = "회원가입";
     form = <SignupForm />;
   }
 
@@ -44,13 +44,13 @@ export const AuthComponent = ({ header, authType }) => {
         {!emailSelected ? (
           <Button
             className="auth-btn email"
-            label={`이메일로 ${text}하기`}
+            label={`이메일로 ${label}하기`}
             onClick={() => setSelectState(true)}
           />
         ) : null}
-        <KakaoOAuth />
-        <GoogleOAuth />
-        <FacebookOAuth />
+        <KakaoOAuth label={label} />
+        <GoogleOAuth label={label} />
+        <FacebookOAuth label={label} />
       </Box>
     </Box>
   );

@@ -29,6 +29,7 @@ export const PasswordInput = ({ onChange, label, value }) => {
         {label}
       </label>
       <TextInput
+        type="password"
         onChange={onChange}
         label={value}
         className="auth-input"
@@ -69,34 +70,34 @@ const OAuth = ({ to, svg, label, className }) => {
   );
 };
 
-export const KakaoOAuth = () => {
+export const KakaoOAuth = ({ label }) => {
   return (
     <OAuth
       to="/kakao"
       svg={kakaoIcon}
-      label="카카오톡 로그인"
+      label={`카카오톡 ${label}`}
       className="kakao"
     />
   );
 };
 
-export const GoogleOAuth = () => {
+export const GoogleOAuth = ({ label }) => {
   return (
     <OAuth
       to="/google"
       svg={googleIcon}
-      label="구글 로그인"
+      label={`구글 ${label}`}
       className="google"
     />
   );
 };
 
-export const FacebookOAuth = () => {
+export const FacebookOAuth = ({ label }) => {
   return (
     <OAuth
       to="/facebook"
       svg={facebookIcon}
-      label="페이스북 로그인"
+      label={`페이스북 ${label}`}
       className="facebook"
     />
   );

@@ -13,6 +13,7 @@ export const InputButton = ({ onClick, label = "", className = "", style }) => {
 };
 
 export const TextInput = ({
+  type = "text",
   onChange,
   required,
   className = "",
@@ -22,7 +23,7 @@ export const TextInput = ({
 }) => {
   return (
     <input
-      type="text"
+      type={type}
       value={label}
       className={`input ${className}`}
       name={name}
