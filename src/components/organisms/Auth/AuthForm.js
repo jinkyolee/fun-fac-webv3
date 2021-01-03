@@ -7,15 +7,31 @@ import {
 } from "components/molecules/Auth/AuthCntrls";
 import Box from "components/atoms/Box/Box";
 import "./AuthForm.css";
+import Text from "components/atoms/Text/Text";
 
 const onChange = ({ target: { value } }, setFunction) => {
   setFunction(value);
-  console.log(value);
 };
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const onClick = (e) => {
+    e.preventDefault();
+    const loginPromise = authService.signInWithEmailAndPassword(
+      email,
+      password
+    );
+    loginPromise
+      .then(() => {
+        window.history.back();
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
 
   return (
     <form name="login" className="auth-form">
@@ -30,13 +46,8 @@ export const LoginForm = () => {
           onChange={(e) => onChange(e, setPassword)}
           value={password}
         />
-        <SubmitAuth
-          onClick={(e) => {
-            e.preventDefault();
-            authService.signInWithEmailAndPassword(email, password);
-          }}
-          label="로그인하기"
-        />
+        {error ? <Text className="auth-error">{error}</Text> : null}
+        <SubmitAuth onClick={onClick} label="로그인하기" />
       </Box>
     </form>
   );
@@ -45,6 +56,22 @@ export const LoginForm = () => {
 export const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const onClick = (e) => {
+    e.preventDefault();
+    const loginPromise = authService.createUserWithEmailAndPassword(
+      email,
+      password
+    );
+    loginPromise
+      .then(() => {
+        window.history.back();
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
 
   return (
     <form name="signup" className="auth-form">
@@ -59,13 +86,8 @@ export const SignupForm = () => {
           onChange={(e) => onChange(e, setPassword)}
           value={password}
         />
-        <SubmitAuth
-          onClick={(e) => {
-            e.preventDefault();
-            authService.createUserWithEmailAndPassword(email, password);
-          }}
-          label="회원 가입하기"
-        />
+        {error ? <Text className="auth-error">{error}</Text> : null}
+        <SubmitAuth onClick={onClick} label="회원 가입하기" />
       </Box>
     </form>
   );

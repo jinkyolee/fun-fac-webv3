@@ -37,7 +37,7 @@ export const AuthComponent = ({ header, authType }) => {
         className="vertical-flex"
         style={
           emailSelected
-            ? { marginTop: "50px" }
+            ? { marginTop: "50px", marginBottom: "60px" }
             : { marginTop: "50px", marginBottom: "120px" }
         }
       >

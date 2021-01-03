@@ -1,9 +1,11 @@
 import React from "react";
 import "./AuthCntrls.css";
 import { kakaoIcon, googleIcon, facebookIcon } from "assets/svg/svgExport";
-import Box, { LinkedBox } from "components/atoms/Box/Box";
+import Box from "components/atoms/Box/Box";
 import { InputButton, TextInput } from "components/atoms/Input/Input";
 import Image from "components/atoms/Image/Image";
+import Button from "components/atoms/Button/Button";
+import { authService, firebaseInst } from "firebase/fbase";
 
 export const EmailInput = ({ onChange, label, value }) => {
   return (
@@ -51,32 +53,37 @@ export const SubmitAuth = ({ onClick, label }) => {
   );
 };
 
-const OAuth = ({ to, svg, label, className }) => {
+const OAuth = ({ svg, label, className, onClick }) => {
   return (
-    <LinkedBox
-      to={to}
-      className={`justify-center align-center auth-btn ${className}`}
-    >
-      <Image
-        src={svg}
-        style={{
-          width: "30px",
-          marginRight: "15px",
-          objectFit: "contain",
-        }}
-      />
-      {label}
-    </LinkedBox>
+    <Button
+      className={`auth-btn ${className}`}
+      label={
+        <>
+          <Image
+            src={svg}
+            style={{
+              width: "30px",
+              marginRight: "15px",
+              objectFit: "contain",
+            }}
+          />
+          {label}
+        </>
+      }
+      onClick={onClick}
+    />
   );
 };
 
 export const KakaoOAuth = ({ label }) => {
   return (
     <OAuth
-      to="/kakao"
       svg={kakaoIcon}
       label={`카카오톡 ${label}`}
       className="kakao"
+      onClick={(e) => {
+        console.log(e);
+      }}
     />
   );
 };
@@ -84,10 +91,14 @@ export const KakaoOAuth = ({ label }) => {
 export const GoogleOAuth = ({ label }) => {
   return (
     <OAuth
-      to="/google"
       svg={googleIcon}
       label={`구글 ${label}`}
       className="google"
+      onClick={async () => {
+        const googleProvider = new firebaseInst.auth.GoogleAuthProvider();
+        await authService.signInWithPopup(googleProvider);
+        window.history.back();
+      }}
     />
   );
 };
@@ -95,10 +106,14 @@ export const GoogleOAuth = ({ label }) => {
 export const FacebookOAuth = ({ label }) => {
   return (
     <OAuth
-      to="/facebook"
       svg={facebookIcon}
       label={`페이스북 ${label}`}
       className="facebook"
+      onClick={async () => {
+        const fbProvider = new firebaseInst.auth.FacebookAuthProvider();
+        await authService.signInWithPopup(fbProvider);
+        window.history.back();
+      }}
     />
   );
 };

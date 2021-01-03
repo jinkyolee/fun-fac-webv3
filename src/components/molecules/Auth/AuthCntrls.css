@@ -34,6 +34,9 @@
 }
 
 .auth-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 29rem;
   height: 55px;
   border: none;
@@ -42,6 +45,7 @@
   font-weight: 500;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
   margin-top: 25px;
+  line-height: 55px;
 }
 
 .auth-btn:first-child {
