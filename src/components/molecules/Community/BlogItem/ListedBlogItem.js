@@ -6,7 +6,7 @@ import Text, { LinkedText } from "components/atoms/Text/Text";
 import Flair from "../Flair/Flair";
 import "./BlogItem.css";
 
-export const ListedBlogItem = ({ title, user, flair, date, id }) => {
+export const ListedBlogItem = ({ title, user, flair, postDate, id }) => {
   return (
     <ListItem className="listItem horizontal-flex">
       <Box className="horizontal-flex column">
@@ -18,7 +18,7 @@ export const ListedBlogItem = ({ title, user, flair, date, id }) => {
       <Box className="horizontal-flex align-center column">
         <Text className="item-uploader">{user}</Text>
         <Line className="vertical divider" />
-        <Text className="upload-date">{date}</Text>
+        <Text className="upload-date">{postDate}</Text>
       </Box>
     </ListItem>
   );

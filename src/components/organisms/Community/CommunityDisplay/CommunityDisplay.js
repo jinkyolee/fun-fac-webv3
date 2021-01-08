@@ -3,7 +3,6 @@ import List from "components/atoms/List/List";
 import CardedBlogItem from "components/molecules/Community/BlogItem/CardedBlogItem";
 import ListedBlogItem from "components/molecules/Community/BlogItem/ListedBlogItem";
 import "./CommunityDisplay.css";
-import Box from "components/atoms/Box/Box";
 
 export const CommunityDisplay = ({ data, displayState }) => {
   let alignClass;
@@ -14,29 +13,31 @@ export const CommunityDisplay = ({ data, displayState }) => {
     alignClass = "";
   }
 
+  console.log(data);
+
   return (
     <List className={`community-display ${alignClass}`}>
       {displayState === "grid"
-        ? data.map(({ title, user, flair, date, content, id }, index) => {
+        ? data.map(({ title, user, flair, postDate, content, id }, index) => {
             return (
               <CardedBlogItem
                 title={title}
                 user={user}
                 flair={flair}
-                date={date}
+                postDate={postDate}
                 content={content}
                 id={id}
                 key={index}
               />
             );
           })
-        : data.map(({ title, user, flair, date, id }, index) => {
+        : data.map(({ title, user, flair, postDate, id }, index) => {
             return (
               <ListedBlogItem
                 title={title}
                 user={user}
                 flair={flair}
-                date={date}
+                postDate={postDate}
                 id={id}
                 key={index}
               />

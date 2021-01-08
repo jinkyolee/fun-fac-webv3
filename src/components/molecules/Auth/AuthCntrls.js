@@ -15,7 +15,7 @@ export const EmailInput = ({ onChange, label, value }) => {
       </label>
       <TextInput
         onChange={onChange}
-        label={value}
+        value={value}
         className="auth-input"
         name="email"
         required={true}
@@ -33,7 +33,7 @@ export const PasswordInput = ({ onChange, label, value }) => {
       <TextInput
         type="password"
         onChange={onChange}
-        label={value}
+        value={value}
         className="auth-input"
         name="password"
         required={true}

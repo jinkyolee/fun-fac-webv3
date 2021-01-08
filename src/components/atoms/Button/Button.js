@@ -9,9 +9,14 @@ export const Button = ({ onClick, label = "", className, style }) => {
   );
 };
 
-export const LinkedButton = ({ to, label, className = "", style }) => {
+export const LinkedButton = ({ to, label, className = "", style, onClick }) => {
   return (
-    <a href={to} className={`btn link-btn ${className}`} style={style}>
+    <a
+      href={to}
+      className={`btn link-btn ${className}`}
+      style={style}
+      onClick={onClick}
+    >
       {label}
     </a>
   );
