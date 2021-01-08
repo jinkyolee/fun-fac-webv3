@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { authService } from "firebase/fbase";
+import { authService } from "fbaseInst/fbase";
 import {
   EmailInput,
   PasswordInput,

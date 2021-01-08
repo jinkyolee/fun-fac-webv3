@@ -3,7 +3,7 @@ import { languageState, loginState } from "./atoms";
 import evilNightKr from "assets/evil-night-kr.epub";
 import evilNightEn from "assets/evil-night-en.epub";
 import Button, { LinkedButton } from "components/atoms/Button/Button";
-import { authService } from "firebase/fbase";
+import { authService } from "fbaseInst/fbase";
 
 export const ebookURLState = selector({
   key: "ebookURLState",

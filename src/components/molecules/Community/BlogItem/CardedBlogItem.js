@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import React from "react";
 import filterContent from "functions/local/Community/filterContent";
 import { LinkedBox, Box } from "components/atoms/Box/Box";
 import ListItem from "components/atoms/List/ListItem";

@@ -13,7 +13,7 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import { languageState, loginState } from "recoil/atoms";
 import LoginPage from "pages/Auth/LoginPage";
 import SignupPage from "pages/Auth/SignupPage";
-import { authService } from "firebase/fbase";
+import { authService } from "fbaseInst/fbase";
 import WritePage from "pages/Community/WritePage";
 // import RedirectBack from "components/atoms/Redirect/Redirect";
 

@@ -9,7 +9,7 @@ import {
   TextInput,
 } from "components/atoms/Input/Input";
 import Button from "components/atoms/Button/Button";
-import { firestoreService, authService, storageService } from "firebase/fbase";
+import { firestoreService, authService, storageService } from "fbaseInst/fbase";
 
 const WritingForm = () => {
   const [title, setTitle] = useState("");

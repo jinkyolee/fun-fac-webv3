@@ -1,4 +1,4 @@
-const { firestoreService } = require("firebase/fbase");
+import { firestoreService } from "fbaseInst/fbase";
 
 const getPosts = async () => {
   const postsCollection = [];
