@@ -1,10 +1,10 @@
 import React from "react";
-import { HeaderInstance as Header } from "../components/0_Instances/HeaderInstance";
-import PalaceTimeline from "../components/molecules/Timeline/PalaceTimeline/PalaceTimeline";
-import StandardPage from "../components/templates/StandardPage";
-import Box from "../components/atoms/Box/Box";
-import palaceEvents from "../constants/events";
-import Text from "../components/atoms/Text/Text";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
+import PalaceTimeline from "components/molecules/Timeline/PalaceTimeline/PalaceTimeline";
+import StandardPage from "components/templates/StandardPage";
+import Box from "components/atoms/Box/Box";
+import palaceEvents from "constants/events";
+import Text from "components/atoms/Text/Text";
 
 export const Timelines = () => {
   return (

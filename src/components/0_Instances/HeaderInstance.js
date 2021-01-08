@@ -1,57 +1,15 @@
 import React from "react";
-import Header from "../organisms/Header/Header";
-import { logoImage } from "../../assets/images/0_images";
-import { LinkedImage } from "../atoms/Image/Image";
-import { Button, LinkButton } from "../atoms/Button/Button";
-import { useRecoilState } from "recoil";
-import { languageState } from "../../recoil/atoms";
+import Header from "components/molecules/Header/Header";
+import { logoImage } from "assets/images/0_images";
+import { LinkedImage } from "components/atoms/Image/Image";
+import { Button } from "components/atoms/Button/Button";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { languageState } from "recoil/atoms";
+import { headerTabs } from "recoil/selectors";
 
 export const HeaderInstance = () => {
   const [language, setLanguage] = useRecoilState(languageState);
-  const tabs = [
-    <LinkButton
-      to="/game"
-      label={language === "kr" ? "게임" : "Game"}
-      key="1"
-      className="tab"
-    />,
-    <LinkButton
-      to="/story"
-      label={language === "kr" ? "스토리" : "Story"}
-      key="2"
-      className="tab"
-    />,
-    <LinkButton
-      to="/team"
-      label={language === "kr" ? "팀" : "Team"}
-      key="3"
-      className="tab"
-    />,
-    <LinkButton
-      to="/test"
-      label={language === "kr" ? "테스트" : "Test"}
-      key="4"
-      className="tab"
-    />,
-    <LinkButton
-      to="/timeline"
-      label={language === "kr" ? "타임라인" : "Timeline"}
-      key="5"
-      className="tab"
-    />,
-    <LinkButton
-      to="/persons/sejong"
-      label={language === "kr" ? "세종" : "Sejong"}
-      key="6"
-      className="tab"
-    />,
-    <LinkButton
-      to="/community"
-      label={language === "kr" ? "커뮤니티" : "Forum"}
-      key="7"
-      className="tab"
-    />,
-  ];
+  const tabs = useRecoilValue(headerTabs);
 
   return (
     <Header
@@ -62,11 +20,14 @@ export const HeaderInstance = () => {
           onClick={(e) => {
             e.preventDefault();
             let newLang;
+
             if (language === "kr") {
               newLang = "en";
             } else {
               newLang = "kr";
             }
+
+            window.localStorage.setItem("languageSetting", newLang);
             setLanguage(newLang);
           }}
           label={language === "kr" ? "English" : "한국어"}
@@ -77,4 +38,4 @@ export const HeaderInstance = () => {
   );
 };
 
-export default Header;
+export default HeaderInstance;

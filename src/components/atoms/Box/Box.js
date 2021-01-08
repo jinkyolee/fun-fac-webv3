@@ -9,4 +9,12 @@ export const Box = ({ className = "", style, children }) => {
   );
 };
 
+export const LinkedBox = ({ className = "", style, children, to }) => {
+  return (
+    <a href={to} className={`box ${className}`} style={style}>
+      {children}
+    </a>
+  );
+};
+
 export default Box;

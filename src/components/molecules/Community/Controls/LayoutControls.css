@@ -1,0 +1,28 @@
+.layout-cntrl {
+  position: absolute;
+  top: 120px;
+  right: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.card-display-btn {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 15px;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.list-display-btn {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+path {
+  pointer-events: none;
+}

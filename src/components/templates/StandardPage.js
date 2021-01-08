@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "../atoms/Box/Box";
+import { Box } from "components/atoms/Box/Box";
 
 const StandardPage = ({ header, body, className, style = null }) => {
   return (

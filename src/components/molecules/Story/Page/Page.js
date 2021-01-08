@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "../../../atoms/Box/Box";
+import Box from "componenets/atoms/Box/Box";
 
 export const Page = ({ children }) => {
   return <Box className="align-center">{children}</Box>;

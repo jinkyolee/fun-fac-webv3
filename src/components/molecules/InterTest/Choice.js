@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../atoms/Button/Button";
+import { Button } from "components/atoms/Button/Button";
 
 export const Choice = ({
   label = "none",

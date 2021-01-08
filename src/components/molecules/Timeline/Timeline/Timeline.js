@@ -1,5 +1,5 @@
 import React from "react";
-import Line from "../../../atoms/Line/Line";
+import Line from "components/atoms/Line/Line";
 import Event from "../EventItem/Event";
 import "./Timeline.css";
 

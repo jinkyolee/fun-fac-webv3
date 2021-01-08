@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ReactReader } from "react-reader";
-import { HeaderInstance as Header } from "../../components/0_Instances/HeaderInstance";
-import StandardPage from "../../components/templates/StandardPage";
-import evilNight from "../../assets/evil-night-kr.epub";
+import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
+import StandardPage from "components/templates/StandardPage";
+import evilNight from "assets/evil-night-kr.epub";
 
 const localURL = evilNight;
 
