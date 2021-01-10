@@ -106,7 +106,7 @@ const WritingForm = () => {
 
     const lines = content.split(/\r\n|\r|\n/);
 
-    if (imageURL.current !== []) {
+    if (imageURL.current.length > 1) {
       for (const url of imageURL.current) {
         const storageRef = storageService
           .ref()
@@ -122,7 +122,8 @@ const WritingForm = () => {
         images[i].src = storageURLs[i];
       }
 
-      finalHTML = configuredHTML.body.innerHTML;
+      console.log(configuredHTML);
+      // finalHTML = configuredHTML.body.innerHTML;
     }
 
     const date = new Date();
