@@ -8,6 +8,10 @@ import teamLogo from "./team-logo.png";
 import profile from "./profile.png";
 import testLogo from "./test-logo.png";
 import testIllust from "./test-illust.png";
+import testBanner from "./test-banner.png";
+import testShare from "./test-share.png";
+import testStart from "./test-start.png";
+import testOther from "./test-other.png";
 import resultImage from "./result-image.png";
 import chapterImage1 from "./chapter-img1.png";
 import chapterImage2 from "./chapter-img2.png";
@@ -20,6 +24,8 @@ import duksoo from "./duksoo.png";
 import gyeonghui from "./gyeonghui.png";
 import gyeongbok from "./gyeongbok.png";
 import sejong from "./sejong.png";
+import sejongImg1 from "./sejong-img1.png";
+import sejongImg2 from "./sejong-img2.png";
 
 export {
   content1,
@@ -44,4 +50,10 @@ export {
   gyeonghui,
   gyeongbok,
   sejong,
+  testBanner,
+  testShare,
+  testStart,
+  testOther,
+  sejongImg1,
+  sejongImg2,
 };

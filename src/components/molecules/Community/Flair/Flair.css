@@ -1,6 +1,6 @@
 .flair {
-  width: 50px;
-  height: 20px;
+  width: 3rem;
+  height: 1.25rem;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
@@ -9,8 +9,8 @@
 
 .card .flair {
   position: absolute;
-  right: 20px;
-  top: 18px;
+  right: 1.25rem;
+  top: 1.25rem;
 }
 
 .listItem .flair {

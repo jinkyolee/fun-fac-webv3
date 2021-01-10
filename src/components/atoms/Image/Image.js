@@ -22,4 +22,22 @@ export const Image = ({ src, className = "", style, alt = "" }) => {
   );
 };
 
+export const ClickableImage = ({
+  src,
+  className = "",
+  style,
+  alt = "",
+  onClick,
+}) => {
+  return (
+    <img
+      src={src}
+      className={className}
+      style={style}
+      alt={alt}
+      onClick={onClick}
+    />
+  );
+};
+
 export default Image;

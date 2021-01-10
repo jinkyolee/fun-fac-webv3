@@ -25,6 +25,12 @@
   border-radius: 0.5rem;
   font-size: 15px;
   line-height: 20px;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+.text-editor *:last-child {
+  margin-bottom: 2rem;
 }
 
 .toolbar {
@@ -71,4 +77,10 @@
 
 .editor-cntrl:not(:last-child) {
   margin-right: 10px;
+}
+
+.image-in-editor {
+  width: 300px;
+  object-fit: contain;
+  pointer-events: none;
 }

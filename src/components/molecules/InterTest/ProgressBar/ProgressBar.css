@@ -1,6 +1,6 @@
 .total-progress {
   position: absolute;
-  background-color: #c4c4c4;
+  background-color: #c4c4c4 !important;
   height: 2px;
   width: 100%;
   left: 0;
@@ -9,7 +9,7 @@
 
 .current-progress {
   position: absolute;
-  background-color: #2f2f2f;
+  background-color: #2f2f2f !important;
   height: 2px;
   left: 0;
   z-index: 50;

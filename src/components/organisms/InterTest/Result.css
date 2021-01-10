@@ -1,0 +1,48 @@
+.result-container {
+  position: relative;
+  margin: 120px 0 0 0;
+  border: 1px solid #00249c;
+  border-radius: 5px;
+  width: 525px;
+  height: 575px;
+  align-items: center;
+}
+
+.result-title {
+  position: absolute;
+  width: 360px;
+  height: 50px;
+  font-size: 17px;
+  top: -25px;
+  background-color: #00249c;
+  color: #fff000;
+}
+
+.result-subtext {
+  text-align: center;
+  color: #00249c;
+  margin-top: 10px;
+  width: 460px;
+}
+
+.result-subtext:first-child {
+  margin-top: 50px;
+}
+
+.carousel {
+  width: 425px;
+  height: 280px;
+  margin-top: 50px;
+  object-fit: cover;
+}
+
+.carousel-title {
+  color: #00249c;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.carousel-description {
+  color: #00249c;
+  font-size: 13px;
+}

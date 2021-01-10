@@ -14,21 +14,40 @@ export const CardedBlogItem = ({
   postDate,
   content,
   id,
+  image,
 }) => {
-  // const filteredUser = filterUsername()
+  const filteredUser = filterUsername(user);
   const filteredContent = filterContent(content);
-  console.log(content);
 
   return (
-    <ListItem className="card">
-      <LinkedBox className="vertical-flex" to={`/${id}`}>
-        <Box className="title-container">
-          <Text className="item-title">{title}</Text>
-          <Text className="item-uploader">{user}</Text>
-        </Box>
+    <ListItem>
+      <LinkedBox
+        className="vertical-flex card"
+        to={`/community/post?id=${id}`}
+        style={{ position: "relative" }}
+      >
         <Flair type={flair} />
-        <Box className="content-preview">{filteredContent}</Box>
-        <Text className="upload-date">{postDate}</Text>
+        <Box className="content-container">
+          <Text className="item-title">
+            {
+              // set icon for posts with image
+            }
+            {title}
+          </Text>
+          <Box className="content-preview">
+            {filteredContent.map((content, index) => {
+              return (
+                <Text className="preview-text" key={index}>
+                  {content}
+                </Text>
+              );
+            })}
+          </Box>
+        </Box>
+        <Box className="bottom-container">
+          <Text className="upload-date">{postDate}</Text>
+          <Text className="item-uploader">{filteredUser}</Text>
+        </Box>
       </LinkedBox>
     </ListItem>
   );

@@ -19,7 +19,3 @@
 .exp-container:first-child {
   margin: 0;
 }
-
-.exp-container:last-child {
-  margin-bottom: 100px;
-}

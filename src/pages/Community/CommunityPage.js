@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
 import StandardPage from "components/templates/StandardPage";
 import WritingControls from "components/molecules/Community/Controls/WritingControls";
 import LayoutControls from "components/molecules/Community/Controls/LayoutControls";
 import initDisplayState from "functions/local/Community/initDisplayState";
 import CommunityDisplay from "components/organisms/Community/CommunityDisplay/CommunityDisplay";
-import { useRecoilValue, useRecoilValueLoadable } from "recoil";
+import { useRecoilValueLoadable } from "recoil";
 import { postsCollection } from "recoil/atoms";
 
 export const CommunityPage = () => {
   const [display, setDisplay] = useState(initDisplayState());
-  const [loaded, setLoadingState] = useState(false);
   const posts = useRecoilValueLoadable(postsCollection);
 
   const setDisplayState = (state) => {
@@ -64,12 +63,8 @@ export const CommunityPage = () => {
           style={{ backgroundColor: "#F9F9F9" }}
         />
       );
-    case "hasError":
-      return (
-        <h1 style={{ marginTop: "100px" }}>
-          Ding Ding Ding.. we have an error
-        </h1>
-      );
+    default:
+      break;
   }
 };
 

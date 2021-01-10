@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./WritingForm.css";
 import Box from "components/atoms/Box/Box";
@@ -13,9 +13,9 @@ import { firestoreService, authService, storageService } from "fbaseInst/fbase";
 
 const WritingForm = () => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [html, setHTML] = useState();
+  const [content, setContent] = useState();
   const [flair, setFlair] = useState("");
+  const [html, setHTML] = useState();
   const imageURL = useRef([]);
   const flairOptions = [
     { value: "palace", label: "Palace" },
@@ -31,7 +31,7 @@ const WritingForm = () => {
   };
 
   const onAreaInput = (event) => {
-    let innerText, innerHTML;
+    let innerHTML, innerText;
     if (event) {
       event.preventDefault();
       innerHTML = event.target.innerHTML;
@@ -63,10 +63,9 @@ const WritingForm = () => {
         currentTarget: { result },
       } = finishedEvent;
       imageURL.current.push(result);
-      image.src = result;
 
-      const prevHTML = textarea.innerHTML;
-      textarea.innerHTML = `${prevHTML}${image.outerHTML}`;
+      image.src = result;
+      textarea.appendChild(image);
 
       onAreaInput();
     };
@@ -74,7 +73,8 @@ const WritingForm = () => {
   };
 
   const onPostSubmit = async () => {
-    let storageURL = null;
+    let storageURLs = [];
+    let finalHTML, configuredHTML;
 
     switch (title) {
       case "":
@@ -104,31 +104,57 @@ const WritingForm = () => {
         break;
     }
 
+    const lines = content.split(/\r\n|\r|\n/);
+
     if (imageURL.current !== []) {
       for (const url of imageURL.current) {
-        console.log(url);
         const storageRef = storageService
           .ref()
           .child(`communityImages/${uuidv4()}`);
         const response = await storageRef.putString(url, "data_url");
-        storageURL = await response.ref.getDownloadURL();
+        const downloadURL = await response.ref.getDownloadURL();
+        storageURLs.push(downloadURL);
       }
+
+      for (let i = 0; i < storageURLs.length; i++) {
+        configuredHTML = new DOMParser().parseFromString(html, "text/html");
+        const images = configuredHTML.getElementsByClassName("image-in-editor");
+        images[i].src = storageURLs[i];
+      }
+
+      finalHTML = configuredHTML.body.innerHTML;
     }
+
+    const date = new Date();
+    const postDate = `${
+      date.getMonth() + 1
+    }-${date.getDate()}-${date.getFullYear()}`;
 
     const post = {
       title: title,
-      content: content,
-      htmlContent: html,
-      postDate: new Date().toDateString(),
+      htmlContent: finalHTML,
+      content: lines,
+      postDate: postDate,
       flair: flair,
-      image: storageURL,
+      image: storageURLs,
       user: authService.currentUser.email,
       uid: authService.currentUser.uid,
+      timestamp: new Date().getTime(),
     };
 
     await firestoreService.collection("posts").add(post);
     window.location.href = "/community";
   };
+
+  useEffect(() => {
+    document.addEventListener("copy", function (e) {
+      const text_only = document.getSelection().toString();
+      const clipdata = e.clipboardData || window.clipboardData;
+      clipdata.setData("text/plain", text_only);
+      clipdata.setData("text/html", text_only);
+      e.preventDefault();
+    });
+  }, []);
 
   return (
     <Box

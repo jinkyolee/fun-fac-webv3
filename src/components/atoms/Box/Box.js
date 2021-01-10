@@ -17,4 +17,16 @@ export const LinkedBox = ({ className = "", style, children, to }) => {
   );
 };
 
+export const ClickableBox = ({ className = "", style, children, onClick }) => {
+  return (
+    <div
+      className={`box clickable ${className}`}
+      style={style}
+      onClick={onClick}
+    >
+      {children}
+    </div>
+  );
+};
+
 export default Box;

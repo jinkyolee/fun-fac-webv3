@@ -1,25 +1,35 @@
 import React from "react";
 import { Box } from "components/atoms/Box/Box";
-import { Button } from "components/atoms/Button/Button";
-import { Image } from "components/atoms/Image/Image";
-import { testLogo, testIllust } from "assets/images/0_images";
+import { ClickableImage, Image } from "components/atoms/Image/Image";
+import {
+  testLogo,
+  testIllust,
+  testShare,
+  testStart,
+} from "assets/images/0_images";
+import "./Pending.css";
+import copyLink from "functions/local/Community/copyLink";
 
 export const Pending = ({ setTestState }) => {
   return (
-    <Box className="vertical-flex align-center" style={{ marginTop: "90px" }}>
-      <Image src={testLogo} className="largeW" />
-      <Image
-        src={testIllust}
-        className=""
-        style={{ width: "800px", marginTop: "20px" }}
-      />
-      <Button
-        className="big"
+    <Box
+      className="vertical-flex align-center"
+      style={{ width: "100%", position: "relative", top: "-4rem" }}
+    >
+      <Image src={testLogo} className="main-test-logo" />
+      <Image src={testIllust} className="main-illust" />
+      <ClickableImage
+        src={testStart}
+        className="start-button"
         label="테스트 시작하기"
-        style={{ marginTop: "20px" }}
         onClick={() => {
           setTestState("started");
         }}
+      />
+      <ClickableImage
+        src={testShare}
+        className="circle share-btn"
+        onClick={copyLink}
       />
     </Box>
   );
