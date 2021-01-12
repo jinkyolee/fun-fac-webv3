@@ -1,5 +1,5 @@
 @import "./reset.css";
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @font-face {
   font-family: yangjin;
   src: url(https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff)
