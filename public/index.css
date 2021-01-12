@@ -1,15 +1,9 @@
 @import "./reset.css";
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @font-face {
   font-family: yangjin;
-  src: url(https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff)
-    format("woff");
+  src: url(YangJin.ttf);
   font-weight: normal;
   font-style: normal;
-}
-
-* {
-  font-family: "Noto Sans KR", sans-serif;
 }
 
 html {
