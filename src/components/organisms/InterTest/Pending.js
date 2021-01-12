@@ -6,7 +6,7 @@ import {
   testIllust,
   testShare,
   testStart,
-} from "assets/images/0_images";
+} from "assets/images/Test/0_testImgExp";
 import "./Pending.css";
 import copyLink from "functions/local/Community/copyLink";
 

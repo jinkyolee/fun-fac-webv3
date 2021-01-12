@@ -4,7 +4,11 @@ import Image, {
   ClickableImage,
   LinkedImage,
 } from "components/atoms/Image/Image";
-import { resultImage, testOther, testShare } from "assets/images/0_images";
+import {
+  resultImage,
+  testOther,
+  testShare,
+} from "assets/images/Test/0_testImgExp";
 import Text from "components/atoms/Text/Text";
 import setResultContent from "functions/local/InterTest/setResultContent";
 import "./Result.css";

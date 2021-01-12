@@ -4,7 +4,7 @@ import {
   duksoo,
   gyeongbok,
   gyeonghui,
-} from "../assets/images/0_images";
+} from "assets/images/Timeline/0_timelineImgExp";
 
 const palaceEvents = [
   {

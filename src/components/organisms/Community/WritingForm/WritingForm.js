@@ -75,6 +75,7 @@ const WritingForm = () => {
   const onPostSubmit = async () => {
     let storageURLs = [];
     let finalHTML, configuredHTML;
+    const domParser = new DOMParser();
 
     switch (title) {
       case "":
@@ -117,13 +118,17 @@ const WritingForm = () => {
       }
 
       for (let i = 0; i < storageURLs.length; i++) {
-        configuredHTML = new DOMParser().parseFromString(html, "text/html");
+        configuredHTML = domParser.parseFromString(html, "text/html");
         const images = configuredHTML.getElementsByClassName("image-in-editor");
         images[i].src = storageURLs[i];
       }
 
-      console.log(configuredHTML);
-      // finalHTML = configuredHTML.body.innerHTML;
+      finalHTML = configuredHTML.body.innerHTML;
+    }
+
+    if (finalHTML === undefined) {
+      const parsedHTML = domParser.parseFromString(html, "text/html");
+      finalHTML = parsedHTML.body.innerHTML;
     }
 
     const date = new Date();

@@ -4,6 +4,8 @@ const filterContentExp = (content) => {
   if (content.length > 8) {
     filteredString = content.slice(0, 9);
     console.log(filteredString);
+  } else {
+    filteredString = content;
   }
 
   filteredString = filteredString.join("∂");

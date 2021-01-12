@@ -7,7 +7,7 @@ import InteractiveTest from "pages/InterTest";
 import StoryMain from "pages/Story/StoryMain";
 import StoryBook from "pages/Story/StoryBook";
 import TimelinePage from "pages/TimelinePage";
-import PersonPage from "pages/Person/Person";
+import PersonPage from "pages/Person/PersonPage";
 import CommunityPage from "pages/Community/CommunityPage";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { languageState, loginState } from "recoil/atoms";
@@ -64,7 +64,7 @@ const App = () => {
         <Route path="/story/chapter" component={StoryBook} />
         <Route path="/timeline" component={TimelinePage} />
         <Route path="/persons" exact component={PersonMain} />
-        <Route path="/persons/sejong" component={PersonPage} />
+        <Route path="/persons/post" component={PersonPage} />
         <Route path="/community" exact component={CommunityPage} />
         <Route path="/community/post" component={ViewPostPage} />
         {loggedIn === true && (

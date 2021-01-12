@@ -9,10 +9,11 @@ export const PostViewer = ({ post }) => {
   const { htmlContent, title, user, postDate } = post;
   const filteredUser = filterUsername(user);
   const htmlParser = new DOMParser();
-  const parsedContent = htmlParser.parseFromString(htmlContent, "text/html");
-  const content = Object.values(parsedContent.body.children);
+  const parsedContent = htmlParser.parseFromString(htmlContent, "text/html")
+    .body;
+  const content = Object.values(parsedContent.childNodes);
 
-  console.log(parsedContent.body);
+  console.log(content);
 
   return (
     <Box className="post-container" style={{ marginTop: "150px" }}>
@@ -26,22 +27,29 @@ export const PostViewer = ({ post }) => {
       </Box>
       <Line className="post-divider" />
       <Box className="post-body">
-        {content.map(({ innerHTML }, index) => {
-          console.log(innerHTML);
-          let parsedHTML = htmlParser.parseFromString(innerHTML, "text/html")
-              .body,
-            returnContent;
-          if (!parsedHTML.innerHTML) {
-            returnContent = parsedContent.children[0].outerHTML;
+        {content.map((element, index) => {
+          let returnContent;
+          if (element.innerHTML) {
+            returnContent = element.innerHTML;
+            return (
+              <div
+                key={index}
+                dangerouslySetInnerHTML={{ __html: returnContent }}
+              ></div>
+            );
           } else {
-            returnContent = innerHTML;
+            if (element.data) {
+              returnContent = element.data;
+              return <div key={index}>{returnContent}</div>;
+            } else {
+              return (
+                <div
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: element.outerHTML }}
+                ></div>
+              );
+            }
           }
-          return (
-            <div
-              key={index}
-              dangerouslySetInnerHTML={{ __html: returnContent }}
-            ></div>
-          );
         })}
       </Box>
     </Box>

@@ -5,7 +5,7 @@ import { Image } from "components/atoms/Image/Image";
 import { Text } from "components/atoms/Text/Text";
 import { PersonItem } from "components/molecules/TeamIntro/PersonItem/PersonItem";
 import StandardPage from "components/templates/StandardPage";
-import { teamLogo } from "assets/images/0_images";
+import teamLogo from "assets/images/Team/team-logo.png";
 import profileProps from "constants/profile";
 
 export const AboutTeam = () => {

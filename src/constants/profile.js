@@ -1,4 +1,4 @@
-import { profile } from "../assets/images/0_images";
+import profile from "assets/images/Team/profile.png";
 
 const profileProps = [
   { name: "홍길동", imageSrc: profile, job: "웹 UX, UI 디자인" },

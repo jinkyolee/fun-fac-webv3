@@ -8,12 +8,12 @@ import ChapterContainer from "components/molecules/Story/Chapter/ChapterContaine
 import StandardPage from "components/templates/StandardPage";
 import Chapter from "components/molecules/Story/Chapter/Chapter";
 import {
-  chapterImage1,
-  chapterImage2,
-  chapterImage3,
-  chapterImage4,
-  chapterImage5,
-} from "assets/images/0_images";
+  chapter1,
+  chapter2,
+  chapter3,
+  chapter4,
+  chapter5,
+} from "assets/images/Chapter/0_chapterImgExp";
 
 export const StoryMain = () => {
   const language = useRecoilValue(languageState);
@@ -43,11 +43,11 @@ export const StoryMain = () => {
           <ChapterContainer
             chapters={
               <>
-                <Chapter imgSrc={chapterImage1} chapter="0" />
-                <Chapter imgSrc={chapterImage2} chapter="1" />
-                <Chapter imgSrc={chapterImage3} chapter="2" />
-                <Chapter imgSrc={chapterImage4} chapter="3" />
-                <Chapter imgSrc={chapterImage5} chapter="4" />
+                <Chapter imgSrc={chapter1} chapter="0" />
+                <Chapter imgSrc={chapter2} chapter="1" />
+                <Chapter imgSrc={chapter3} chapter="2" />
+                <Chapter imgSrc={chapter4} chapter="3" />
+                <Chapter imgSrc={chapter5} chapter="4" />
               </>
             }
           />

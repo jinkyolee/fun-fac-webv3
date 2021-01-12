@@ -47,3 +47,12 @@
   background-color: transparent;
   color: #00249c;
 }
+
+.link-btn.return-to-persons {
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #00249c;
+  color: #00249c;
+  margin-bottom: 75px;
+}

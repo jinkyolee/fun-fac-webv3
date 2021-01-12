@@ -3,7 +3,7 @@ import { Box } from "components/atoms/Box/Box";
 import { Text } from "components/atoms/Text/Text";
 import Image from "components/atoms/Image/Image";
 import Choice from "components/molecules/InterTest/Choice/Choice";
-import { testBanner } from "assets/images/0_images";
+import { testBanner } from "assets/images/Test/0_testImgExp";
 import ProgressBar from "components/molecules/InterTest/ProgressBar/ProgressBar";
 import "./InProgress.css";
 
