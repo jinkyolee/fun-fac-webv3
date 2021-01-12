@@ -10,7 +10,7 @@
 
 .start-button {
   position: absolute;
-  margin-top: 20rem;
+  top: 22rem;
   width: 11.5rem;
   height: 3.15rem;
 }
@@ -23,4 +23,11 @@
   height: 6rem;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.main-subtext {
+  position: absolute;
+  top: 18rem;
+  text-align: center;
+  color: #00249c;
 }

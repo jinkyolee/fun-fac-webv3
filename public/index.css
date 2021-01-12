@@ -1,7 +1,7 @@
 @import "./reset.css";
 @font-face {
   font-family: yangjin;
-  src: url(YangJin.ttf);
+  src: local(yangjin), url(../src/assets/fonts/YangJin.ttf);
   font-weight: normal;
   font-style: normal;
 }
@@ -46,4 +46,9 @@ textarea {
 
 b {
   font-weight: bold;
+}
+
+.funfac-styled {
+  background-color: rgb(255, 240, 0);
+  border: 2px solid #00249c;
 }

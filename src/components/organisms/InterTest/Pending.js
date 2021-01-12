@@ -7,8 +7,9 @@ import {
   testShare,
   testStart,
 } from "assets/images/Test/0_testImgExp";
-import "./Pending.css";
 import copyLink from "functions/local/Community/copyLink";
+import Text from "components/atoms/Text/Text";
+import "./Pending.css";
 
 export const Pending = ({ setTestState }) => {
   return (
@@ -18,6 +19,10 @@ export const Pending = ({ setTestState }) => {
     >
       <Image src={testLogo} className="main-test-logo" />
       <Image src={testIllust} className="main-illust" />
+      <Text className="main-subtext yangjin">
+        각기 다른 매력과 분위기의 조선 5대궁 중<br />
+        나와 찰떡인 궁은?
+      </Text>
       <ClickableImage
         src={testStart}
         className="start-button"

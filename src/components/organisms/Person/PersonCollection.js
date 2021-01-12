@@ -5,7 +5,7 @@ import "./PersonCollection.css";
 export const PersonCollection = ({ personItems, label }) => {
   return (
     <Box className="collection-container">
-      <Box className="container-label yangjin">{label}</Box>
+      <Box className="container-label funfac-styled yangjin">{label}</Box>
       {personItems}
     </Box>
   );
