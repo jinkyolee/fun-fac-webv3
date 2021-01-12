@@ -76,8 +76,8 @@ export const headerTabs = selector({
           className="tab"
         />,
         <LinkedButton
-          to="/persons/sejong"
-          label={language === "kr" ? "세종" : "Sejong"}
+          to="/persons"
+          label={language === "kr" ? "인물" : "Person"}
           key="6"
           className="tab"
         />,
@@ -133,8 +133,8 @@ export const headerTabs = selector({
           className="tab"
         />,
         <LinkedButton
-          to="/persons/sejong"
-          label={language === "kr" ? "세종" : "Sejong"}
+          to="/persons"
+          label={language === "kr" ? "인물" : "Person"}
           key="6"
           className="tab"
         />,
