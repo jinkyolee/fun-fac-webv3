@@ -45,10 +45,7 @@ export const Timelines = () => {
           className="vertical-flex justify-center"
           style={{ marginTop: "170px", marginBottom: "150px" }}
         >
-          <Text
-            className="heading centered"
-            style={{ marginBottom: "60px", color: "#00249c" }}
-          >
+          <Text className="heading centered" style={{ color: "#00249c" }}>
             우리가{" "}
             <Text className="super-bold palace-text fade-in">{text[0]}</Text>과
             함께한 시간{" "}
