@@ -1,7 +1,6 @@
 import "react-app-polyfill/ie11";
 import "react-app-polyfill/ie9";
 import "react-app-polyfill/stable";
-import "assets/fonts/YangJin.ttf";
 import React from "react";
 import ReactDOM from "react-dom";
 import { RecoilRoot } from "recoil";

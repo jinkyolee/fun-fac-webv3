@@ -15,7 +15,12 @@ export const AboutTeam = () => {
       header={<Header />}
       body={
         <Box className="vertical-flex" style={{ marginTop: "100px" }}>
-          <Box className="about-banner funfac-styled gotham">About</Box>
+          <Box
+            className="about-banner funfac-styled gotham"
+            style={{ top: "7.75rem" }}
+          >
+            <Text>About</Text>
+          </Box>
         </Box>
       }
     />
