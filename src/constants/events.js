@@ -8,6 +8,44 @@ import {
 
 const palaceEvents = [
   {
+    label: "경복궁",
+    image: gyeongbok,
+    events: [
+      {
+        style: { type: "Basic" },
+        date: 1395,
+        eventName: "태조 이성계가 경복궁 창건",
+      },
+      {
+        style: { type: "Basic" },
+        date: 1592,
+        eventName: "임진왜란으로 경복궁 소실",
+      },
+      {
+        style: { type: "Basic", props: {} },
+        date: 1867,
+        eventName: "경복궁 중건 완료",
+      },
+      {
+        style: {
+          type: "Vertical",
+          props: { dir: "top", height: "30px", width: "12px" },
+        },
+        date: 1895,
+        eventName: "명성황후 시해사건 발발 (을미사변)",
+      },
+      {
+        style: {
+          type: "Vertical",
+          props: { dir: "bottom", height: "32.5px", width: "12px" },
+        },
+        date: 1926,
+        eventName: "조선총독부 청사 설치로 경복궁 가리게 됨",
+      },
+    ],
+  },
+  {
+    label: "창덕궁",
     image: changduk,
     events: [
       {
@@ -54,6 +92,7 @@ const palaceEvents = [
     ],
   },
   {
+    label: "창경궁",
     image: changgyeong,
     events: [
       {
@@ -84,42 +123,7 @@ const palaceEvents = [
     ],
   },
   {
-    image: gyeongbok,
-    events: [
-      {
-        style: { type: "Basic" },
-        date: 1395,
-        eventName: "태조 이성계가 경복궁 창건",
-      },
-      {
-        style: { type: "Basic" },
-        date: 1592,
-        eventName: "임진왜란으로 경복궁 소실",
-      },
-      {
-        style: { type: "Basic", props: {} },
-        date: 1867,
-        eventName: "경복궁 중건 완료",
-      },
-      {
-        style: {
-          type: "Vertical",
-          props: { dir: "top", height: "30px", width: "12px" },
-        },
-        date: 1895,
-        eventName: "명성황후 시해사건 발발 (을미사변)",
-      },
-      {
-        style: {
-          type: "Vertical",
-          props: { dir: "bottom", height: "32.5px", width: "12px" },
-        },
-        date: 1926,
-        eventName: "조선총독부 청사 설치로 경복궁 가리게 됨",
-      },
-    ],
-  },
-  {
+    label: "경희궁",
     image: gyeonghui,
     events: [
       {
@@ -146,6 +150,7 @@ const palaceEvents = [
     ],
   },
   {
+    label: "덕수궁",
     image: duksoo,
     events: [
       {

@@ -4,10 +4,16 @@ import Image from "components/atoms/Image/Image";
 import Timeline from "../Timeline/Timeline";
 import "./PalaceTimeline.css";
 
-export const PalaceTimeline = ({ img, events }) => {
+export const PalaceTimeline = ({ img, events, label }) => {
   return (
     <Box className="horizontal-flex align-center palace-timeline">
-      <Image className="timeline-img" src={img} />
+      <Box
+        className="vertical-flex align-center"
+        style={{ marginRight: "40px" }}
+      >
+        <Box className="funfac-styled palace-label">{label}</Box>
+        <Image className="timeline-img" src={img} />
+      </Box>
       <Timeline events={events} />
     </Box>
   );
