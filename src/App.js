@@ -4,20 +4,16 @@ import AboutTeam from "pages/About/About";
 import GameIntroduction from "pages/GameIntro";
 import Home from "pages/Home";
 import InteractiveTest from "pages/InterTest";
-import StoryMain from "pages/Story/StoryMain";
-import StoryBook from "pages/Story/StoryBook";
 import TimelinePage from "pages/TimelinePage";
 import PersonPage from "pages/Person/PersonPage";
 import CommunityPage from "pages/Community/CommunityPage";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { languageState, loginState } from "recoil/atoms";
 import LoginPage from "pages/Auth/LoginPage";
-import SignupPage from "pages/Auth/SignupPage";
 import { authService } from "fbaseInst/fbase";
 import WritePage from "pages/Community/WritePage";
 import ViewPostPage from "pages/Community/ViewPostPage";
 import PersonMain from "pages/Person/PersonMain";
-import Slider from "components/organisms/Slider/Slider";
 
 const App = () => {
   const setLanguageState = useSetRecoilState(languageState);
@@ -61,8 +57,6 @@ const App = () => {
         <Route path="/game" component={GameIntroduction} />
         <Route path="/team" component={AboutTeam} />
         <Route path="/test" component={InteractiveTest} />
-        <Route path="/story" component={StoryMain} />
-        <Route path="/story/chapter" component={StoryBook} />
         <Route path="/timeline" component={TimelinePage} />
         <Route path="/persons" exact component={PersonMain} />
         <Route path="/persons/post" component={PersonPage} />
@@ -71,12 +65,7 @@ const App = () => {
         {loggedIn === true && (
           <Route path="/community/write" component={WritePage} />
         )}
-        {loggedIn === false && (
-          <>
-            <Route path="/login" component={LoginPage} />
-            <Route path="/signup" component={SignupPage} />
-          </>
-        )}
+        {loggedIn === false && <Route path="/login" component={LoginPage} />}
       </Switch>
     </BrowserRouter>
   );

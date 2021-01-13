@@ -1,20 +1,105 @@
 .header {
   position: fixed;
+  flex-direction: column;
   top: 0;
   right: 0;
   left: 0;
-  height: 70px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   z-index: 100000;
 }
 
-.column:first-child {
-  margin-left: 30px;
+.header.closed {
+  height: 120px !important;
 }
 
-.column:last-child {
-  margin-right: 30px;
+.header.opened {
+  height: 180px !important;
+}
+
+.row:first-child {
+  height: fit-content;
+  width: 100%;
+  justify-content: space-between;
+  margin: 5px 0 20px 0;
+}
+
+.row:last-child {
+  margin-top: 30px;
+}
+
+.tab.last {
+  font-weight: 700 !important;
+  color: #00249c;
+  font-size: 25px !important;
+}
+
+.last-wrap {
+  animation: fade-in 1.15s;
+}
+
+.lang-btn {
+  height: 26px;
+  width: fit-content;
+  background-color: transparent;
+  color: #00249c;
+  font-size: 24px;
+  margin: 23px 0 0 50px;
+}
+
+.home-auth-btn {
+  height: 28px;
+  line-height: 28px;
+  font-size: 15px;
+  background-color: transparent;
+  color: #00249c;
+  margin-top: 1px;
+}
+
+.toggle-menu {
+  height: 28px;
+  font-size: 24px;
+  background-color: transparent;
+  color: #00249c;
+  margin-top: 8px;
+}
+
+.toggled {
+  animation: toggledHeader ease 1s;
+}
+
+.untoggled {
+  animation: untoggleHeader ease 1s;
+}
+
+@keyframes toggledHeader {
+  from {
+    height: 120px;
+  }
+  to {
+    height: 180px;
+  }
+}
+@keyframes untoggleHeader {
+  from {
+    height: 180px;
+  }
+  to {
+    height: 120px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

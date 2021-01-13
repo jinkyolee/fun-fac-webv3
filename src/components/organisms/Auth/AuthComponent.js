@@ -25,14 +25,13 @@ export const AuthComponent = ({ header, authType }) => {
     <Box
       className="vertical-flex align-center"
       style={{
-        marginTop: "140px",
+        marginTop: "220px",
         marginBottom: "50px",
       }}
     >
       <Text className="sub-heading" style={{ fontWeight: 500 }}>
         {header}
       </Text>
-      {emailSelected ? form : null}
       <Box
         className="vertical-flex"
         style={
@@ -41,13 +40,6 @@ export const AuthComponent = ({ header, authType }) => {
             : { marginTop: "50px", marginBottom: "120px" }
         }
       >
-        {!emailSelected ? (
-          <Button
-            className="auth-btn email"
-            label={`이메일로 ${label}하기`}
-            onClick={() => setSelectState(true)}
-          />
-        ) : null}
         <KakaoOAuth label={label} />
         <GoogleOAuth label={label} />
         <FacebookOAuth label={label} />

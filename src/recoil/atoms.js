@@ -8,7 +8,7 @@ export const languageState = atom({
 
 export const loginState = atom({
   key: "loginState",
-  default: window.localStorage.getItem("loginState") || false,
+  default: window.localStorage.getItem("loginState"),
 });
 
 export const postsCollection = atom({

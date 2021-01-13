@@ -23,16 +23,6 @@
   line-height: 45px;
 }
 
-.lang-btn {
-  height: 26px;
-  width: 85px;
-  border: 1px solid #00249c;
-  border-radius: 10px;
-  background-color: transparent;
-  color: #00249c;
-  font-size: 12px;
-}
-
 .link-btn {
   display: inline-block;
   height: 26px;
@@ -43,9 +33,11 @@
 
 .link-btn.tab {
   margin-right: 30px;
-  width: 61px;
+  width: fit-content;
   background-color: transparent;
   color: #00249c;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .link-btn.return-to-persons {
