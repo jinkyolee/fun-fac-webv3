@@ -60,19 +60,3 @@
 .fit-contentH {
   height: fit-content;
 }
-
-.box.about-banner {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  width: 215px;
-  height: 75px;
-  line-height: 75px;
-  left: 5rem;
-}
-
-.box.about-banner * {
-  margin-top: 20px;
-  font-weight: 900;
-}

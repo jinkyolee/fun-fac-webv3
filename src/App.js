@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import AboutTeam from "pages/About";
+import AboutTeam from "pages/About/About";
 import GameIntroduction from "pages/GameIntro";
 import Home from "pages/Home";
 import InteractiveTest from "pages/InterTest";
