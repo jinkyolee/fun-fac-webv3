@@ -2,19 +2,64 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 50rem;
-  border-bottom: 0.5px solid black;
+  background-color: #ffffff;
+  user-select: none;
 }
 
 .description-container {
   position: absolute;
-  left: 25px;
-  bottom: 30px;
+  left: 90px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 95%;
-  height: 300px;
+}
+
+.content-image {
+  position: absolute;
+  right: 60px;
+  bottom: 100px;
+  height: 400px;
+  width: fit-content;
+  object-fit: contain;
+}
+
+.home-title {
+  color: rgba(0, 36, 156, 1);
+  font-weight: 900;
+  width: fit-content;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.home-descrip {
+  color: rgba(0, 36, 156, 1);
+  font-size: 22px;
+}
+
+.home-link {
+  margin-top: 75px;
+  font-size: 18px;
+  font-weight: 700;
+  width: 160px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.swiper-pagination {
+  right: 80px !important;
+  left: auto !important;
+  bottom: 60px !important;
+  width: fit-content !important;
+}
+
+.swiper-pagination-bullet {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 10px 0 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(249, 66, 58) !important;
 }

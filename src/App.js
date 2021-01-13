@@ -17,6 +17,7 @@ import { authService } from "fbaseInst/fbase";
 import WritePage from "pages/Community/WritePage";
 import ViewPostPage from "pages/Community/ViewPostPage";
 import PersonMain from "pages/Person/PersonMain";
+import Slider from "components/organisms/Slider/Slider";
 
 const App = () => {
   const setLanguageState = useSetRecoilState(languageState);
@@ -76,9 +77,6 @@ const App = () => {
             <Route path="/signup" component={SignupPage} />
           </>
         )}
-        {/* <Redirect from="*">
-          <RedirectBack />
-        </Redirect> */}
       </Switch>
     </BrowserRouter>
   );

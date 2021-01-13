@@ -7,19 +7,19 @@ import palaceEvents from "constants/events";
 import Text from "components/atoms/Text/Text";
 
 export const Timelines = () => {
-  const [text, setText] = useState(["경복궁", "625"]);
+  const [text, setText] = useState(["경복궁", "626"]);
 
   const setPalaceText = () => {
     if (text[0] === "경복궁") {
-      setText(["창덕궁", "256"]);
+      setText(["창덕궁", "616"]);
     } else if (text[0] === "창덕궁") {
-      setText(["창경궁", "750"]);
+      setText(["창경궁", "538"]);
     } else if (text[0] === "창경궁") {
-      setText(["경희궁", "860"]);
+      setText(["경희궁", "389"]);
     } else if (text[0] === "경희궁") {
-      setText(["덕수궁", "123"]);
+      setText(["덕수궁", "428"]);
     } else if (text[0] === "덕수궁") {
-      setText(["경복궁", "625"]);
+      setText(["경복궁", "626"]);
     }
   };
 
