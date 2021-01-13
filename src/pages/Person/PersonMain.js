@@ -11,7 +11,7 @@ export const PersonMain = () => {
       className="justify-center"
       header={<Header />}
       body={
-        <Box className="vertical-flex" style={{ marginTop: "200px" }}>
+        <Box className="vertical-flex" style={{ marginTop: "240px" }}>
           <PersonCollection
             personItems={personCollection.historical}
             label="궁의 옛 주인들 이야기"

@@ -15,7 +15,7 @@ export const Pending = ({ setTestState }) => {
   return (
     <Box
       className="vertical-flex align-center"
-      style={{ width: "100%", position: "relative", top: "-4rem" }}
+      style={{ width: "100%", position: "relative" }}
     >
       <Image src={testLogo} className="main-test-logo" />
       <Image src={testIllust} className="main-illust" />

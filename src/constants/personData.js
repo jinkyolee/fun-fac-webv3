@@ -38,7 +38,7 @@ export const personPosts = {
         style={{
           position: "absolute",
           right: "30px",
-          top: "105px",
+          top: "145px",
           width: "200px",
         }}
       />

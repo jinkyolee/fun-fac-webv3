@@ -26,7 +26,7 @@ export const Result = ({ score }) => {
       />
       <Box
         className="vertical-flex result-container"
-        style={{ marginTop: "120px" }}
+        style={{ marginTop: "170px" }}
       >
         <Box className="justify-center align-center result-title">
           <Text className="body bold">{title}</Text>

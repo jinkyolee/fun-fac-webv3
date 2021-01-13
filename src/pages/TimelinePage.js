@@ -43,7 +43,7 @@ export const Timelines = () => {
       body={
         <Box
           className="vertical-flex justify-center"
-          style={{ marginTop: "135px", marginBottom: "190px" }}
+          style={{ marginTop: "170px", marginBottom: "190px" }}
         >
           <Text
             className="heading centered"

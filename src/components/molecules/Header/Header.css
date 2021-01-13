@@ -11,7 +11,7 @@
 }
 
 .header.closed {
-  height: 120px !important;
+  height: 130px !important;
 }
 
 .header.opened {
@@ -50,6 +50,7 @@
 
 .home-auth-btn {
   height: 28px;
+  width: 66px;
   line-height: 28px;
   font-size: 15px;
   background-color: transparent;
@@ -75,7 +76,7 @@
 
 @keyframes toggledHeader {
   from {
-    height: 120px;
+    height: 130px;
   }
   to {
     height: 180px;
@@ -86,7 +87,7 @@
     height: 180px;
   }
   to {
-    height: 120px;
+    height: 130px;
   }
 }
 

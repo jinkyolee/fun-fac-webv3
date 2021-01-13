@@ -34,7 +34,7 @@ export const CommunityPage = () => {
               <CommunityDisplay data={posts.contents} displayState={display} />
             </>
           }
-          style={{ backgroundColor: "#F9F9F9" }}
+          style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
         />
       );
     case "loading":

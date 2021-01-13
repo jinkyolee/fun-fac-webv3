@@ -11,10 +11,12 @@ import "./About.css";
 export const AboutTeam = () => {
   return (
     <StandardPage
-      className="centered"
       header={<Header />}
       body={
-        <Box className="vertical-flex" style={{ width: "100%" }}>
+        <Box
+          className="vertical-flex"
+          style={{ width: "100%", marginTop: "90px" }}
+        >
           <Box className="about-section">
             <Box className="about-banner funfac-styled gotham">
               <Text>About</Text>
