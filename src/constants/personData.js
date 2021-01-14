@@ -11,7 +11,6 @@ import {
   sejongThumbnail,
 } from "assets/images/Persons/0_personImgExp";
 import Image from "components/atoms/Image/Image";
-import Text from "components/atoms/Text/Text";
 import ExplanationImage from "components/molecules/PersonPage/ExplationImage/ExplanationImage";
 import PersonExplanation from "components/molecules/PersonPage/PersonExplanation/PersonExplanation";
 import PersonHeader from "components/molecules/PersonPage/PersonHeader/PersonHeader";

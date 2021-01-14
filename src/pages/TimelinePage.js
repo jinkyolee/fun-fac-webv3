@@ -31,9 +31,10 @@ export const Timelines = () => {
         targetText.forEach((element) => element.classList.remove("fade-out"));
         setPalaceText();
         targetText.forEach((element) => element.classList.add("fade-in"));
-      }, 990);
+      }, 985);
       targetText.forEach((element) => element.classList.add("fade-out"));
     }, 4000);
+    // eslint-disable-next-line
   }, [text]);
 
   return (

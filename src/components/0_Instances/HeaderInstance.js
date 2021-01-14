@@ -8,7 +8,6 @@ import { languageState, loginState } from "recoil/atoms";
 import { headerTabs } from "recoil/selectors";
 import { authService } from "fbaseInst/fbase";
 import Box from "components/atoms/Box/Box";
-import { Link } from "react-router-dom";
 
 export const HeaderInstance = () => {
   const [language, setLanguage] = useRecoilState(languageState);
@@ -50,8 +49,9 @@ export const HeaderInstance = () => {
             setLanguage(newLang);
           }}
           label="한 / En"
+          key={0}
         />,
-        <LinkedImage src={logo} className="logo" to="/" />,
+        <LinkedImage src={logo} className="logo" to="/" key={1} />,
         <Box
           className="horizontal-flex"
           style={{
@@ -59,6 +59,7 @@ export const HeaderInstance = () => {
             alignItems: "center",
             height: "26px",
           }}
+          key={2}
         >
           {loggedIn ? (
             <Button
@@ -88,13 +89,13 @@ export const HeaderInstance = () => {
             <LinkedButton
               to="/game"
               label="GAME"
-              key="1"
+              key={0}
               className="tab last gotham"
             />
             <LinkedButton
               to="/team"
               label="ABOUT US"
-              key="3"
+              key={1}
               className="tab last gotham"
             />
           </Box>

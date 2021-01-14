@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { languageState, loginState } from "./atoms";
+import { languageState } from "./atoms";
 import { LinkedButton } from "components/atoms/Button/Button";
 
 export const fontState = selector({
@@ -24,18 +24,6 @@ export const headerTabs = selector({
     const language = get(languageState);
 
     return [
-      // <LinkedButton
-      //   to="/game"
-      //   label={language === "kr" ? "게임" : "Game"}
-      //   key="1"
-      //   className="tab"
-      // />,
-      // <LinkedButton
-      //   to="/team"
-      //   label={language === "kr" ? "팀" : "Team"}
-      //   key="3"
-      //   className="tab"
-      // />,
       <LinkedButton
         to="/timeline"
         label={language === "kr" ? "5대궁과 함께한 시간" : "Timeline"}
