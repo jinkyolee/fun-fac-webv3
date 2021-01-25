@@ -4,8 +4,11 @@ import StandardPage from "components/templates/StandardPage";
 import Pending from "components/organisms/InterTest/Pending";
 import InProgress from "components/organisms/InterTest/InProgress";
 import Result from "components/organisms/InterTest/Result";
+import { useRecoilValue } from "recoil";
+import { languageState } from "recoil/atoms";
 
 export const InteractiveTest = () => {
+  const language = useRecoilValue(languageState);
   const [testState, setTestState] = useState("pending");
   const [score, setScore] = useState();
 
@@ -20,9 +23,9 @@ export const InteractiveTest = () => {
       header={<Header />}
       body={
         {
-          pending: <Pending setTestState={setTestState} />,
-          started: <InProgress setResult={setResult} />,
-          finished: <Result score={score} />,
+          pending: <Pending setTestState={setTestState} language={language} />,
+          started: <InProgress setResult={setResult} language={language} />,
+          finished: <Result score={score} language={language} />,
         }[testState]
       }
     />

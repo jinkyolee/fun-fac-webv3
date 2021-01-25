@@ -10,7 +10,7 @@ export const PersonItem = ({ name, imageSrc, job }) => {
       <Image src={imageSrc} className="profile-img" alt={name} />
       <Box className="profile-descrip funfac-styled">
         <Text className="bold">{name}</Text>
-        <Text className="body">{job}</Text>
+        <Text style={{ fontSize: "13px" }}>{job}</Text>
       </Box>
     </Box>
   );

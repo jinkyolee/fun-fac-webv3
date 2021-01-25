@@ -9,7 +9,7 @@ export const PalaceTimeline = ({ img, events, label }) => {
     <Box className="horizontal-flex align-center palace-timeline">
       <Box
         className="vertical-flex align-center"
-        style={{ marginRight: "40px" }}
+        style={{ marginRight: "40px", maxWidth: "160px" }}
       >
         <Box className="funfac-styled palace-label">{label}</Box>
         <Image className="timeline-img" src={img} />

@@ -3,12 +3,15 @@ import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance"
 import Box from "components/atoms/Box/Box";
 import StandardPage from "components/templates/StandardPage";
 import { LinkedButton } from "components/atoms/Button/Button";
-import { personPosts } from "constants/personData";
 import Text from "components/atoms/Text/Text";
+import { useRecoilValue } from "recoil";
+import { languageState } from "recoil/atoms";
+import personsPageText from "constants/textConsts/personsPage";
 
 export const PersonPage = () => {
+  const language = useRecoilValue(languageState);
   const postID = new URLSearchParams(window.location.search).get("id");
-  const post = personPosts[postID];
+  const post = personsPageText(language)[postID];
 
   if (post === undefined) {
     return (

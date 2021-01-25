@@ -14,8 +14,8 @@ import setResultContent from "functions/local/InterTest/setResultContent";
 import "./Result.css";
 import copyLink from "functions/local/Community/copyLink";
 
-export const Result = ({ score }) => {
-  const { title, subtext } = setResultContent(score);
+export const Result = ({ score, language }) => {
+  const { title, subtext } = setResultContent(score, language);
 
   return (
     <Box className="vertical-flex align-center">

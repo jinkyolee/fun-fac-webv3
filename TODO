@@ -13,7 +13,8 @@
 -- ✅ oAuth
 -- ✅ create post viewing page/component
 
-❌ profile customization
+✅ profile customization
 ❌ recreate storybook -> customization is pain in ass
-❌ finish design configs -> header, team, persons main page
+✅ finish design configs -> header, team, persons main page
 ✅ mechanism for retaining language settings
+❌ fix timeline text animations
