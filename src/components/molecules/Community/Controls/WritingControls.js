@@ -4,6 +4,9 @@ import { LinkedButton } from "components/atoms/Button/Button";
 import SearchIcon from "assets/svg/SearchIcon";
 import "./WritingControls.css";
 
+export const WritingControls = ({ setDisplayContent }) => {
+  const language = useRecoilValue(languageState);
+
   const checkLoginState = (e) => {
     e.preventDefault();
     const loginState = JSON.parse(window.localStorage.getItem("loginState"));
