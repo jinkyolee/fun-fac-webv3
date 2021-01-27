@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import GridIcon from "assets/svg/Community/GridIcon";
 import ListIcon from "assets/svg/Community/ListIcon";
 import initButtonColor from "functions/local/Community/initButtonColor";
