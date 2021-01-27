@@ -7,11 +7,14 @@ import initDisplayState from "functions/local/Community/initDisplayState";
 import CommunityDisplay from "components/organisms/Community/CommunityDisplay/CommunityDisplay";
 import { useRecoilValue, useRecoilValueLoadable } from "recoil";
 import { postsCollection } from "recoil/atoms";
+import { filteredPosts } from "recoil/selectors";
 
 export const CommunityPage = () => {
   const [display, setDisplay] = useState(initDisplayState());
   const [loaded, setLoadingState] = useState(false);
   const posts = useRecoilValueLoadable(postsCollection);
+  const fPosts = useRecoilValueLoadable(filteredPosts);
+  const [displayContent, setDisplayContent] = useState();
 
   const setDisplayState = (state) => {
     setDisplay(state);
@@ -19,57 +22,56 @@ export const CommunityPage = () => {
     window.localStorage.setItem("displayState", state);
   };
 
-  switch (posts.state) {
-    case "hasValue":
-      return (
-        <StandardPage
-          className="justify-center relative"
-          header={<Header />}
-          body={
-            <>
-              <WritingControls />
-              <LayoutControls
-                displayState={display}
-                setDisplayState={setDisplayState}
-              />
-              <CommunityDisplay data={posts.contents} displayState={display} />
-            </>
-          }
-          style={{ backgroundColor: "#F9F9F9" }}
-        />
-      );
-    case "loading":
-      return (
-        <StandardPage
-          className="justify-center relative"
-          header={<Header />}
-          body={
-            <>
-              <WritingControls />
-              <LayoutControls
-                displayState={display}
-                setDisplayState={setDisplayState}
-              />
-              <span
-                style={{
-                  marginTop: "300px",
-                  marginBottom: "1000px",
-                  fontSize: "50px",
-                }}
-              >
-                Loading...
-              </span>
-            </>
-          }
-          style={{ backgroundColor: "#F9F9F9" }}
-        />
-      );
-    case "hasError":
-      return (
-        <h1 style={{ marginTop: "100px" }}>
-          Ding Ding Ding.. we have an error
-        </h1>
-      );
+  if (posts.state === "hasValue" && fPosts.state === "hasValue") {
+    let content = posts.contents;
+    const filteredContent = fPosts.contents;
+    setDisplayContent(content);
+    return (
+      <StandardPage
+        className="justify-center relative"
+        header={<Header />}
+        body={
+          <>
+            <WritingControls setDisplayContent={setDisplayContent} />
+            <LayoutControls
+              displayState={display}
+              setDisplayState={setDisplayState}
+              setDisplayContent={setDisplayContent}
+              filteredPosts={filteredContent}
+              displayContent={displayContent}
+            />
+            <CommunityDisplay data={displayContent} displayState={display} />
+          </>
+        }
+        style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
+      />
+    );
+  } else if (posts.state === "loading" || fPosts.state === "loading") {
+    return (
+      <StandardPage
+        className="justify-center relative"
+        header={<Header />}
+        body={
+          <>
+            <WritingControls />
+            <LayoutControls
+              displayState={display}
+              setDisplayState={setDisplayState}
+            />
+            <span
+              style={{
+                marginTop: "300px",
+                marginBottom: "1000px",
+                fontSize: "50px",
+              }}
+            >
+              Loading...
+            </span>
+          </>
+        }
+        style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
+      />
+    );
   }
 };
 

@@ -4,7 +4,6 @@ import { LinkedButton } from "components/atoms/Button/Button";
 import SearchIcon from "assets/svg/SearchIcon";
 import "./WritingControls.css";
 
-export const WritingControls = () => {
   const checkLoginState = (e) => {
     e.preventDefault();
     const loginState = JSON.parse(window.localStorage.getItem("loginState"));

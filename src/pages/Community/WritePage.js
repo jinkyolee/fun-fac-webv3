@@ -6,7 +6,7 @@ import WritingForm from "components/organisms/Community/WritingForm/WritingForm"
 export const WritePage = () => {
   return (
     <StandardPage
-      className="full centered"
+      className="fullW centered"
       header={<Header />}
       body={<WritingForm />}
     />

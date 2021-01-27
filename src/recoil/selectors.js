@@ -1,25 +1,6 @@
 import { selector } from "recoil";
-import { languageState, loginState } from "./atoms";
-import evilNightKr from "assets/evil-night-kr.epub";
-import evilNightEn from "assets/evil-night-en.epub";
-import Button, { LinkedButton } from "components/atoms/Button/Button";
-import { authService } from "firebase/fbase";
-
-export const ebookURLState = selector({
-  key: "ebookURLState",
-  get: ({ get }) => {
-    const language = get(languageState);
-
-    switch (language) {
-      case "kr":
-        return evilNightKr;
-      case "en":
-        return evilNightEn;
-      default:
-        break;
-    }
-  },
-});
+import { languageState, postsCollection } from "./atoms";
+import { LinkedButton } from "components/atoms/Button/Button";
 
 export const fontState = selector({
   key: "fontState",
@@ -152,5 +133,24 @@ export const headerTabs = selector({
         />,
       ];
     }
+  },
+});
+
+export const filteredPosts = selector({
+  key: "filteredPosts",
+  get: ({ get }) => {
+    const posts = get(postsCollection);
+    let palacePosts = [],
+      gamePosts = [];
+
+    posts.forEach((post) => {
+      if (post.flair === "palace") {
+        palacePosts.push(post);
+      } else {
+        gamePosts.push(post);
+      }
+    });
+
+    return { palacePosts, gamePosts };
   },
 });

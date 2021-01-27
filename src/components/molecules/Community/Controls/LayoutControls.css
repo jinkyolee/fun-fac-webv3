@@ -26,3 +26,10 @@
 path {
   pointer-events: none;
 }
+
+.tag-selecter {
+  border-radius: 0.5rem;
+  width: min-content;
+  margin-right: 10px;
+  padding: 5px 0;
+}
