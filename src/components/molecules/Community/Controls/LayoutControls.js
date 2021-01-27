@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GridIcon from "assets/svg/Community/GridIcon";
 import ListIcon from "assets/svg/Community/ListIcon";
 import initButtonColor from "functions/local/Community/initButtonColor";
@@ -14,18 +14,23 @@ export const LayoutControls = ({
   displayState,
   setDisplayState,
   setDisplayContent,
-  displayContent,
-  filteredPosts = { palacePosts: [], gamePosts: [] },
+  filteredPosts,
+  posts,
 }) => {
   const language = useRecoilValue(languageState);
-  const [flairState, setFlair] = useState("default");
+  const flairState = useRef("default");
   const { palacePosts, gamePosts } = filteredPosts;
 
+  console.log(filteredPosts);
+
   const filterDisplayContent = () => {
-    if (flairState === "palace") {
+    console.log(flairState.current);
+    if (flairState.current === "palace") {
       return palacePosts;
-    } else {
+    } else if (flairState.current === "game") {
       return gamePosts;
+    } else if (flairState.current === "default") {
+      return posts;
     }
   };
 
@@ -35,26 +40,32 @@ export const LayoutControls = ({
 
   return (
     <Box className="layout-cntrl">
-      {flairState !== "" && (
+      {flairState.current !== "default" && (
         <Box
-          className={`flair-circle ${flairState}`}
+          className={`flair-circle ${flairState.current}`}
           style={{ marginRight: "10px" }}
         />
       )}
       <Dropdown
         name="tag-selecter"
         className="tag-selecter"
-        defaultLabel={language ? "선택한 태그 없음" : "No tag selected"}
-        value={flairState}
+        defaultLabel={language === "kr" ? "모든 태그" : "All"}
+        value={flairState.current}
         onChange={(e) => {
-          setFlair(e.target.value);
+          flairState.current = e.target.value;
           setDisplayContent(filterDisplayContent());
-          displayContent = filterDisplayContent();
         }}
-        options={[
-          { value: "palace", label: "Palace" },
-          { value: "game", label: "Game" },
-        ]}
+        options={
+          language === "kr"
+            ? [
+                { value: "palace", label: "고궁" },
+                { value: "game", label: "게임" },
+              ]
+            : [
+                { value: "palace", label: "Palace" },
+                { value: "game", label: "Game" },
+              ]
+        }
       />
       <Button
         className="list-display-btn"

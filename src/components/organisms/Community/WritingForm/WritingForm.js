@@ -10,16 +10,25 @@ import {
 } from "components/atoms/Input/Input";
 import Button from "components/atoms/Button/Button";
 import { firestoreService, authService, storageService } from "fbaseInst/fbase";
+import { useRecoilValue } from "recoil";
+import { languageState } from "recoil/atoms";
 
 const WritingForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState();
   const [flair, setFlair] = useState("");
   const [html, setHTML] = useState();
+  const language = useRecoilValue(languageState);
   const imageURL = useRef([]);
-  const flairOptions = [
+
+  const flairOptionsEn = [
     { value: "palace", label: "Palace" },
     { value: "game", label: "Game" },
+  ];
+
+  const flairOptionsKr = [
+    { value: "palace", label: "고궁" },
+    { value: "game", label: "게임" },
   ];
 
   const onTitleChange = (event) => {
@@ -181,7 +190,7 @@ const WritingForm = () => {
           <TextInput
             className="title-input"
             name="content-title"
-            placeholder="제목을 입력하세요"
+            placeholder={language === "kr" ? "제목을 입력하세요" : "Title"}
             value={title}
             onChange={onTitleChange}
           />
@@ -191,8 +200,10 @@ const WritingForm = () => {
           <Dropdown
             className="flair-selecter"
             name="flair-selecter"
-            options={flairOptions}
-            defaultLabel="태그를 선택하세요"
+            options={language === "kr" ? flairOptionsKr : flairOptionsEn}
+            defaultLabel={
+              language === "kr" ? "태그를 선택하세요" : "Select Tag"
+            }
             onChange={(e) => setFlair(e.target.value)}
           />
           <Button
