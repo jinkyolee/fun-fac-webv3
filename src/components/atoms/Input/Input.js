@@ -40,6 +40,8 @@ export const TextInput = ({
   style,
   name,
   placeholder = "",
+  onBlur = null,
+  onKeyDown = null,
 }) => {
   return (
     <input
@@ -52,6 +54,8 @@ export const TextInput = ({
       required={required}
       style={style}
       placeholder={placeholder}
+      onBlur={onBlur}
+      onKeyDown={onKeyDown}
     />
   );
 };

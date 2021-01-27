@@ -1,9 +1,9 @@
 import React from "react";
 import "./Box.css";
 
-export const Box = ({ className = "", style, children }) => {
+export const Box = ({ className = "", style, children, onBlur }) => {
   return (
-    <div className={`box ${className}`} style={style}>
+    <div className={`box ${className}`} style={style} onBlur={onBlur}>
       {children}
     </div>
   );
