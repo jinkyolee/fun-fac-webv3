@@ -7,11 +7,9 @@ import initDisplayState from "functions/local/Community/initDisplayState";
 import CommunityDisplay from "components/organisms/Community/CommunityDisplay/CommunityDisplay";
 import { useRecoilValue } from "recoil";
 import { postsCollection } from "recoil/atoms";
-import { filteredPosts } from "recoil/selectors";
 
 export const CommunityPage = () => {
   const posts = useRecoilValue(postsCollection);
-  const fPosts = useRecoilValue(filteredPosts);
   const [display, setDisplay] = useState(initDisplayState());
   const [displayContent, setDisplayContent] = useState(posts);
 
@@ -32,8 +30,6 @@ export const CommunityPage = () => {
             displayState={display}
             setDisplayState={setDisplayState}
             setDisplayContent={setDisplayContent}
-            filteredPosts={fPosts}
-            posts={posts}
           />
           <CommunityDisplay data={displayContent} displayState={display} />
         </>

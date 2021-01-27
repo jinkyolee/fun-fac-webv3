@@ -1,13 +1,18 @@
-import React from "react";
-import Box from "components/atoms/Box/Box";
+import React, { useState } from "react";
+import Box, { ClickableBox } from "components/atoms/Box/Box";
 import { LinkedButton } from "components/atoms/Button/Button";
 import SearchIcon from "assets/svg/SearchIcon";
-import "./WritingControls.css";
 import { useRecoilValue } from "recoil";
-import { languageState } from "recoil/atoms";
+import { languageState, postsCollection } from "recoil/atoms";
+import "./WritingControls.css";
+import { TextInput } from "components/atoms/Input/Input";
+import { searchPosts } from "functions/local/Community/searchPosts";
 
-export const WritingControls = () => {
+export const WritingControls = ({ setDisplayContent }) => {
+  const posts = useRecoilValue(postsCollection);
   const language = useRecoilValue(languageState);
+  const [opened, setOpenState] = useState(false);
+  const [search, setSearch] = useState("");
 
   const checkLoginState = (e) => {
     e.preventDefault();
@@ -23,6 +28,27 @@ export const WritingControls = () => {
     }
   };
 
+  const setSearchBtnState = () => {
+    if (opened) {
+      setOpenState(false);
+    } else {
+      setOpenState(true);
+    }
+  };
+
+  const initSearch = () => {
+    const searchedPosts = searchPosts(posts, search);
+    setDisplayContent(searchedPosts);
+  };
+
+  const onInput = (event) => {
+    if (event.code === "Enter") {
+      event.preventDefault();
+      initSearch();
+    }
+    event.Handled = true;
+  };
+
   return (
     <Box className="writing-cntrl">
       <LinkedButton
@@ -31,9 +57,30 @@ export const WritingControls = () => {
         label={language === "kr" ? "✍️  글 쓰기" : <>✍&nbsp;&nbsp;Post</>}
         onClick={(e) => checkLoginState(e)}
       />
-      <Box className="search-btn centered">
-        <SearchIcon />
-      </Box>
+      {opened ? (
+        <Box className={`search-btn ${opened}`} onClick={setSearchBtnState}>
+          <TextInput
+            className="search-input"
+            value={search}
+            onChange={(e) => {
+              e.preventDefault();
+              setSearch(e.target.value);
+            }}
+            onKeyDown={onInput}
+            onBlur={() => {
+              setOpenState(false);
+              setSearch("");
+            }}
+          />
+          <ClickableBox onClick={() => initSearch()}>
+            <SearchIcon className="search-icon" />
+          </ClickableBox>
+        </Box>
+      ) : (
+        <ClickableBox className={`search-btn`} onClick={setSearchBtnState}>
+          <SearchIcon className="search-icon" />
+        </ClickableBox>
+      )}
     </Box>
   );
 };
