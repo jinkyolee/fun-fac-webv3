@@ -8,20 +8,19 @@ import Button from "components/atoms/Button/Button";
 import "./LayoutControls.css";
 import { Dropdown } from "components/atoms/Input/Input";
 import { useRecoilValue } from "recoil";
-import { languageState } from "recoil/atoms";
+import { languageState, postsCollection } from "recoil/atoms";
+import { filteredPosts } from "recoil/selectors";
 
 export const LayoutControls = ({
   displayState,
   setDisplayState,
   setDisplayContent,
-  filteredPosts,
-  posts,
 }) => {
+  const posts = useRecoilValue(postsCollection);
+  const fPosts = useRecoilValue(filteredPosts);
   const language = useRecoilValue(languageState);
   const flairState = useRef("default");
-  const { palacePosts, gamePosts } = filteredPosts;
-
-  console.log(filteredPosts);
+  const { palacePosts, gamePosts } = fPosts;
 
   const filterDisplayContent = () => {
     console.log(flairState.current);

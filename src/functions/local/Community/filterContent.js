@@ -11,7 +11,7 @@ const filterContentExp = (content) => {
   filteredString = filteredString.join("∂");
 
   if (filteredString.length > 275) {
-    filteredString = `${filteredString.slice(0, 275)}...`;
+    filteredString = `${filteredString.slice(0, 225)}...`;
   }
 
   filteredString = filteredString.split("∂");
