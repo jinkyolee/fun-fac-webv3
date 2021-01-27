@@ -1,0 +1,9 @@
+.exp-img-container {
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+
+.exp-img {
+  object-fit: contain;
+}

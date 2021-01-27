@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HeaderInstance as Header } from "components/0_Instances/HeaderInstance";
 import StandardPage from "components/templates/StandardPage";
 import WritingControls from "components/molecules/Community/Controls/WritingControls";
 import LayoutControls from "components/molecules/Community/Controls/LayoutControls";
 import initDisplayState from "functions/local/Community/initDisplayState";
 import CommunityDisplay from "components/organisms/Community/CommunityDisplay/CommunityDisplay";
-import { useRecoilValue, useRecoilValueLoadable } from "recoil";
+import { useRecoilValueLoadable } from "recoil";
 import { postsCollection } from "recoil/atoms";
 import { filteredPosts } from "recoil/selectors";
 
 export const CommunityPage = () => {
   const [display, setDisplay] = useState(initDisplayState());
-  const [loaded, setLoadingState] = useState(false);
   const posts = useRecoilValueLoadable(postsCollection);
   const fPosts = useRecoilValueLoadable(filteredPosts);
   const [displayContent, setDisplayContent] = useState();

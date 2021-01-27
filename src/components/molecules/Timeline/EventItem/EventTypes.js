@@ -56,7 +56,7 @@ export const VerticalEvent = ({ eventDate, date, eventName, styleProps }) => {
         <Box
           className="event-textbox vertical-flex align-center"
           style={{
-            [styleProps.dir]: `calc(-${styleProps.height} - 20px)`,
+            [styleProps.dir]: `calc(-${styleProps.height} - 25px)`,
             left: `calc(${styleProps.width} + 10px )`,
           }}
         >

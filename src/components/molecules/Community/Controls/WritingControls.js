@@ -3,8 +3,10 @@ import Box from "components/atoms/Box/Box";
 import { LinkedButton } from "components/atoms/Button/Button";
 import SearchIcon from "assets/svg/SearchIcon";
 import "./WritingControls.css";
+import { useRecoilValue } from "recoil";
+import { languageState } from "recoil/atoms";
 
-export const WritingControls = ({ setDisplayContent }) => {
+export const WritingControls = () => {
   const language = useRecoilValue(languageState);
 
   const checkLoginState = (e) => {
@@ -26,7 +28,7 @@ export const WritingControls = ({ setDisplayContent }) => {
       <LinkedButton
         className="new-blog-btn"
         to="/community/write"
-        label="✍️  글 쓰기"
+        label={language === "kr" ? "✍️  글 쓰기" : <>✍&nbsp;&nbsp;Post</>}
         onClick={(e) => checkLoginState(e)}
       />
       <Box className="search-btn centered">

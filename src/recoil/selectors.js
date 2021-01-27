@@ -21,118 +21,34 @@ export const fontState = selector({
 export const headerTabs = selector({
   key: "headerTabs",
   get: ({ get }) => {
-    const loggedIn = get(loginState);
     const language = get(languageState);
 
-    if (!loggedIn) {
-      return [
-        <LinkedButton
-          to="/game"
-          label={language === "kr" ? "게임" : "Game"}
-          key="1"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/story"
-          label={language === "kr" ? "스토리" : "Story"}
-          key="2"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/team"
-          label={language === "kr" ? "팀" : "Team"}
-          key="3"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/test"
-          label={language === "kr" ? "테스트" : "Test"}
-          key="4"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/timeline"
-          label={language === "kr" ? "타임라인" : "Timeline"}
-          key="5"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/persons/sejong"
-          label={language === "kr" ? "세종" : "Sejong"}
-          key="6"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/community"
-          label={language === "kr" ? "커뮤니티" : "Forum"}
-          key="7"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/signup"
-          label={language === "kr" ? "회가" : "Signup"}
-          key="8"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/login"
-          label={language === "kr" ? "로그" : "Login"}
-          key="9"
-          className="tab"
-        />,
-      ];
-    } else {
-      return [
-        <LinkedButton
-          to="/game"
-          label={language === "kr" ? "게임" : "Game"}
-          key="1"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/story"
-          label={language === "kr" ? "스토리" : "Story"}
-          key="2"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/team"
-          label={language === "kr" ? "팀" : "Team"}
-          key="3"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/test"
-          label={language === "kr" ? "테스트" : "Test"}
-          key="4"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/timeline"
-          label={language === "kr" ? "타임라인" : "Timeline"}
-          key="5"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/persons/sejong"
-          label={language === "kr" ? "세종" : "Sejong"}
-          key="6"
-          className="tab"
-        />,
-        <LinkedButton
-          to="/community"
-          label={language === "kr" ? "커뮤니티" : "Forum"}
-          key="7"
-          className="tab"
-        />,
-        <Button
-          className="tab"
-          key="8"
-          label={languageState === "kr" ? "로그아웃" : "Logout"}
-          onClick={() => authService.signOut()}
-        />,
-      ];
-    }
+    return [
+      <LinkedButton
+        to="/timeline"
+        label={language === "kr" ? "5대궁과 함께한 시간" : "Timeline"}
+        key="0"
+        className="tab"
+      />,
+      <LinkedButton
+        to="/test"
+        label={language === "kr" ? "궁 추천 테스트" : "Test"}
+        key="1"
+        className="tab"
+      />,
+      <LinkedButton
+        to="/persons"
+        label={language === "kr" ? "인물 포커스" : "Person"}
+        key="2"
+        className="tab"
+      />,
+      <LinkedButton
+        to="/community"
+        label={language === "kr" ? "커뮤니티" : "Forum"}
+        key="3"
+        className="tab"
+      />,
+    ];
   },
 });
 

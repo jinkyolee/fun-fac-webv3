@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { LoginForm, SignupForm } from "components/organisms/Auth/AuthForm";
+import React from "react";
 import Box from "components/atoms/Box/Box";
 import Text from "components/atoms/Text/Text";
 import {
@@ -7,50 +6,26 @@ import {
   GoogleOAuth,
   KakaoOAuth,
 } from "components/molecules/Auth/AuthCntrls";
-import Button from "components/atoms/Button/Button";
 
-export const AuthComponent = ({ header, authType }) => {
-  let label, form;
-  const [emailSelected, setSelectState] = useState(false);
-
-  if (authType === "login") {
-    label = "로그인";
-    form = <LoginForm />;
-  } else {
-    label = "회원가입";
-    form = <SignupForm />;
-  }
-
+export const AuthComponent = ({ header }) => {
   return (
     <Box
       className="vertical-flex align-center"
       style={{
-        marginTop: "140px",
+        marginTop: "220px",
         marginBottom: "50px",
       }}
     >
       <Text className="sub-heading" style={{ fontWeight: 500 }}>
         {header}
       </Text>
-      {emailSelected ? form : null}
       <Box
         className="vertical-flex"
-        style={
-          emailSelected
-            ? { marginTop: "50px", marginBottom: "60px" }
-            : { marginTop: "50px", marginBottom: "120px" }
-        }
+        style={{ marginTop: "50px", marginBottom: "120px" }}
       >
-        {!emailSelected ? (
-          <Button
-            className="auth-btn email"
-            label={`이메일로 ${label}하기`}
-            onClick={() => setSelectState(true)}
-          />
-        ) : null}
-        <KakaoOAuth label={label} />
-        <GoogleOAuth label={label} />
-        <FacebookOAuth label={label} />
+        <KakaoOAuth label={"로그인하기"} />
+        <GoogleOAuth label={"로그인하기"} />
+        <FacebookOAuth label={"로그인하기"} />
       </Box>
     </Box>
   );

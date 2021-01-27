@@ -14,38 +14,58 @@ export const CommunityDisplay = ({ data, displayState }) => {
     alignClass = "";
   }
 
-  console.log(data);
-
-  return (
-    <List className={`community-display ${alignClass}`}>
-      {displayState === "grid"
-        ? data.map(({ title, user, flair, postDate, content, id }, index) => {
-            return (
-              <CardedBlogItem
-                title={title}
-                user={user}
-                flair={flair}
-                postDate={postDate}
-                content={content}
-                id={id}
-                key={index}
-              />
-            );
-          })
-        : data.map(({ title, user, flair, postDate, id }, index) => {
-            return (
-              <ListedBlogItem
-                title={title}
-                user={user}
-                flair={flair}
-                postDate={postDate}
-                id={id}
-                key={index}
-              />
-            );
-          })}
-    </List>
-  );
+  if (data.length < 1) {
+    return (
+      <span
+        style={{
+          marginTop: "300px",
+          marginBottom: "340px",
+          fontSize: "50px",
+        }}
+      >
+        No Posts Found
+      </span>
+    );
+  } else {
+    return (
+      <List
+        className={`community-display ${alignClass}`}
+        style={
+          data.length > 6 ? { height: "fit-content" } : { height: "50rem" }
+        }
+      >
+        {displayState === "grid"
+          ? data.map(
+              ({ title, user, flair, postDate, content, id, image }, index) => {
+                return (
+                  <CardedBlogItem
+                    title={title}
+                    user={user}
+                    flair={flair}
+                    postDate={postDate}
+                    content={content}
+                    id={id}
+                    image={image}
+                    key={index}
+                  />
+                );
+              }
+            )
+          : data.map(({ title, user, flair, postDate, id }, index) => {
+              return (
+                <ListedBlogItem
+                  title={title}
+                  user={user}
+                  flair={flair}
+                  postDate={postDate}
+                  id={id}
+                  key={index}
+                />
+              );
+            })}
+      </List>
+    );
+  }
 };
 
 export default CommunityDisplay;

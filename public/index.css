@@ -1,8 +1,21 @@
 @import "./reset.css";
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+  font-family: "YANGJIN";
+  src: local("YANGJIN"), url("../src/assets/fonts/YangJin.ttf") format("ttf"),
+    url("../src/assets/fonts/YangJin.woff") format("woff"),
+    url("../src/assets/fonts/YangJin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
-* {
-  font-family: "Noto Sans KR", sans-serif;
+@font-face {
+  font-family: "Gotham-Book";
+  src: local("Gotham-Book"),
+    url("../src/assets/fonts/GothamBook.ttf") format("ttf"),
+    url("../src/assets/fonts/Gotham-Book.woff") format("woff"),
+    url("../src/assets/fonts/Gotham-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
@@ -36,4 +49,130 @@ a {
 
 textarea {
   resize: none;
+}
+
+b {
+  font-weight: bold;
+}
+
+.yangjin {
+  font-family: "YANGJIN";
+  user-select: none;
+}
+
+.gotham {
+  font-family: "Gotham-Book";
+  user-select: none;
+}
+
+.funfac-styled {
+  background-color: rgb(255, 240, 0);
+  border: 2px solid #00249c !important;
+  color: #00249c;
+}
+
+.fade-in {
+  animation: fade-in ease 1s;
+  -webkit-animation: fade-in ease 1s;
+  -moz-animation: fade-in ease 1s;
+  -o-animation: fade-in ease 1s;
+  -ms-animation: fade-in ease 1s;
+}
+
+.fade-out {
+  animation: fade-out ease 1s;
+  -webkit-animation: fade-out ease 1s;
+  -moz-animation: fade-out ease 1s;
+  -o-animation: fade-out ease 1s;
+  -ms-animation: fade-out ease 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

@@ -5,7 +5,7 @@ import Box from "components/atoms/Box/Box";
 import { InputButton, TextInput } from "components/atoms/Input/Input";
 import Image from "components/atoms/Image/Image";
 import Button from "components/atoms/Button/Button";
-import { authService, firebaseInst } from "firebase/fbase";
+import { authService, firebaseInst } from "fbaseInst/fbase";
 
 export const EmailInput = ({ onChange, label, value }) => {
   return (

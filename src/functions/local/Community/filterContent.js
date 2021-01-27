@@ -1,9 +1,22 @@
 const filterContentExp = (content) => {
-  if (content.length > 275) {
-    return `${content.slice(0, 275)} ...`;
+  let filteredString;
+
+  if (content.length > 8) {
+    filteredString = content.slice(0, 9);
+    console.log(filteredString);
   } else {
-    return content;
+    filteredString = content;
   }
+
+  filteredString = filteredString.join("∂");
+
+  if (filteredString.length > 275) {
+    filteredString = `${filteredString.slice(0, 275)}...`;
+  }
+
+  filteredString = filteredString.split("∂");
+
+  return filteredString;
 };
 
 export default filterContentExp;

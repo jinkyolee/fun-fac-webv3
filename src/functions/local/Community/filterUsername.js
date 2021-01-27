@@ -1,5 +1,6 @@
 const filterUsername = (username) => {
-  const slicedUsername = username.slice(0, 8);
+  const slicedUsername = username.split("@");
+  return slicedUsername[0];
 };
 
 export default filterUsername;

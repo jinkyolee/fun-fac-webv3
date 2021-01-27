@@ -1,0 +1,38 @@
+.box.about-banner {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  width: 215px;
+  height: 75px;
+  line-height: 75px;
+  left: 5rem;
+}
+
+.box.about-banner * {
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.about-section {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about-section:first-child {
+  margin-top: 8rem;
+}
+
+.about-section:last-child {
+  margin-top: 8rem;
+}
+
+.profile-container {
+  margin-top: 9rem;
+  margin-bottom: 4rem;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+}

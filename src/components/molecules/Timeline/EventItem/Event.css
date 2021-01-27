@@ -7,15 +7,15 @@
   justify-content: center;
   width: 13px;
   height: 13px;
-  border: 1px solid #2f2f2f;
-  background-color: #f2f2f2;
+  border: 2px solid #00249c;
+  background-color: #fff000;
   z-index: 1000;
 }
 
 .event-mask {
   width: 13px;
   height: 13px;
-  background-color: #f2f2f2;
+  background-color: #fff000;
   z-index: 1000;
 }
 
@@ -40,19 +40,21 @@
   position: absolute;
   text-align: center;
   font-size: 13px;
-  line-height: 13px;
+  line-height: 15px;
   width: 95px;
   left: -40px;
   top: 20px;
 }
 
 .event-text.top {
-  top: -35px;
+  top: -40px;
+  margin-left: -3px;
+  width: 100px;
 }
 
 .event-text.vertical {
   position: static;
-  width: 110px !important;
+  width: 115px !important;
 }
 
 .event-textbox {
