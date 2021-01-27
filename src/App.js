@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AboutTeam from "pages/About/About";
 import GameIntroduction from "pages/GameIntro";
@@ -14,6 +14,7 @@ import { authService } from "fbaseInst/fbase";
 import WritePage from "pages/Community/WritePage";
 import ViewPostPage from "pages/Community/ViewPostPage";
 import PersonMain from "pages/Person/PersonMain";
+import Loading from "pages/Loading";
 
 const App = () => {
   const setLanguageState = useSetRecoilState(languageState);
@@ -60,12 +61,14 @@ const App = () => {
         <Route path="/timeline" component={TimelinePage} />
         <Route path="/persons" exact component={PersonMain} />
         <Route path="/persons/post" component={PersonPage} />
-        <Route path="/community" exact component={CommunityPage} />
         <Route path="/community/post" component={ViewPostPage} />
         {loggedIn === true && (
           <Route path="/community/write" component={WritePage} />
         )}
         {loggedIn === false && <Route path="/login" component={LoginPage} />}
+        <Suspense fallback={<Loading />}>
+          <Route path="/community" exact component={CommunityPage} />
+        </Suspense>
       </Switch>
     </BrowserRouter>
   );

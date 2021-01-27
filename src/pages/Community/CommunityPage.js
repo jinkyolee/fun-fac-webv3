@@ -5,15 +5,15 @@ import WritingControls from "components/molecules/Community/Controls/WritingCont
 import LayoutControls from "components/molecules/Community/Controls/LayoutControls";
 import initDisplayState from "functions/local/Community/initDisplayState";
 import CommunityDisplay from "components/organisms/Community/CommunityDisplay/CommunityDisplay";
-import { useRecoilValueLoadable } from "recoil";
+import { useRecoilValue } from "recoil";
 import { postsCollection } from "recoil/atoms";
 import { filteredPosts } from "recoil/selectors";
 
 export const CommunityPage = () => {
+  const posts = useRecoilValue(postsCollection);
+  const fPosts = useRecoilValue(filteredPosts);
   const [display, setDisplay] = useState(initDisplayState());
-  const posts = useRecoilValueLoadable(postsCollection);
-  const fPosts = useRecoilValueLoadable(filteredPosts);
-  const [displayContent, setDisplayContent] = useState();
+  const [displayContent, setDisplayContent] = useState(posts);
 
   const setDisplayState = (state) => {
     setDisplay(state);
@@ -21,57 +21,26 @@ export const CommunityPage = () => {
     window.localStorage.setItem("displayState", state);
   };
 
-  if (posts.state === "hasValue" && fPosts.state === "hasValue") {
-    let content = posts.contents;
-    const filteredContent = fPosts.contents;
-    setDisplayContent(content);
-    return (
-      <StandardPage
-        className="justify-center relative"
-        header={<Header />}
-        body={
-          <>
-            <WritingControls setDisplayContent={setDisplayContent} />
-            <LayoutControls
-              displayState={display}
-              setDisplayState={setDisplayState}
-              setDisplayContent={setDisplayContent}
-              filteredPosts={filteredContent}
-              displayContent={displayContent}
-            />
-            <CommunityDisplay data={displayContent} displayState={display} />
-          </>
-        }
-        style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
-      />
-    );
-  } else if (posts.state === "loading" || fPosts.state === "loading") {
-    return (
-      <StandardPage
-        className="justify-center relative"
-        header={<Header />}
-        body={
-          <>
-            <WritingControls />
-            <LayoutControls
-              displayState={display}
-              setDisplayState={setDisplayState}
-            />
-            <span
-              style={{
-                marginTop: "300px",
-                marginBottom: "1000px",
-                fontSize: "50px",
-              }}
-            >
-              Loading...
-            </span>
-          </>
-        }
-        style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
-      />
-    );
-  }
+  return (
+    <StandardPage
+      className="justify-center relative"
+      header={<Header />}
+      body={
+        <>
+          <WritingControls setDisplayContent={setDisplayContent} />
+          <LayoutControls
+            displayState={display}
+            setDisplayState={setDisplayState}
+            setDisplayContent={setDisplayContent}
+            filteredPosts={fPosts}
+            posts={posts}
+          />
+          <CommunityDisplay data={displayContent} displayState={display} />
+        </>
+      }
+      style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
+    />
+  );
 };
 
 export default CommunityPage;
