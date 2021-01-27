@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { languageState } from "./atoms";
+import { languageState, postsCollection } from "./atoms";
 import { LinkedButton } from "components/atoms/Button/Button";
 
 export const fontState = selector({
@@ -49,5 +49,24 @@ export const headerTabs = selector({
         className="tab"
       />,
     ];
+  },
+});
+
+export const filteredPosts = selector({
+  key: "filteredPosts",
+  get: ({ get }) => {
+    const posts = get(postsCollection);
+    let palacePosts = [],
+      gamePosts = [];
+
+    posts.forEach((post) => {
+      if (post.flair === "palace") {
+        palacePosts.push(post);
+      } else {
+        gamePosts.push(post);
+      }
+    });
+
+    return { palacePosts, gamePosts };
   },
 });

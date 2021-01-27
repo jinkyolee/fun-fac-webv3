@@ -97,7 +97,7 @@ export const Dropdown = ({
       onChange={onChange}
       value={value}
     >
-      <option defaultValue value="">
+      <option defaultValue value="default">
         {defaultLabel}
       </option>
       {options.map(({ value, label }, index) => {

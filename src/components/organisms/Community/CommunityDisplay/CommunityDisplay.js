@@ -6,6 +6,7 @@ import "./CommunityDisplay.css";
 
 export const CommunityDisplay = ({ data, displayState }) => {
   let alignClass;
+  console.log(data);
 
   if (displayState === "listed") {
     alignClass = "centered";

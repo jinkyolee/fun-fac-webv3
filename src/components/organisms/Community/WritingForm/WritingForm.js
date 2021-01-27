@@ -98,7 +98,7 @@ const WritingForm = () => {
     }
 
     switch (flair) {
-      case "":
+      case "default":
         window.alert("태그를 선택하셔야합니다");
         return;
       default:
@@ -170,6 +170,7 @@ const WritingForm = () => {
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
         borderRadius: "0.5rem",
         width: "40rem",
+        marginTop: "150px",
       }}
     >
       <Box
