@@ -58,7 +58,7 @@ export const WritingControls = ({ setDisplayContent }) => {
         onClick={(e) => checkLoginState(e)}
       />
       {opened ? (
-        <Box className={`search-btn ${opened}`} onClick={setSearchBtnState}>
+        <Box className={`search-btn ${opened}`}>
           <TextInput
             className="search-input"
             value={search}
@@ -72,9 +72,7 @@ export const WritingControls = ({ setDisplayContent }) => {
               setSearch("");
             }}
           />
-          <ClickableBox onClick={() => initSearch()}>
-            <SearchIcon className="search-icon" />
-          </ClickableBox>
+          <SearchIcon className="search-icon" />
         </Box>
       ) : (
         <ClickableBox className={`search-btn`} onClick={setSearchBtnState}>
