@@ -1,3 +1,4 @@
+import getDeviceWidth from "functions/getDeviceWidth";
 import getPosts from "functions/local/Community/getPosts";
 import { atom } from "recoil";
 
@@ -14,4 +15,9 @@ export const loginState = atom({
 export const postsCollection = atom({
   key: "postsCollection",
   default: getPosts(),
+});
+
+export const deviceType = atom({
+  key: "deviceType",
+  default: getDeviceWidth(),
 });

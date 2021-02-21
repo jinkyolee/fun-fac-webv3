@@ -13,4 +13,13 @@ export const Header = ({ firstCol, secondCol, thirdCol }) => {
   );
 };
 
+export const HeaderMobile = ({ firstCol, dropdown }) => {
+  return (
+    <nav className="header-mobile closed">
+      <Box className="row-mobile">{firstCol}</Box>
+      <Box className="row-mobile">{dropdown}</Box>
+    </nav>
+  );
+};
+
 export default Header;

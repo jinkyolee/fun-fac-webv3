@@ -1,12 +1,22 @@
 .header {
   position: fixed;
+  display: flex;
   flex-direction: column;
   top: 0;
   right: 0;
   left: 0;
-  display: flex;
   align-items: center;
   background-color: #ffffff;
+  z-index: 100000;
+}
+
+.header-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
   z-index: 100000;
 }
 
@@ -16,6 +26,15 @@
 
 .header.opened {
   height: 180px !important;
+}
+
+.header-mobile.opened {
+  height: 100% !important;
+  background-color: #ffffff;
+}
+
+.row-mobile {
+  margin-top: 1.5rem;
 }
 
 .row:first-child {
@@ -29,33 +48,8 @@
   margin-top: 30px;
 }
 
-.tab.last {
-  font-weight: 700 !important;
-  color: #00249c;
-  font-size: 25px !important;
-}
-
 .last-wrap {
   animation: fade-in 1.15s;
-}
-
-.lang-btn {
-  height: 26px;
-  width: fit-content;
-  background-color: transparent;
-  color: #00249c;
-  font-size: 24px;
-  margin: 23px 0 0 50px;
-}
-
-.home-auth-btn {
-  height: 28px;
-  width: 66px;
-  line-height: 28px;
-  font-size: 15px;
-  background-color: transparent;
-  color: #00249c;
-  margin-top: 1px;
 }
 
 .toggle-menu {
@@ -66,12 +60,49 @@
   margin-top: 8px;
 }
 
-.toggled {
+.toggle-menuM {
+  height: fit-content;
+  color: #00249c;
+  background-color: transparent;
+  margin: none;
+}
+
+.header.toggled {
   animation: toggledHeader ease 1s;
 }
 
-.untoggled {
+.header.untoggled {
   animation: untoggleHeader ease 1s;
+}
+
+.header-mobile.toggled {
+  animation: toggledHeaderM ease 2s;
+}
+
+.header-mobile.untoggled {
+  animation: untoggleHeaderM ease 2s;
+}
+
+@keyframes toggledHeaderM {
+  0% {
+    height: auto;
+    background-color: transparent;
+  }
+  100% {
+    height: 100%;
+    background-color: #ffffff;
+  }
+}
+
+@keyframes untoggleHeaderM {
+  0% {
+    height: 100%;
+    background-color: #ffffff;
+  }
+  100% {
+    height: auto;
+    background-color: transparent;
+  }
 }
 
 @keyframes toggledHeader {
