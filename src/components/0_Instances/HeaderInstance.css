@@ -1,10 +1,19 @@
 .lang-btn {
-  height: 26px;
+  height: 1.75rem;
   width: fit-content;
   background-color: transparent;
   color: #00249c;
   font-size: 24px;
   margin: 23px 0 0 50px;
+}
+
+.lang-btn.mobile {
+  position: absolute;
+  top: 1.3rem;
+  left: 1.3rem;
+  font-size: 1.25rem;
+  margin: 0;
+  animation: fade-in ease-in 1s;
 }
 
 .home-auth-btn {
@@ -21,4 +30,45 @@
   font-weight: 700 !important;
   color: #00249c;
   font-size: 25px !important;
+}
+
+.tab.mobile {
+  font-size: 1.5rem;
+  margin: 1.25rem 0 0 0;
+  font-size: 20px;
+  animation: fade-in ease-in 1s;
+}
+
+.tab-box {
+  margin-top: 1.5rem;
+}
+
+.tab-box .tab {
+  font-weight: 900;
+  font-size: 25px;
+  margin-top: 1.4rem;
+  animation: fade-in ease-in 1s;
+}
+
+.logo.mobile {
+  height: 2rem;
+  margin-top: 1rem;
+  animation: fade-in ease-in 1s;
+}
+
+.home-auth-btn.mobile {
+  width: fit-content;
+  border: #00249c solid 1px;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  animation: fade-in ease-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
