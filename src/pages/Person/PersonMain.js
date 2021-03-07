@@ -17,7 +17,7 @@ export const PersonMain = () => {
 
   const returnModern = () => {
     const data = personStuff.modern.map((data, index) => {
-      const { src, title, subtitle } = data;
+      const { src, title, subtitle, to } = data;
       if (!data.$$typeof) {
         return (
           <PersonThumbnail
@@ -25,6 +25,7 @@ export const PersonMain = () => {
             title={title}
             subtitle={subtitle}
             key={index}
+            to={to}
             type={device === "small" ? "mobile" : ""}
           />
         );
@@ -41,13 +42,14 @@ export const PersonMain = () => {
   };
   const returnHistoric = () => {
     const data = personStuff.historical.map(
-      ({ src, title, subtitle }, index) => {
+      ({ src, title, subtitle, to }, index) => {
         return (
           <PersonThumbnail
             src={src}
             title={title}
             subtitle={subtitle}
             key={index}
+            to={to}
             type={device === "small" ? "mobile" : ""}
           />
         );
