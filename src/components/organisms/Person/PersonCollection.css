@@ -2,6 +2,13 @@
   position: relative;
 }
 
+.collection-container.mobile {
+  position: static;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .collection-container:not(:first-child) {
   margin-top: 150px;
 }
@@ -22,6 +29,15 @@
   text-align: center;
   transform: rotate(-5.45deg);
   line-height: 24px;
+}
+
+.container-label.mobile {
+  position: static;
+  width: 80%;
+  height: 5rem;
+  font-size: 25px;
+  line-height: 30px;
+  transform: none;
 }
 
 .collection-container:first-child .container-label {

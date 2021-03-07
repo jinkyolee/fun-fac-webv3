@@ -5,26 +5,77 @@ import PersonCollection from "components/organisms/Person/PersonCollection";
 import Box from "components/atoms/Box/Box";
 import personMainText from "constants/textConsts/personsMain";
 import { useRecoilValue } from "recoil";
-import { languageState } from "recoil/atoms";
+import { deviceType, languageState } from "recoil/atoms";
+import PersonThumbnail, {
+  PreparingThumbnail,
+} from "components/molecules/PersonPage/PersonThumbnail/PersonThumbnail";
 
 export const PersonMain = () => {
   const language = useRecoilValue(languageState);
+  const device = useRecoilValue(deviceType);
   const { labels, personStuff } = personMainText(language);
-  console.log(labels);
+
+  const returnModern = () => {
+    const data = personStuff.modern.map((data, index) => {
+      const { src, title, subtitle } = data;
+      if (!data.$$typeof) {
+        return (
+          <PersonThumbnail
+            src={src}
+            title={title}
+            subtitle={subtitle}
+            key={index}
+            type={device === "small" ? "mobile" : ""}
+          />
+        );
+      } else {
+        return (
+          <PreparingThumbnail
+            key={2}
+            type={device === "small" ? "mobile" : ""}
+          />
+        );
+      }
+    });
+    return data;
+  };
+  const returnHistoric = () => {
+    const data = personStuff.historical.map(
+      ({ src, title, subtitle }, index) => {
+        return (
+          <PersonThumbnail
+            src={src}
+            title={title}
+            subtitle={subtitle}
+            key={index}
+            type={device === "small" ? "mobile" : ""}
+          />
+        );
+      }
+    );
+    return data;
+  };
 
   return (
     <StandardPage
       className="justify-center"
       header={<Header />}
       body={
-        <Box className="vertical-flex" style={{ marginTop: "240px" }}>
+        <Box
+          className="vertical-flex"
+          style={
+            device === "small" ? { marginTop: "6rem" } : { marginTop: "240px" }
+          }
+        >
           <PersonCollection
-            personItems={personStuff.historical}
+            personItems={returnHistoric()}
             label={labels[0]}
+            device={device}
           />
           <PersonCollection
-            personItems={personStuff.modern}
+            personItems={returnModern()}
             label={labels[1]}
+            device={device}
           />
         </Box>
       }

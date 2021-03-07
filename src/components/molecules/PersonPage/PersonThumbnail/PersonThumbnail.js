@@ -4,9 +4,13 @@ import Image from "components/atoms/Image/Image";
 import Text from "components/atoms/Text/Text";
 import "./PersonThumbnail.css";
 
-export const PersonThumbnail = ({ src, title, subtitle, to }) => {
+export const PersonThumbnail = ({ src, title, subtitle, to, type }) => {
+  console.log(type);
   return (
-    <LinkedBox className="thumbnail-container" to={`/persons/post?id=${to}`}>
+    <LinkedBox
+      className={`thumbnail-container ${type}`}
+      to={`/persons/post?id=${to}`}
+    >
       <Image src={src} className="thumbnail-img" />
       <Text className="thumbnail-text title">{title}</Text>
       <Text className="thumbnail-text sub">{subtitle}</Text>
@@ -14,9 +18,9 @@ export const PersonThumbnail = ({ src, title, subtitle, to }) => {
   );
 };
 
-export const PreparingThumbnail = () => {
+export const PreparingThumbnail = ({ type }) => {
   return (
-    <Box className="preparing-container">
+    <Box className={`thumbnail-container preparing ${type}`}>
       다음 주인공은
       <br />
       누구일까요? 🤔
