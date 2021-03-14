@@ -15,6 +15,8 @@ export const PersonMain = () => {
   const device = useRecoilValue(deviceType);
   const { labels, personStuff } = personMainText(language);
 
+  console.log(personStuff);
+
   const returnModern = () => {
     const data = personStuff.modern.map((data, index) => {
       const { src, title, subtitle, to } = data;
