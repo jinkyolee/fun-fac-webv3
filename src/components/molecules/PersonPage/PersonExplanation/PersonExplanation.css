@@ -2,6 +2,7 @@
   font-size: 18px;
   line-height: 35px;
   margin-top: 10px;
+  text-align: justify;
 }
 
 .person-exp.title {
@@ -18,4 +19,12 @@
 
 .exp-container:first-of-type {
   margin-top: 50px;
+}
+
+.mobile .exp-container:first-of-type {
+  margin-top: 25px;
+}
+
+.mobile .exp-container {
+  margin-top: 60px;
 }

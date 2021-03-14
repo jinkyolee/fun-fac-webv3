@@ -1,6 +1,10 @@
 const setButtonColor = ({ target: { id } }) => {
-  const list = document.getElementById("list");
+  const list = document.getElementsByClassName("list-display-btn")[0]
+    .firstChild;
   const grid = document.getElementById("grid");
+
+  console.log(list);
+  console.log(grid);
 
   if (id === "grid") {
     grid.firstChild.style.fill = "#00249C";

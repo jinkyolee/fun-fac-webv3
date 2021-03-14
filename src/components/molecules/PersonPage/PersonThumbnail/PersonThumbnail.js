@@ -5,7 +5,6 @@ import Text from "components/atoms/Text/Text";
 import "./PersonThumbnail.css";
 
 export const PersonThumbnail = ({ src, title, subtitle, to, type }) => {
-  console.log(type);
   return (
     <LinkedBox
       className={`thumbnail-container ${type}`}

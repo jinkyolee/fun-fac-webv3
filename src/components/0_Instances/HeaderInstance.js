@@ -23,15 +23,22 @@ export const HeaderInstance = () => {
     const header =
       document.querySelector(".header") ||
       document.querySelector(".header-mobile");
+    const body = document.querySelector("body");
     if (!header.classList.contains("opened")) {
       setTimeout(() => header.classList.replace("toggled", "opened"), 985);
       header.classList.remove("closed");
       header.classList.add("toggled");
+      if (deviceType === "small") {
+        body.style.overflowY = "hidden";
+      }
       setToggled(true);
     } else {
       setTimeout(() => header.classList.replace("untoggled", "closed"), 985);
       header.classList.remove("opened");
       header.classList.add("untoggled");
+      if (deviceType === "small") {
+        body.style.overflowY = "scroll";
+      }
       setToggled(false);
     }
   };

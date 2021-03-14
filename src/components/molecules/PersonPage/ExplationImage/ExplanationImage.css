@@ -7,3 +7,7 @@
 .exp-img {
   object-fit: contain;
 }
+
+.mobile .exp-img-container {
+  margin-top: 40px;
+}

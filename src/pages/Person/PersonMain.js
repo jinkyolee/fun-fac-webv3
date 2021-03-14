@@ -40,6 +40,7 @@ export const PersonMain = () => {
     });
     return data;
   };
+
   const returnHistoric = () => {
     const data = personStuff.historical.map(
       ({ src, title, subtitle, to }, index) => {

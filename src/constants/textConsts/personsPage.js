@@ -16,12 +16,10 @@ const modern = "[오늘날 궁을 이야기하는 사람들]";
 export const personPostsKr = {
   // 세종 데이터 ---------------------------------------------------------------------------------------------
   sejong: {
-    heading: (
-      <PersonHeader
-        title="경복궁 그리고 백성울 사랑했던 세종"
-        subtitle={historical}
-      />
-    ),
+    heading: {
+      title: "경복궁 그리고 백성을 사랑했던 세종",
+      subtitle: historical,
+    },
     image: (
       <Image
         className="person-image"
@@ -29,7 +27,7 @@ export const personPostsKr = {
         style={{
           position: "absolute",
           right: "30px",
-          top: "145px",
+          top: "9.15rem",
           width: "200px",
         }}
       />
@@ -56,8 +54,8 @@ export const personPostsKr = {
       />,
       <ExplanationImage
         src={sejongImg1}
-        subtext="만원 권 지폐 속 세종대왕 [출처 : 한국은행]"
-        width="525px"
+        subtext="만원 권 지폐 속 세종대왕 [출처: 한국은행]"
+        width="80%"
         key={1}
       />,
       <PersonExplanation
@@ -89,7 +87,7 @@ export const personPostsKr = {
       />,
       <ExplanationImage
         src={sejongImg2}
-        subtext="경복궁 수정전 전경 [출처 : 문화재청 국가문화유산포털]"
+        subtext="경복궁 수정전 전경 [출처: 문화재청 국가문화유산포털]"
         width="100%"
         key={3}
       />,

@@ -5,11 +5,13 @@ import StandardPage from "components/templates/StandardPage";
 import { LinkedButton } from "components/atoms/Button/Button";
 import Text from "components/atoms/Text/Text";
 import { useRecoilValue } from "recoil";
-import { languageState } from "recoil/atoms";
+import { deviceType, languageState } from "recoil/atoms";
 import personsPageText from "constants/textConsts/personsPage";
+import PersonHeader from "components/molecules/PersonPage/PersonHeader/PersonHeader";
 
 export const PersonPage = () => {
   const language = useRecoilValue(languageState);
+  const device = useRecoilValue(deviceType);
   const postID = new URLSearchParams(window.location.search).get("id");
   const post = personsPageText(language)[postID];
 
@@ -29,22 +31,41 @@ export const PersonPage = () => {
       header={<Header />}
       body={
         <Box className="vertical-flex fullW align-center">
-          {post.heading}
-          {post.image}
+          <PersonHeader
+            title={post.heading.title}
+            subtitle={post.heading.subtitle}
+            device={device === "small" ? "mobile" : ""}
+          />
+          {device !== "small" && post.image}
           <Box
-            className="vertical-flex align-center"
-            style={{
-              width: "750px",
-              marginTop: "80px",
-            }}
+            className={`vertical-flex align-center ${
+              device === "small" ? "mobile" : ""
+            }`}
+            style={
+              device !== "small"
+                ? {
+                    width: "750px",
+                    marginTop: "80px",
+                  }
+                : { width: "87.5%", marginTop: "1.25rem" }
+            }
           >
             <Text
-              style={{
-                width: "100%",
-                fontWeight: "900",
-                fontSize: "23px",
-                lineHeight: "20px",
-              }}
+              style={
+                device !== "small"
+                  ? {
+                      width: "100%",
+                      fontWeight: "900",
+                      fontSize: "23px",
+                      lineHeight: "20px",
+                    }
+                  : {
+                      width: "100%",
+                      fontWeight: "900",
+                      fontSize: "20px",
+                      lineHeight: "25px",
+                    }
+              }
             >
               {post.subtitle}
             </Text>
@@ -52,12 +73,16 @@ export const PersonPage = () => {
           </Box>
           <Text
             className="sub-body"
-            style={{
-              marginTop: "45px",
-              marginBottom: "70px",
-              width: "750px",
-              fontSize: "16px",
-            }}
+            style={
+              device !== "small"
+                ? {
+                    marginTop: "45px",
+                    marginBottom: "70px",
+                    width: "750px",
+                    fontSize: "16px",
+                  }
+                : { width: "90%", marginTop: "1rem", marginBottom: "1rem" }
+            }
           >
             <b>{post.credits}</b>
           </Text>
