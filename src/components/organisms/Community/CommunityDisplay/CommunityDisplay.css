@@ -1,7 +1,15 @@
 .community-display {
   flex-wrap: wrap;
   width: 88%;
-  margin: 200px 0 100px 0;
+  margin: 11rem 0 4rem 0;
+}
+
+.community-display.mobile {
+  display: flex;
+  margin-top: 6.5rem;
+  align-items: center;
+  justify-content: center;
+  height: fit-content !important;
 }
 
 .community-display.centered {

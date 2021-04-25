@@ -1,5 +1,6 @@
 const initButtonColor = (displayState) => {
-  const list = document.getElementById("list");
+  const list = document.getElementsByClassName("list-display-btn")[0]
+    .firstChild;
   const grid = document.getElementById("grid");
 
   if (displayState === "grid") {

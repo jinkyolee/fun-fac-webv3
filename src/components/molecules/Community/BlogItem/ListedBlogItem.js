@@ -1,16 +1,26 @@
 import React from "react";
-import Box from "components/atoms/Box/Box";
+import Box, { LinkedBox } from "components/atoms/Box/Box";
 import Line from "components/atoms/Line/Line";
 import ListItem from "components/atoms/List/ListItem";
 import Text, { LinkedText } from "components/atoms/Text/Text";
 import Flair from "../Flair/Flair";
 import filterUsername from "functions/local/Community/filterUsername";
+import { useRecoilValue } from "recoil";
+import { deviceType } from "recoil/atoms";
 import "./BlogItem.css";
 
 export const ListedBlogItem = ({ title, user, flair, postDate, id }) => {
+  const device = useRecoilValue(deviceType);
   const filteredUser = filterUsername(user);
+
   return (
-    <ListItem className="listItem horizontal-flex">
+    <ListItem
+      className={
+        device !== "small"
+          ? "list-item horizontal-flex"
+          : "list-item vertical-flex"
+      }
+    >
       <Box className="horizontal-flex column">
         <Flair type={flair} />
         <LinkedText className="item-title" to={`/community/post?id=${id}`}>

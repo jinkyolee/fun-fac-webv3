@@ -1,7 +1,13 @@
+@media screen and (max-width: 320px) {
+  .thumbnail-container {
+    width: 17.5rem !important;
+    height: 17rem !important;
+  }
+}
 .thumbnail-container {
   flex-direction: column;
-  width: 320px;
-  height: 275px;
+  width: 20rem;
+  height: 17rem;
   border: 1px solid #4a4949;
   align-items: center;
 }

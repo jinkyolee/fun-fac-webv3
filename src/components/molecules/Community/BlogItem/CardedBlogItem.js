@@ -6,6 +6,8 @@ import Text from "components/atoms/Text/Text";
 import Flair from "components/molecules/Community/Flair/Flair";
 import "./BlogItem.css";
 import filterUsername from "functions/local/Community/filterUsername";
+import { useRecoilValue } from "recoil";
+import { deviceType } from "recoil/atoms";
 
 export const CardedBlogItem = ({
   title,
@@ -16,8 +18,9 @@ export const CardedBlogItem = ({
   id,
   image,
 }) => {
+  const device = useRecoilValue(deviceType);
   const filteredUser = filterUsername(user);
-  const filteredContent = filterContent(content);
+  const filteredContent = filterContent(content, device);
 
   return (
     <ListItem>

@@ -101,12 +101,15 @@ export const personPostsKr = {
   },
   // 안희선 가이드님 데이터 -------------------------------------------------------------------------------
   0: {
-    heading: (
-      <PersonHeader
-        title="계속 숨쉬는 시간의 흔적을 이야기하다"
-        subtitle={modern}
-      />
-    ),
+    heading: {
+      title: (
+        <>
+          계속 숨쉬는 시간의 <br />
+          흔적을 이야기하다
+        </>
+      ),
+      subtitle: modern,
+    },
     subtitle: "누구보다 궁에 진심인 궁노리터 안희선 가이드를 만나보세요.",
     body: [
       <PersonExplanation

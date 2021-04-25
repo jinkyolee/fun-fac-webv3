@@ -3,8 +3,11 @@ import List from "components/atoms/List/List";
 import CardedBlogItem from "components/molecules/Community/BlogItem/CardedBlogItem";
 import ListedBlogItem from "components/molecules/Community/BlogItem/ListedBlogItem";
 import "./CommunityDisplay.css";
+import { useRecoilValue } from "recoil";
+import { deviceType } from "recoil/atoms";
 
 export const CommunityDisplay = ({ data, displayState }) => {
+  const device = useRecoilValue(deviceType);
   let alignClass;
 
   if (displayState === "listed") {
@@ -28,7 +31,11 @@ export const CommunityDisplay = ({ data, displayState }) => {
   } else {
     return (
       <List
-        className={`community-display ${alignClass}`}
+        className={
+          device !== "small"
+            ? `community-display ${alignClass}`
+            : `community-display ${alignClass} mobile`
+        }
         style={
           data.length > 6 ? { height: "fit-content" } : { height: "50rem" }
         }

@@ -34,7 +34,11 @@ export const CommunityPage = () => {
           <CommunityDisplay data={displayContent} displayState={display} />
         </>
       }
-      style={{ backgroundColor: "#F9F9F9", marginTop: "70px" }}
+      style={{
+        backgroundColor: "#F9F9F9",
+        marginTop: "70px",
+        height: "fit-content",
+      }}
     />
   );
 };
