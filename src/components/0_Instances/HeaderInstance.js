@@ -7,7 +7,6 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { languageState, loginState } from "recoil/atoms";
 import { headerTabs } from "recoil/selectors";
 import { authService } from "fbaseInst/fbase";
-import { logo } from "assets/images/0_images";
 import "./HeaderInstance.css";
 import getDeviceWidth from "functions/getDeviceWidth";
 import { ListIconBlue as ListIcon } from "assets/svg/Community/ListIcon";
@@ -48,7 +47,8 @@ export const HeaderInstance = () => {
       <Header
         firstCol={[
           <Button
-            className="lang-btn gotham"
+          // gotham was here
+            className="lang-btn"
             onClick={(e) => {
               e.preventDefault();
               let newLang;
@@ -62,37 +62,34 @@ export const HeaderInstance = () => {
               window.localStorage.setItem("languageSetting", newLang);
               setLanguage(newLang);
             }}
-            label="한 / En"
+            label={language === "kr" ? <label><strong>한</strong>{` / EN`}</label> : <label>{`한 / `} <strong>EN</strong></label> }
             key={0}
           />,
-          <LinkedImage src={logo} className="logo" to="/" key={1} />,
+          <div className="logo-container">
+            <LinkedImage src={require("assets/images/logo.png").default} className="logo" to="/" key={1} />
+          </div>,
           <Box
             className="horizontal-flex"
-            style={{
-              margin: "15px 50px 0 0",
-              alignItems: "center",
-              height: "26px",
-            }}
             key={2}
           >
             {loggedIn ? (
               <Button
-                className="home-auth-btn gotham"
+                className="home-auth-btn"
                 key="8"
-                label={languageState === "kr" ? "로그아웃" : "Logout"}
+                label={language === "kr" ? "로그아웃" : "LOG-OUT"}
                 onClick={() => authService.signOut()}
               />
             ) : (
               <LinkedButton
-                className="home-auth-btn gotham"
+                className="home-auth-btn"
                 to="/login"
-                label={languageState === "kr" ? "로그인" : "Login"}
+                label={language === "kr" ? "로그인" : "LOG-IN"}
               />
             )}
             <Button
-              className="toggle-menu gotham"
+              className="toggle-menu"
               onClick={toggleHeader}
-              label="Menu"
+              label={language === "kr" ? "메뉴" : "MENU"}
             />
           </Box>,
         ]}
@@ -198,7 +195,7 @@ export const HeaderInstance = () => {
                     label={languageState === "kr" ? "로그인" : "LOGIN"}
                   />
                 )}
-                <LinkedImage src={logo} className="logo mobile" to="/" />
+                <LinkedImage src={require("assets/images/logo.png").default} className="logo mobile" to="/" />
               </Box>
             </Box>
           )

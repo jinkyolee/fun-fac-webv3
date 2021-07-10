@@ -77,8 +77,20 @@
   height: 50px;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 187px;
+  padding-bottom: 3px;
+}
+
 .logo {
-  height: 56px;
+  /* Figma width problem */
+  /* margin-top: 20px; */
+  width: 160px;
+  height: auto;
 }
 
 .content-image {

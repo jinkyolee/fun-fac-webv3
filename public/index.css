@@ -9,11 +9,11 @@
 }
 
 @font-face {
-  font-family: "Gotham-Book";
-  src: local("Gotham-Book"),
+  font-family: "GothamBook";
+  src: local("GothamBook"),
     url("../src/assets/fonts/GothamBook.ttf") format("ttf"),
-    url("../src/assets/fonts/Gotham-Book.woff") format("woff"),
-    url("../src/assets/fonts/Gotham-Book.woff2") format("woff2");
+    url("../src/assets/fonts/GothamBook.woff") format("woff"),
+    url("../src/assets/fonts/GothamBook.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -61,7 +61,7 @@ b {
 }
 
 .gotham {
-  font-family: "Gotham-Book";
+  font-family: "GothamBook";
   user-select: none;
 }
 
