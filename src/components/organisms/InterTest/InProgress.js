@@ -31,7 +31,7 @@ export const InProgress = ({ setResult, language }) => {
   return (
     <Box
       className="vertical-flex centered"
-      style={{ marginTop: "110px", marginBottom: "150px", width: "100%" }}
+      style={{ marginTop: "170px", marginBottom: "150px", width: "100%" }}
     >
       <Box className="banner align-center justify-center">
         <Image src={testBanner} className="banner__image" />

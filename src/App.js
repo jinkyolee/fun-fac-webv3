@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutTeam from "pages/About/About";
 import GameIntroduction from "pages/GameIntro";
 import Home from "pages/Home";
@@ -52,25 +52,25 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/game" component={GameIntroduction} />
-        <Route path="/team" component={AboutTeam} />
-        <Route path="/test" component={InteractiveTest} />
-        <Route path="/timeline" component={TimelinePage} />
-        <Route path="/persons" exact component={PersonMain} />
-        <Route path="/persons/post" component={PersonPage} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/game" component={GameIntroduction} />
+        <Route exact path="/team" component={AboutTeam} />
+        <Route exact path="/test" component={InteractiveTest} />
+        <Route exact path="/timeline" component={TimelinePage} />
+        <Route exact path="/persons" component={PersonMain} />
+        <Route exact path="/persons/post" component={PersonPage} />
         <Route path="/community/post" component={ViewPostPage} />
         {loggedIn === true && (
-          <Route path="/community/write" component={WritePage} />
+          <Route  path="/community/write" component={WritePage} />
         )}
         {loggedIn === false && <Route path="/login" component={LoginPage} />}
         <Suspense fallback={<Loading />}>
           <Route path="/community" exact component={CommunityPage} />
         </Suspense>
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 };
 

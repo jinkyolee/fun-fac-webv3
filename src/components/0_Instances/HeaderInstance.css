@@ -28,7 +28,7 @@
 
 .horizontal-flex {
   display: flex;
-  width: 120px;
+  min-width: 156px;
   flex-direction: row;
   margin: 15px 30px 0 0;
   align-items: flex-end;
@@ -38,7 +38,7 @@
 .home-auth-btn {
   font-weight: normal;
   /* width: 66px; */
-  font-weight: 400;
+  font-weight: 300;
   line-height: 25px;
   font-size: 15px;
   background-color: transparent;
@@ -47,6 +47,7 @@
 }
 
 .tab.last {
+  animation: fade-in ease 1s;
   font-weight: 700 !important;
   color: #00249c;
   font-size: 25px !important;

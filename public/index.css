@@ -1,7 +1,7 @@
 @import "./reset.css";
 @font-face {
-  font-family: "YANGJIN";
-  src: local("YANGJIN"), url("../src/assets/fonts/YangJin.ttf") format("ttf"),
+  font-family: "yangjin";
+  src: local("yangjin"), url("../src/assets/fonts/YangJin.ttf") format("ttf"),
     url("../src/assets/fonts/YangJin.woff") format("woff"),
     url("../src/assets/fonts/YangJin.woff2") format("woff2");
   font-weight: normal;
@@ -29,7 +29,7 @@ body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: antialiased;
 }
 
 pre {
@@ -56,7 +56,7 @@ b {
 }
 
 .yangjin {
-  font-family: "YANGJIN";
+  font-family: "yangjin";
   user-select: none;
 }
 

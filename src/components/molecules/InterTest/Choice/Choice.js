@@ -14,7 +14,7 @@ export const Choice = ({
         onClick();
       }}
     >
-      <Text style={{ width: "230px", textAlign: "center", userSelect: "none" }}>
+      <Text style={{ width: "230px", textAlign: "center", userSelect: "none", fontWeight: '500', fontSize: '20px', lineHeight:'28.96px' }}>
         {label[0]}
       </Text>
       {label[1] && (

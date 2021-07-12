@@ -1,25 +1,27 @@
 .main-illust {
   width: 100%;
+  margin-top: -80px;
 }
 
 .main-test-logo {
   width: 390px;
   position: absolute;
-  top: 10.5rem;
+  top: 240px;
 }
 
 .start-button {
   position: absolute;
-  top: 22rem;
+  top: 460px;
   width: 11.5rem;
   height: 3.15rem;
   border-radius: 5rem;
+  cursor: pointer;
 }
 
 .share-btn {
   position: absolute;
   top: 15rem;
-  right: 1rem;
+  right: 3rem;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -28,7 +30,11 @@
 
 .main-subtext {
   position: absolute;
-  top: 18rem;
+  top: 370px;
   text-align: center;
   color: #00249c;
+
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 30px;
 }

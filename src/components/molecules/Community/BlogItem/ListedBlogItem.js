@@ -21,7 +21,7 @@ export const ListedBlogItem = ({ title, user, flair, postDate, id }) => {
           : "list-item vertical-flex"
       }
     >
-      <Box className="horizontal-flex column">
+      <Box className="horizontal-flex column" style={{justifyContent:'flex-start'}}>
         <Flair type={flair} />
         <LinkedText className="item-title" to={`/community/post?id=${id}`}>
           {title}

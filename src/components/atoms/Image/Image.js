@@ -1,18 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Image.css";
 
 export const LinkedImage = ({ src, className = "", to, style, alt = "" }) => {
   return (
-    <img
-      src={src}
-      className={`image linked ${className}`}
-      onClick={(e) => {
-        e.preventDefault();
-        window.location.href = to;
-      }}
-      style={style}
-      alt={alt}
-    />
+    <Link to={to}>
+      <img
+        src={src}
+        className={`image linked ${className}`}
+        style={style}
+        alt={alt} />
+    </Link>
   );
 };
 

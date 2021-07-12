@@ -24,11 +24,11 @@
 }
 
 .header.closed {
-  height: 130px !important;
+  height: 170px !important;
 }
 
 .header.opened {
-  height: 180px !important;
+  height: 220px !important;
 }
 
 .header-mobile.opened {
@@ -44,8 +44,15 @@
   height: fit-content;
   width: 100%;
   justify-content: space-between;
-  margin: 5px 0 20px 0;
+  margin: 10px 0 50px 0;
   padding: 0 28px;
+}
+
+.row:nth-child(2) {
+  width: 42%;
+  min-width: 500px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .row:last-child {
@@ -53,13 +60,17 @@
 }
 
 .last-wrap {
-  animation: fade-in 1.15s;
+  display: flex;
+  min-width: 250px;
+  width: 23vw;
+  justify-content: space-between;
+  /* width: 25%; */
 }
 
 .toggle-menu {
   height: 28px;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
   background-color: transparent;
   color: #00249c;
   margin-top: 8px;
@@ -74,19 +85,19 @@
 }
 
 .header.toggled {
-  animation: toggledHeader ease 1s;
+  animation: toggledHeader ease-in 0.5s;
 }
 
 .header.untoggled {
-  animation: untoggleHeader ease 1s;
+  animation: untoggleHeader ease 0.5s;
 }
 
 .header-mobile.toggled {
-  animation: toggledHeaderM ease 1s;
+  animation: toggledHeaderM ease 0.5s;
 }
 
 .header-mobile.untoggled {
-  animation: untoggleHeaderM ease 1s;
+  animation: untoggleHeaderM ease 0.5s;
 }
 
 @keyframes toggledHeaderM {
@@ -105,18 +116,18 @@
 
 @keyframes toggledHeader {
   from {
-    height: 130px;
+    height: 170px;
   }
   to {
-    height: 180px;
+    height: 220px;
   }
 }
 @keyframes untoggleHeader {
   from {
-    height: 180px;
+    height: 220px;
   }
   to {
-    height: 130px;
+    height: 170px;
   }
 }
 

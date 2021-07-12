@@ -20,8 +20,8 @@ export const Pending = ({ setTestState, language }) => {
       <ClickableImage
         src={start}
         className="start-button"
-        label="테스트 시작하기"
         onClick={() => setTestState("started")}
+        alt="테스트 시작하기"
       />
       <ClickableImage
         src={share}

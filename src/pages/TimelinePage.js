@@ -12,7 +12,7 @@ export const Timelines = () => {
   const language = useRecoilValue(languageState);
   const { palaceEvents, rotationText } = palaceText(language);
   const [text, setText] = useState(rotationText[0]);
-  console.log(text.current);
+  // console.log(text.current);
 
   const setPalaceText = () => {
     if (text.current === "gyeongbok") {
@@ -49,7 +49,7 @@ export const Timelines = () => {
       body={
         <Box
           className="vertical-flex justify-center"
-          style={{ marginTop: "170px", marginBottom: "150px" }}
+          style={{ marginTop: "180px", marginBottom: "150px" }}
         >
           <Text className="heading centered" style={{ color: "#00249c" }}>
             우리가{" "}

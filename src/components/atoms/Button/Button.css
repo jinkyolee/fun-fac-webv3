@@ -32,11 +32,10 @@
 }
 
 .link-btn.tab {
-  margin-right: 30px;
   width: fit-content;
   background-color: transparent;
   color: #00249c;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
 }
 

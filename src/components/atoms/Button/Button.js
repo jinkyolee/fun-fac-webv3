@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.css";
+import { Link } from 'react-router-dom'
 
 export const Button = ({ onClick, label = "", className, style }) => {
   return (
@@ -11,14 +12,14 @@ export const Button = ({ onClick, label = "", className, style }) => {
 
 export const LinkedButton = ({ to, label, className = "", style, onClick }) => {
   return (
-    <a
-      href={to}
-      className={`btn link-btn ${className}`}
+    <Link
+      to={to}
+      className={`${className} btn link-btn`}
       style={style}
       onClick={onClick}
     >
       {label}
-    </a>
+    </Link>
   );
 };
 

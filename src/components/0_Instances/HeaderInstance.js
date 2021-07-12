@@ -24,7 +24,7 @@ export const HeaderInstance = () => {
       document.querySelector(".header-mobile");
     const body = document.querySelector("body");
     if (!header.classList.contains("opened")) {
-      setTimeout(() => header.classList.replace("toggled", "opened"), 985);
+      setTimeout(() => header.classList.replace("toggled", "opened"), 485);
       header.classList.remove("closed");
       header.classList.add("toggled");
       if (deviceType === "small") {
@@ -32,7 +32,7 @@ export const HeaderInstance = () => {
       }
       setToggled(true);
     } else {
-      setTimeout(() => header.classList.replace("untoggled", "closed"), 985);
+      setTimeout(() => header.classList.replace("untoggled", "closed"), 485);
       header.classList.remove("opened");
       header.classList.add("untoggled");
       if (deviceType === "small") {
@@ -66,7 +66,7 @@ export const HeaderInstance = () => {
             key={0}
           />,
           <div className="logo-container">
-            <LinkedImage src={require("assets/images/logo.png").default} className="logo" to="/" key={1} />
+            <LinkedImage src={require("assets/images/logo.png").default} className="logo" to="/" alt="메인 페이지" key={1} />
           </div>,
           <Box
             className="horizontal-flex"
@@ -100,20 +100,22 @@ export const HeaderInstance = () => {
         })}
         thirdCol={
           toggled && (
+            <div id="las">
             <Box className="last-wrap">
               <LinkedButton
                 to="/game"
                 label="GAME"
                 key={0}
-                className="tab last gotham"
+                className="tab last "
               />
               <LinkedButton
                 to="/team"
                 label="ABOUT US"
                 key={1}
-                className="tab last gotham"
+                className="tab last "
               />
             </Box>
+            </div>
           )
         }
       />

@@ -67,7 +67,7 @@ export const PersonMain = () => {
         <Box
           className="vertical-flex"
           style={
-            device === "small" ? { marginTop: "6rem" } : { marginTop: "240px" }
+            device === "small" ? { marginTop: "6rem" } : { marginTop: "270px" }
           }
         >
           <PersonCollection
