@@ -96,7 +96,7 @@ export const GoogleOAuth = ({ label }) => {
       className="google"
       onClick={async () => {
         const googleProvider = new firebaseInst.auth.GoogleAuthProvider();
-        await authService.signInWithPopup(googleProvider);
+        await authService.signInWithRedirect(googleProvider);
         window.history.back();
       }}
     />
@@ -111,7 +111,7 @@ export const FacebookOAuth = ({ label }) => {
       className="facebook"
       onClick={async () => {
         const fbProvider = new firebaseInst.auth.FacebookAuthProvider();
-        await authService.signInWithPopup(fbProvider);
+        await authService.signInWithRedirect(fbProvider);
         window.history.back();
       }}
     />

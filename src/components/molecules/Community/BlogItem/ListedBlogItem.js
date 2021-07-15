@@ -27,7 +27,7 @@ export const ListedBlogItem = ({ title, user, flair, postDate, id }) => {
           {title}
         </LinkedText>
       </Box>
-      <Box className="horizontal-flex align-center column">
+      <Box className="align-center column">
         <Text className="item-uploader">{filteredUser}</Text>
         <Line className="vertical divider" />
         <Text className="upload-date">{postDate}</Text>

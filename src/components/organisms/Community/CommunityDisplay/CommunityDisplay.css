@@ -1,7 +1,9 @@
 .community-display {
   flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
   width: 88%;
-  margin: 11rem 0 4rem 0;
+  margin: 11rem 0 4rem 12%;
 }
 
 .community-display.mobile {

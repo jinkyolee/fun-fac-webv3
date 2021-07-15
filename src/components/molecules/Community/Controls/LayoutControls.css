@@ -40,8 +40,9 @@ path {
 }
 
 .tag-selecter {
-  border-radius: 0.5rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
   width: min-content;
   margin-right: 0.75rem;
-  padding: 5px 0 5px 0.25rem;
+  padding: 9px 3px 9px 5px;
 }

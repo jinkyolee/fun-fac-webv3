@@ -5,6 +5,7 @@ const getPosts = async () => {
   const posts = await firestoreService
     .collection("posts")
     .orderBy("timestamp", "desc")
+    .limit(9)
     .get();
   posts.forEach((document) => {
     const post = {

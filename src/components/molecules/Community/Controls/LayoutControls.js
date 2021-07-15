@@ -52,7 +52,7 @@ export const LayoutControls = ({
         <Dropdown
           name="tag-selecter"
           className="tag-selecter"
-          defaultLabel={language === "kr" ? "모든 태그" : "All"}
+          defaultLabel={language === "kr" ? "태그 선택하기" : "All"}
           value={flairState.current}
           onChange={(e) => {
             flairState.current = e.target.value;
