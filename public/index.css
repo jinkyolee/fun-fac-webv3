@@ -1,9 +1,8 @@
 @import "./reset.css";
 @font-face {
   font-family: "yangjin";
-  src: local("yangjin"), url("../src/assets/fonts/YangJin.ttf") format("ttf"),
-    url("../src/assets/fonts/YangJin.woff") format("woff"),
-    url("../src/assets/fonts/YangJin.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
