@@ -12,22 +12,24 @@
     <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
     <!-- <link rel="stylesheet" href="./src/components/Draft.css" /> -->
     <title>Funhi Factory</title>
-    <script
+    <!-- <script
       async
       src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"
     ></script>
     <script
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.2.15/epub.min.js"
-      integrity="sha512-5wAFsOdRwzWaCMwQvCIbT3IPT5ESRki2ikvjsSjbmf1NfGUAobG2VtneOoEFIb7pjmWKS35NOo5slkPjNjG25A=="
-      crossorigin="anonymous"
-    ></script>
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.2.15/epub.min.js"
+    integrity="sha512-5wAFsOdRwzWaCMwQvCIbT3IPT5ESRki2ikvjsSjbmf1NfGUAobG2VtneOoEFIb7pjmWKS35NOo5slkPjNjG25A=="
+    crossorigin="anonymous"
+    ></script> -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      Kakao.init('ab4977b20412e766c9e2c871db72e35f');
+      console.log(Kakao.isInitialized());
+    </script>
+    <meta name="description" content="Funhi Factory Website 고궁의 이야기를 전하는 펀히팩토리의 웹사이트">
   </head>
   <body>
-    <noscript
-      >Funhi Factory Website 고궁의 이야기를 전하는 펀히팩토리의
-      웹사이트</noscript
-    >
     <div id="root"></div>
   </body>
 </html>

@@ -81,9 +81,34 @@ export const KakaoOAuth = ({ label }) => {
       svg={kakaoIcon}
       label={`카카오톡 ${label}`}
       className="kakao"
-      onClick={(e) => {
-        console.log(e);
-      }}
+      onClick={() => {
+        window.Kakao.Auth.login({
+          success: (res) => {
+              window.Kakao.Auth.setAccessToken(res.access_token);
+              window.Kakao.API.request({
+                  url: '/v2/user/me',
+                  success: function(res) {
+                   console.log(JSON.stringify(res));
+                   firebaseInst.auth().signInWithCustomToken(res.id)
+                   .then((userCredential) => {
+                     console.log(userCredential);
+                     window.history.back();
+                   })
+                   .catch((err) => console.error(err.message));
+                  },
+                  fail: function(error) {
+                      window.alert(
+                          'login success, but failed to request user information: ' +
+                          JSON.stringify(error)
+                      )
+                  },
+              })
+          }, 
+          fail: (err) => {
+              console.error(err);
+          }
+      })}
+    }
     />
   );
 };

@@ -14,21 +14,19 @@
 -- ✅ create post viewing page/component
 
 ✅ profile customization
-❌ recreate storybook -> customization is pain in ass (del)
 ✅ finish design configs -> header, team, persons main page
 ✅ mechanism for retaining language settings
-❌ fix timeline text animations (del)
 
-❌ SignIn&Up
+
+#### SignIn&Up
 -- ✅ Google
--- ❌ FaceBook
 -- ❌ Kakao
 
-❌ GBTI
+#### GBTI
 -- ❌ Result (en / kr)
 -- ❌ Result
 
-❌ Styling 
+#### Styling 
 -- ✅ Website kr 
 -- ❌ Website en
 -- ❌ Mobile kr
