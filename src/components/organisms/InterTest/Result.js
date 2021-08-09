@@ -15,7 +15,7 @@ import "./Result.css";
 import copyLink from "functions/local/Community/copyLink";
 
 export const Result = ({ score, language }) => {
-  const { title, subtext } = setResultContent(score, language);
+  const { title, palace, image, body, subtext } = setResultContent(score, language);
 
   return (
     <Box className="vertical-flex align-center">
@@ -29,7 +29,7 @@ export const Result = ({ score, language }) => {
         style={{ marginTop: "230px" }}
       >
         <Box className="justify-center align-center result-title">
-          <Text className="body bold">{title}</Text>
+          <Text className="body bold">{palace}을 소개합니다</Text>
         </Box>
         <Box className="vertical-flex">
           {subtext.map((content, index) => {

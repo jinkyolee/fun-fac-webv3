@@ -25,7 +25,7 @@ export const AuthComponent = ({ header }) => {
       >
         <KakaoOAuth label={"로그인하기"} />
         <GoogleOAuth label={"로그인하기"} />
-        <FacebookOAuth label={"로그인하기"} />
+        {/* <FacebookOAuth label={"로그인하기"} /> */}
       </Box>
     </Box>
   );

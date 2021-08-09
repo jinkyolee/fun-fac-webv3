@@ -20,11 +20,11 @@
 
 #### SignIn&Up
 -- ✅ Google
--- ❌ Kakao
+-- ✅ Kakao ( firebae auth를 custom token으로 제끼려면 별도의 api가 필요한데, 시간 없으니까 그냥 storage에 넣음 )
 
 #### GBTI
--- ❌ Result (en / kr)
--- ❌ Result
+-- ❌ Result (en / kr)  이해 안댐 -> 메롱한테 알고리즘 방식 물어보기 
+
 
 #### Styling 
 -- ✅ Website kr 

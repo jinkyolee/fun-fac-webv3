@@ -5,7 +5,10 @@ import Box from "components/atoms/Box/Box";
 import { InputButton, TextInput } from "components/atoms/Input/Input";
 import Image from "components/atoms/Image/Image";
 import Button from "components/atoms/Button/Button";
-import { authService, firebaseInst } from "fbaseInst/fbase";
+import { authService, firebaseInst, firestoreService } from "fbaseInst/fbase";
+import { uuid } from "uuidv4";
+import { useSetRecoilState } from "recoil";
+import { loginState } from "recoil/atoms";
 
 export const EmailInput = ({ onChange, label, value }) => {
   return (
@@ -76,6 +79,8 @@ const OAuth = ({ svg, label, className, onClick }) => {
 };
 
 export const KakaoOAuth = ({ label }) => {
+  const setLoginState = useSetRecoilState(loginState);
+
   return (
     <OAuth
       svg={kakaoIcon}
@@ -88,13 +93,24 @@ export const KakaoOAuth = ({ label }) => {
               window.Kakao.API.request({
                   url: '/v2/user/me',
                   success: function(res) {
-                   console.log(JSON.stringify(res));
-                   firebaseInst.auth().signInWithCustomToken(res.id)
-                   .then((userCredential) => {
-                     console.log(userCredential);
-                     window.history.back();
-                   })
-                   .catch((err) => console.error(err.message));
+                    // user exist check 필요함
+                    const docRef = firestoreService.collection("KakaoUsers").doc(`kakao${res.id}`);
+                    docRef.get().then((doc) => {
+                      if (doc.exists) {
+                        window.localStorage.setItem("loginState", true);
+                        setLoginState(true);
+                        window.history.back();
+                      } else {
+                        docRef.set({
+                          id: res.id,
+                          nickname: res.properties.nickname
+                        }).then(() => {
+                          window.localStorage.setItem("loginState", true);
+                          setLoginState(true);
+                          window.history.back();
+                        }).catch(err => console.error(err));
+                      }
+                    }).catch(err => console.error(err))
                   },
                   fail: function(error) {
                       window.alert(
@@ -128,6 +144,7 @@ export const GoogleOAuth = ({ label }) => {
   );
 };
 
+/*
 export const FacebookOAuth = ({ label }) => {
   return (
     <OAuth
@@ -142,3 +159,4 @@ export const FacebookOAuth = ({ label }) => {
     />
   );
 };
+*/

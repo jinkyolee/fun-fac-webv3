@@ -13,7 +13,7 @@ import { ListIconBlue as ListIcon } from "assets/svg/Community/ListIcon";
 
 export const HeaderInstance = () => {
   const [language, setLanguage] = useRecoilState(languageState);
-  const loggedIn = useRecoilValue(loginState);
+  const [loggedIn, setLoggedIn] = useRecoilState(loginState);
   const [toggled, setToggled] = useState(false);
   const tabs = useRecoilValue(headerTabs);
   const deviceType = getDeviceWidth();
@@ -77,7 +77,11 @@ export const HeaderInstance = () => {
                 className="home-auth-btn"
                 key="8"
                 label={language === "kr" ? "로그아웃" : "LOG-OUT"}
-                onClick={() => authService.signOut()}
+                onClick={() => {
+                  authService.signOut();
+                  window.localStorage.setItem('loginState', false);
+                  setLoggedIn(false);
+                }}
               />
             ) : (
               <LinkedButton
@@ -188,7 +192,11 @@ export const HeaderInstance = () => {
                     className="home-auth-btn mobile"
                     key="8"
                     label={languageState === "kr" ? "로그아웃" : "LOGOUT"}
-                    onClick={() => authService.signOut()}
+                    onClick={() => {
+                      authService.signOut();
+                      window.localStorage.setItem('loginState', false);
+                      setLoggedIn(false);
+                    }}
                   />
                 ) : (
                   <LinkedButton
